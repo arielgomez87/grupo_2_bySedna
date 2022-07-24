@@ -8,11 +8,11 @@
 [Guillermina Varela](https://github.com/guiguisv/)
 <br>
 [Nicolas Lomanto](https://github.com/Nicoloman/Nicoloman/)
-<p>Ana Barboza</p>
+<p>Ana Barboza
 
 
 
-**Inspiracion para desarrolar nuestra pagina web**
+**Inspiracion para desarrollar nuestra pagina web**
 <p> https://www.paolita.co.uk/
 <p> https://koalabay.com/es/
 <p> https://monrie.ru/
