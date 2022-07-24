@@ -5,3 +5,9 @@
  <p>-Ana Barboza
  <p>-Guillermina Varela
  <p>-Nicolas Lomanto
+
+
+Inspiracion para desarrolar nuestra pagina web
+https://www.paolita.co.uk/
+https://koalabay.com/es/
+https://monrie.ru/
