@@ -8,6 +8,6 @@
 
 
 Inspiracion para desarrolar nuestra pagina web
-https://www.paolita.co.uk/
-https://koalabay.com/es/
-https://monrie.ru/
+<p> https://www.paolita.co.uk/
+<p> https://koalabay.com/es/
+<p> https://monrie.ru/
