@@ -1,15 +1,14 @@
 # grupo_2_bySedna
  El grupo esta conformado por:
 <br>
-[Augusto Castelli](https://github.com/castelliaugusto/).
+[Augusto Castelli](https://github.com/castelliaugusto/)
 <br>
-[Ariel Gomez](https://github.com/arielgomez87/).
+[Ariel Gomez](https://github.com/arielgomez87/)
 <br>
-[Guillermina Varela](https://github.com/guiguisv/).
+[Guillermina Varela](https://github.com/guiguisv/)
 <br>
-[Nicolas Lomanto](https://github.com/Nicoloman/Nicoloman/).
-<br>
-<p>[Ana Barboza]</p>
+[Nicolas Lomanto](https://github.com/Nicoloman/Nicoloman/)
+<p>Ana Barboza</p>
 
 
 
