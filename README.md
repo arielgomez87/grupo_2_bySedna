@@ -11,7 +11,6 @@ By Sedna es un emprendimiento con el objetivo de hacer trajes de baños únicos 
 [Guillermina Varela](https://github.com/guiguisv/)
 <br>
 [Nicolas Lomanto](https://github.com/Nicoloman/Nicoloman/)
-<p>Ana Barboza
 
 
 
