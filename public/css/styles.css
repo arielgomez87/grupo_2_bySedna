@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Abre Header*/
+.main-header{
+    background-color: aliceblue;
+}
+.top-bar{
+    align-items: center;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+.hamburger-button{
+    color: grey;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 2em;
+}
+.logo-img{
+    border-radius: 50%;
+}
+.search-icons{
+    display: flex;
+}
+.bar{
+    background-color: aliceblue;
+    border: none;
+    border-bottom: solid 2px grey;
+    font-size: 1em;
+}
+.bar:active{
+    border: none;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.icons{
+    color: grey;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.5em;
+}
+.icons a{
+    text-decoration: none;
+    color: grey;
+}
+/*Cierre Header*/
