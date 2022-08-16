@@ -32,6 +32,15 @@
 .search-bar input{
     color: white;
 }
+.search-bar a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    margin: 5px;
+}
+::placeholder {
+    color: white;
+  }
 .bar{
     color: white;
     background-color: #AD8F8F;
@@ -56,6 +65,23 @@
 }
 /*Cierre Header*/
 
+.img{
+    max-width: 100%;
+}
+.main-banner{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+.banner-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner-overlay :hover{
+    background-color: rgba(128, 128, 128, .5);
+}
 @media (min-width:768px) {
     .search-bar{
         display: block;
