@@ -1,0 +1,26 @@
+{
+  "name": "grupo_2_bySedna",
+  "version": "1.0.0",
+  "description": "By Sedna es un emprendimiento con el objetivo de hacer trajes de baños únicos y de calidad. La idea de cada diseño es combinar la tendencia y versatilidad pudiendo darle a la prenda un uso extra en la cotidianidad.",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielgomez87/grupo_2_bySedna.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arielgomez87/grupo_2_bySedna/issues"
+  },
+  "homepage": "https://github.com/arielgomez87/grupo_2_bySedna#readme"
+}
