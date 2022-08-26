@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Roboto:wght@100;300;400;700&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 /*Abre Header*/
 .main-header{
@@ -69,19 +72,26 @@
     max-width: 100%;
 }
 .main-banner{
+    background-color: rgba(128, 128, 128, .5);
     text-align: center;
     width: 90%;
     margin: auto;
 }
 .banner-overlay{
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+} .main-banner:hover .img-slider{
+    opacity: 35%;
+
 }
-.banner-overlay :hover{
-    background-color: rgba(128, 128, 128, .5);
+.main-banner:hover .banner-overlay{
+    display: block;
 }
+
 @media (min-width:768px) {
     .search-bar{
         display: block;
