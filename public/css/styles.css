@@ -15,6 +15,7 @@
     max-width: 1200px;
     display: flex;
     justify-content: space-around;
+    margin: auto;
 }
 .hamburger-button{
     color: white;
@@ -68,14 +69,17 @@
 }
 /*Cierre Header*/
 
-.img{
-    max-width: 100%;
-}
 .main-banner{
-    background-color: rgba(128, 128, 128, .5);
-    text-align: center;
-    width: 90%;
     margin: auto;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.img-slider{
+    margin: auto;
+    width: 96%;
+    height: 50vh;
+    object-fit: cover;
 }
 .banner-overlay{
     display: none;
