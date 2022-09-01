@@ -309,6 +309,25 @@ a:link, a:visited, a:active {
     border: 1px solid black;
     padding: 2px;
 }
+
+
+/* Register*/
+
+.main-register{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
+}
+
+.input-register{
+    padding: 5px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    width: 300px;
+}
+
 .button-register{
     border: 1px solid black;
     padding: 2px;
@@ -352,4 +371,7 @@ a:link, a:visited, a:active {
         width: 99%;
     }
 
+    .input-register{
+        width: 99%;
+    }
 }
