@@ -93,13 +93,6 @@
     display: block;
 }
 
-@media (min-width:768px) {
-    .search-bar{
-        display: block;
-    }
-}
-
-
 /* footer */
 .bod{
     width: 100%;
@@ -319,4 +312,44 @@ a:link, a:visited, a:active {
 .button-register{
     border: 1px solid black;
     padding: 2px;
+}
+
+/*media query*/
+
+@media (min-width:769px) {
+    .search-bar{
+        display: block;
+    }   
+}
+
+@media (max-width:768px){
+    .main-login{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+
+    .input-login{
+        width: 80%;
+        padding: 4.5px;
+        margin: 4px 4px 4px 0;
+        border: 1px solid #bcbcbc;
+        border-radius: 5px;
+        text-align: center;
+    }
+    .form-login{
+        width: 99%;
+    }
+    
+    .register-from-login{
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+        margin-top: 25px;
+    }
+    
+    .text-register{
+        width: 99%;
+    }
+
 }
