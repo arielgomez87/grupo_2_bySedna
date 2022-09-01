@@ -14,26 +14,29 @@
     <header class="main-header">
         <%- include ("./partials/head") %> 
     </header>
-    <main>
-        <div class="main-login">
-     <h4>LogIn</h4>
-            <form class="form-login" action="./">
-                <input class="input-login"type="text" name="Nombre de usuari@" id="Nombre de usuari@" placeholder="Nombre de usuari@" required>
+    <main class="main-login">
+
+        <div class="form-login">
+            <form  action="./">
+                <h4>Login</h4>
+                <input class="input-login" type="text" name="Nombre de usuari@" id="Nombre de usuari@" placeholder="Nombre de usuari@" required>
                 <br>
                 <input class="input-login" type="password" name="Contraseña" id="Contraseña" placeholder="Contraseña" required>
                 <br>
-                <button class="boton-login" type="submit">Enviar</button>
+                <button class="button-login" type="submit">Enviar</button>
             </form>
-    
         </div>
 
-        <div class="crear-cuenta-desde-login">
+        <div class="register-from-login">
             <h4>Crear una cuenta</h4>
-            <p>Creando una cuenta con BySedna vas a poder comprar en nuestra tienda, gestionar tus pedidos y mucho mas.</p>
+            <p class="text-register">Creando una cuenta con BySedna vas a poder comprar en nuestra tienda, gestionar tus pedidos y mucho mas.</p>
             <br>
-                <button class="boton-login" type="submit">Crear cuenta</button>
+                <a href="/register"><button class="button-register" type="submit">Crear cuenta</button></a>
         </div>
         
     </main>
+    <footer>
+        <%- include ("./partials/footer") %>
+    </footer>
 </body>
 </html>

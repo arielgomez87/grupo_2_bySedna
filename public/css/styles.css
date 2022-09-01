@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 300;
 }
 /*Abre Header*/
@@ -30,23 +30,20 @@
     display: flex;
 }
 .search-bar{
-    color: white;
     display: none;
 }
-.search-bar input{
-    color: white;
-}
+
 .search-bar a{
     text-decoration: none;
-    color: white;
     font-size: 1.5em;
     margin: 5px;
 }
-::placeholder {
+
+.bar::placeholder{
     color: white;
-  }
+}
+
 .bar{
-    color: white;
     background-color: #AD8F8F;
     border: none;
     border-bottom: solid 2px white;
@@ -283,4 +280,43 @@
 
 a:link, a:visited, a:active {
     text-decoration:none;
+}
+
+/*login*/
+
+.main-login{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.form-login{
+    width: 30%;
+}
+
+.register-from-login{
+    width: 35%;
+    padding-left: 100px;
+}
+
+.input-login{
+    padding: 4.5px;
+    margin: 4px 4px 4px 0;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.text-register{
+    width: 100%;
+    margin: 0;
+}
+
+.button-login{
+    margin: 10px 10px 10px 0;
+    border: 1px solid black;
+    padding: 2px;
+}
+.button-register{
+    border: 1px solid black;
+    padding: 2px;
 }
