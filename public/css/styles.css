@@ -300,7 +300,7 @@ a:link, a:visited, a:active {
 }
 
 .text-register{
-    width: 100%;
+    width: 80%;
     margin: 0;
 }
 
@@ -332,6 +332,22 @@ a:link, a:visited, a:active {
     border: 1px solid black;
     padding: 2px;
 }
+
+.recuperarContraseña{
+    font-size: 14px;
+}
+
+.check-recordadUsuario{
+    font-size: 12px;
+}
+
+.check-recordadUsuario input{
+    vertical-align: bottom;
+    position: relative;
+    top: -3px;
+}
+
+
 
 /*media query*/
 

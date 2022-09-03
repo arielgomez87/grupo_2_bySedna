@@ -18,3 +18,5 @@ By Sedna es un emprendimiento con el objetivo de hacer trajes de baños únicos 
 <p> https://www.paolita.co.uk/
 <p> https://koalabay.com/es/
 <p> https://monrie.ru/
+
+Trello con el que nos organizamos: https://trello.com/invite/grupo2digitalhouse/99b198cd06e61942e16143b241866662
