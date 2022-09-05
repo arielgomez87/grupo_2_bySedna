@@ -545,12 +545,12 @@ a:link, a:visited, a:active {
 /*.images_position {
     
 }*/
-
-img {
+/* Revisar Esto */
+/* img {
     width: 24.75%;
     height: 408px;
     padding: 0;
-}
+} */
 
 .image_bottom-radius {
     border-radius: 0 0 50% 50%;
