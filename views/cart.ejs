@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Carrito de Compras</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="body_cart">
+    <header>
+        <%- include ("./partials/header") %>
+    </header>
+    <main>
+        <section>
+            <div class="user_cart">
+                <div class="user_cart-upper-section">
+                    <h3>TU CARRITO</h3>
+                    <nav class="nav_bar">
+                        <ul type="none" class="currency-selection">
+                            <li><a href="" class="currencies">ARS</a></li>
+                            <li><a href="" class="currencies">USD</a></li>
+                            <li><a href="" class="currencies">EUR</a></li>
+                            <li><a href="" class="currencies">GBP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <h2 class="user_cart-status">Tu carrito de compras está vacío.</h2>
+                <a href="/" style="text-decoration: none; color: black"><div class="user_cart-button-to-home">
+                    <p>Seguir buscando<i class="fas fa-long-arrow-alt-right" id="black-arrow"></i></p>
+                </a></div>
+            </div>
+        </section>
+    
+        <section class="products_viewed"><h3 class="title-section">Visto recientemente</h3>
+        </section>
+
+        <article class="post-purchasement">
+            <div class="shipping-returns"><a href="" style="text-decoration: none; color: black;">
+                <div class="shipping">ENVÍO
+                    <p>Realizamos envíos a todo el mundo y el envío global gratuito está disponible en pedidos superiores a 250 £. Lea aquí para más información.</p>
+                </div>
+            </div><a>
+            
+            <div class="shipping-returns"><a href="" style="text-decoration: none; color: black;">
+                <div class="returns">DEVOLUCIONES
+                    <p>Si no está completamente satisfecho con un artículo, le daremos un reembolso, siempre que nos lo devuelva dentro de los 21 días en su estado original. Lea nuestra política de devoluciones completa para obtener más información.
+                    </p>
+                </div>
+            </div></a>
+        </article>
+        
+        <section class="newsletter">
+            <div class="newsletter_text">¡Suscríbase a nuestro boletín informativo y reciba un 10% de descuento en su primer pedido!</div>
+            <div class="newsletter_form">
+                <form action="/cart" method="POST">
+                    <input type="email" name="email" placeholder="Email" class="newsletter_email-adress" required>
+                </form>
+                <p><a href="" style="text-decoration: none; color: black" class="newsletter_sign-up">Registrarse</a></p>
+            </div>
+        </section>
+
+        <section class="images">
+            <div class="images_position">
+                <img class="image_bottom-radius" src="./images/picture.png" alt="Imagen del producto">
+                <img class="image_upper-radius" src="./images/picture.png" alt="Imagen del producto">
+                <img class="image_complete-radius" src="./images/picture.png" alt="Imagen del producto">
+                <img src="./images/picture.png" alt="Imagen del producto">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <%- include ("./partials/footer") %>
+    </footer>
+</body>
+</html>
