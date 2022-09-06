@@ -93,6 +93,16 @@
     display: block;
 }
 
+.oferta{
+    background-color: thistle;
+}
+.product{
+    background-color: #d6f4e7;
+}
+.product-img{
+    padding: 1em;
+}
+
 /* footer */
 .main-footer{ /* Temporal */
     margin-top: 100px;
