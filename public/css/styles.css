@@ -94,9 +94,16 @@
 }
 
 .oferta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 95%;
     background-color: thistle;
 }
 .product{
+    max-width: 25%;
+    margin: 0.5em;
     background-color: #d6f4e7;
 }
 .product-img{
