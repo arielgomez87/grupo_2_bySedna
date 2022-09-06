@@ -27,6 +27,26 @@
         <button type="button" class="btn btn-light">Tienda</button>
       </div>
     </div>
+    <div>
+      <section class="oferta">
+          <% products.forEach(product => { %>
+            <div class=" product col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <div class="product-img">
+                <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
+              </div>
+              <div class="product-description">
+                <div class="product-title">
+                  <%= product.name %> 
+                </div>
+                <div class="product-price">
+                  <p>$ <%= product.price %></p>
+                </div>
+              </div>
+            </div>
+       <% }) %>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
