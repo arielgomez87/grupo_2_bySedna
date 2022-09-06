@@ -6,5 +6,5 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 //Routing
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/indexRoutes');
 app.use('/', indexRouter);
