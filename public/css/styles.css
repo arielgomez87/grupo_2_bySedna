@@ -565,20 +565,27 @@ a:link, a:visited, a:active {
     margin-top: 100px;
 }
 
-.images {
+.images_cart {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     border-bottom: solid 1px black;
+    margin-top: 18px;
+    padding-bottom: 18px;
 }
 
-/* Revisar Esto */
-/* img {
-    width: 24.75%;
+.images_cart-position {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image_bottom-radius, .image_upper-radius, .image_complete-radius, .image_normal {
+    width: 23.9%;
     height: 408px;
     padding: 0;
-} */
+} 
 
 .image_bottom-radius {
     border-radius: 0 0 50% 50%;
@@ -589,7 +596,7 @@ a:link, a:visited, a:active {
 }
 
 .image_complete-radius {
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 
