@@ -420,11 +420,12 @@ a:link, a:visited, a:active {
 .user_cart-upper-section {
     display: flex;
     justify-content: space-between;
-    margin-top: -15px;
+    margin-top: 5px;
 }
 
 .user_cart-upper-section h3{
     font-weight: 400;
+    font-size: 18px;
 }
 
 .nav_bar {
@@ -441,24 +442,29 @@ a:link, a:visited, a:active {
 
 .currencies {
     color: black;
-    font-weight: 400;
     text-decoration: none;
 }
 
 .currencies:visited {
     color: black;
-    font-weight: bold;
+    font-weight: 400;
     text-decoration: none;
 }
 
 .user_cart-status {
-    font-size: 62px;
+    font-size: 54px;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .user_cart-button-to-home {
     width: 243.2px;
+    margin-top: 60px;
+}
+
+.user_cart-button-to-home p {
+    font-size: 15px;
+    padding: 16px 0;
 }
 
 .products_viewed {
@@ -493,18 +499,18 @@ a:link, a:visited, a:active {
 }
 
 .shipping p, .returns p {
-    font-weight: 400;
+    font-weight: 0;
     font-size: 15px;
     line-height: 1.5;
     max-width: 78%;
 }
 
 .shipping p {
-    margin-top: 85px;
+    margin-top: 75px;
 }
 
 .returns p {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .newsletter {
@@ -516,13 +522,14 @@ a:link, a:visited, a:active {
 }
 
 .newsletter_text {
-    font-size: 34px;
+    font-size: 32px;
     text-align: center;
     line-height: 1.2;
-    width: 674px;
+    width: 795px;
     height: 91.2px;
     margin: auto;
     padding: 80px 0 0 0;
+    font-weight: 400;
     
 }
 
@@ -532,7 +539,7 @@ a:link, a:visited, a:active {
     width: 40%;
     border-bottom: solid 1px black;
     margin: auto;
-    padding-top: 150px;
+    padding-top: 162px;
 }
 
 .newsletter_email-adress {
@@ -543,50 +550,55 @@ a:link, a:visited, a:active {
     padding: 0;
     width: 330px;
     outline: none;
-    margin-top: 16px;
+    margin-top: 0px;
+    background-color: #bdd7f0;
 }
 
 .newsletter_email-adress:focus {
     background-color: #bdd7f0;
     border: none;
     padding: none;
-    font-weight: 400;
+    font-weight: 200;
+    font-size: 14px;
 }
 
 .newsletter_sign-up {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     padding: 0;
 }
 
-.newsletter_sign-up::placeholder {
+.newsletter_email-adress::placeholder {
     color: black;
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 400;
+    font-weight: 200;
+    font-size: 16px;
     background-color: #bdd7f0;
     border: none;
     padding: 0;
     margin-top: 100px;
-    border-top: solid 1px #bdd7f0;
 }
 
-.images {
+.images_cart {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     border-bottom: solid 1px black;
+    margin-top: 18px;
+    padding-bottom: 18px;
 }
 
-/*.images_position {
-    
-}*/
-/* Revisar Esto */
-/* img {
-    width: 24.75%;
+.images_cart-position {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.image_bottom-radius, .image_upper-radius, .image_complete-radius, .image_normal {
+    width: 23.9%;
     height: 408px;
     padding: 0;
-} */
+} 
 
 .image_bottom-radius {
     border-radius: 0 0 50% 50%;
@@ -597,7 +609,7 @@ a:link, a:visited, a:active {
 }
 
 .image_complete-radius {
-    border-radius: 50%;
+    border-radius: 30%;
 }
 
 
