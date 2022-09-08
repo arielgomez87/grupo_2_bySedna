@@ -30,7 +30,7 @@
     <div>
       <section class="oferta">
           <% products.forEach(product => { %>
-            <div class=" product col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="product-img">
                 <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
               </div>
@@ -45,6 +45,23 @@
             </div>
        <% }) %>
         </div>
+      </section>
+    </div>
+    <div>
+      <section class="temporada">
+        <% products.forEach(product => { %>
+          <div class=" product-temporada col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class="product-img">
+              <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
+            </div>
+            <div class="product-description">
+              <div class="product-title mx-auto">
+                <p style="text-align: center; "><%= product.name %> </p>
+              </div>
+            </div>
+          </div>
+     <% }) %>
+      </div>        
       </section>
     </div>
   </main>

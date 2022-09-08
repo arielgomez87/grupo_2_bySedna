@@ -101,8 +101,21 @@
     width: 95%;
     background-color: thistle;
 }
-.product{
-    max-width: 25%;
+.temporada{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 95%;
+    background-color: thistle;
+}
+.product-oferta{
+    max-width: 23%;
+    margin: 0.5em;
+    background-color: #d6f4e7;
+}
+.product-temporada{
+    max-width: 45%;
     margin: 0.5em;
     background-color: #d6f4e7;
 }
