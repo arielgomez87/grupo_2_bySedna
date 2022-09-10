@@ -8,3 +8,6 @@ app.use(express.static('public'));
 //Routing
 const indexRouter = require('./routes/indexRoutes');
 app.use('/', indexRouter);
+
+const productRouter = require('./routes/productRoutes');
+app.use('/products', productRouter);

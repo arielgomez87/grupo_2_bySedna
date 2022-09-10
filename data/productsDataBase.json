@@ -1,57 +1,57 @@
 [
     {
      "id": 1,
-     "name": "Cafetera Moulinex Dolce Gusto Edited",
-     "price": "3500",
+     "name": "GALENE AVELLANA",
+     "price": "3190",
      "discount": "10",
      "size": "",
      "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-     "img": "MZA07740.jpg"
+     "img": "MZA07721.jpg"
     },
     {
         "id": 2,
-        "name": "Cafetera Moulinex Dolce Gusto Edited",
-        "price": "3500",
+        "name": "AGATA",
+        "price": "3900",
         "discount": "10",
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "img": "MZA07740.jpg"
+        "img": "MZA07582.jpg"
        },
        {
         "id": 3,
-        "name": "Cafetera Moulinex Dolce Gusto Edited",
-        "price": "3500",
+        "name": "AMATISTA",
+        "price": "4400",
         "discount": "10",
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "img": "MZA07740.jpg"
+        "img": "MZA07513.jpg"
        },
        {
         "id": 4,
-        "name": "Cafetera Moulinex Dolce Gusto Edited",
-        "price": "3500",
+        "name": "OBSIDIANA",
+        "price": "4400",
         "discount": "10",
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "img": "MZA07740.jpg"
+        "img": "MZA07653.jpg"
        },
        {
         "id": 5,
-        "name": "Cafetera Moulinex Dolce Gusto Edited",
+        "name": "ESMERALDA",
         "price": "3500",
         "discount": "10",
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "img": "MZA07740.jpg"
+        "img": "MZA07553.jpg"
        },
        {
         "id": 6,
-        "name": "Cafetera Moulinex Dolce Gusto Edited",
+        "name": "PANDORA",
         "price": "3500",
         "discount": "10",
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "img": "MZA07740.jpg"
+        "img": "MZA07614.jpg"
        },
        {
         "id": 7,
@@ -60,7 +60,7 @@
         "discount": "10",
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-        "img": "MZA07740.jpg"
+        "img": "MZA07710.jpg"
        },
        {
         "id": 8,
@@ -70,5 +70,5 @@
         "size": "",
         "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
         "img": "MZA07740.jpg"
-       }
+       }     
 ]

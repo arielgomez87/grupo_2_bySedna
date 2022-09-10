@@ -29,40 +29,47 @@
     </div>
     <div>
       <section class="oferta">
-          <% products.forEach(product => { %>
-            <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+        <% products.forEach(product=> { %>
+          <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <a href="/products/detail/<%= product.id %> ">
               <div class="product-img">
                 <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
               </div>
               <div class="product-description">
                 <div class="product-title">
-                  <%= product.name %> 
+                  <%= product.name %>
                 </div>
                 <div class="product-price">
-                  <p>$ <%= product.price %></p>
+                  <p>$ <%= product.price %>
+                  </p>
                 </div>
               </div>
-            </div>
-       <% }) %>
-        </div>
-      </section>
+            </a>
+          </div>
+          <% }) %>
+    </div>
+    </section>
     </div>
     <div>
       <section class="temporada">
-        <% products.forEach(product => { %>
+        <% products.forEach(product=> { %>
           <div class=" product-temporada col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <div class="product-img">
-              <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
-            </div>
-            <div class="product-description">
-              <div class="product-title mx-auto">
-                <p style="text-align: center; "><%= product.name %> </p>
+            <a href="/products/detail/<%= product.id %> ">
+              <div class="product-img">
+                <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
               </div>
-            </div>
+              <div class="product-description">
+                <div class="product-title mx-auto">
+                  <p style="text-align: center; ">
+                    <%= product.name %>
+                  </p>
+                </div>
+              </div>
+            </a>
           </div>
-     <% }) %>
-      </div>        
-      </section>
+          <% }) %>
+    </div>
+    </section>
     </div>
   </main>
 

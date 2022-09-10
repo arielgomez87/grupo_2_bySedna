@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include ("./partials/head") %>
+</head>
+
+<body>
+    <header>
+        <%- include ("./partials/header") %>
+    </header>
+    <main>
+
+        <div>
+            <section class="oferta">
+                <% products.forEach(product=> { %>
+                    <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <a href="/products/detail/<%= product.id %> ">
+                        <div class="product-img">
+                            <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris"
+                                class="img-product">
+                        </div>
+                        <div class="product-description">
+                            <div class="product-title">
+                                <%= product.name %>
+                            </div>
+                            <div class="product-price">
+                                <p>$ <%= product.price %>
+                                </p>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+                    <% }) %>
+        </div>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <%- include ("./partials/footer") %>
+    </footer>
+
+</body>
+
+</html>
