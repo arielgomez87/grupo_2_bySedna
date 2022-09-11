@@ -2,44 +2,54 @@
 <html lang="es">
 
 <head>
-  <%- include ("./partials/head", {title: 'Detalle del producto'}) %>
+  <%- include ("./partials/head", {title: 'Detalle del producto' }) %>
 </head>
 
 <body>
   <header>
     <%- include ("./partials/header") %>
   </header>
-<main>
+  <main>
     <div>
-        <section >
-                <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div class="product-img">
-                        <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris"
-                            class="img-product">
-                    </div>
-                    <div class="product-description">
-                        <div class="product-title">
-                            <%= product.name %>
-                        </div>
-                        <div class="product-price">
-                            <p>$ <%= product.price %>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <section>
+        <div class="product-detail">
+
+          <div class="product-description-full-content">
+            <div class="product-title-detail">
+              <%= product.name %>
+            </div>
+            <div class="product-description-detail">
+              <%= product.description %>
+            </div>
+            <div class="product-price-detail">
+              <p>$ <%= product.price %>
+              </p>
+            </div>
+            <div class="product-discount-detail">
+              <p>Descuento <%= product.discount %>%
+              </p>
+            </div>
+            <label for="talle">Talle:</label>
+            <select name="talle">
+              <option value="talleS">S</option>
+              <option value="talleM" selected>M</option>
+              <option value="talleL">L</option>
+              <option value="talleXL">XL</option>
+            </select>
+            <a href="#" class="buy-button">COMPRAR</a>
+          </div>
+          <div class="product-img-detail">
+            <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
+          </div>
+        </div>
     </div>
     </section>
     </div>
-descripcion
-precio
-talle
-nombre
-imagen
-Boton de agregar al carrito
 
-</main>
 
-<footer>
+  </main>
+
+  <footer>
     <%- include ("./partials/footer") %>
   </footer>
 

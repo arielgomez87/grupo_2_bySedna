@@ -101,6 +101,9 @@
     width: 95%;
     background-color: thistle;
 }
+.oferta a, .temporada a{
+    color: #7a7a7a;
+} 
 .temporada{
     display: flex;
     justify-content: space-around;
@@ -611,8 +614,37 @@ a:link, a:visited, a:active {
 .image_complete-radius {
     border-radius: 30%;
 }
+/* Detail*/
 
-
+.product-detail{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.product-title-detail{
+    font-size: 30px;
+}
+.product-description-full-content{
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+}
+.product-price-detail{
+font-size: 25px;
+}
+.product-discount-detail{
+    font-size: 17px;
+}
+.product-img-detail{
+    width: 30%;
+}
+.buy-button{
+    background-color: var(--light-blue);
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
 
 /*media query*/
 
