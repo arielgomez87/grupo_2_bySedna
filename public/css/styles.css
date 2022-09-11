@@ -128,7 +128,7 @@
 
 /* footer */
 .main-footer{ /* Temporal */
-    margin-top: 100px;
+    margin-top: 50px;
     border: dotted 4px blueviolet;
 }
 
@@ -319,7 +319,8 @@ a:link, a:visited, a:active {
 .main-login{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 60px;
 }
 .form-login{
     width: 30%;
@@ -346,7 +347,15 @@ a:link, a:visited, a:active {
 .button-login{
     margin: 10px 10px 10px 0;
     border: 1px solid black;
-    padding: 2px;
+    padding: 7px;
+    border: none;
+    background-color: #AD8F8F;
+    border-radius: 5px;
+}
+
+.button-login:hover{
+   color: white;
+   opacity: 0.8;
 }
 
 
@@ -369,8 +378,15 @@ a:link, a:visited, a:active {
 
 .button-register{
     border: 1px solid black;
-    padding: 2px;
+    padding: 7px;
+    border: none;
+    background-color: #AD8F8F;
+    border-radius: 5px;
 }
+.button-register:hover{
+    color: white;
+    opacity: 0.8;
+ }
 
 .recuperarContraseña{
     font-size: 14px;
@@ -614,12 +630,14 @@ a:link, a:visited, a:active {
 .image_complete-radius {
     border-radius: 30%;
 }
+
 /* Detail*/
 
 .product-detail{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 50px;
 }
 .product-title-detail{
     font-size: 30px;
@@ -628,6 +646,11 @@ a:link, a:visited, a:active {
     display:flex;
     flex-direction: column;
     width: 30%;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+.product-description-detail{
+    margin-bottom: 20px;
 }
 .product-price-detail{
 font-size: 25px;
@@ -639,12 +662,15 @@ font-size: 25px;
     width: 30%;
 }
 .buy-button{
-    background-color: var(--light-blue);
   font-size: 14px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin: 20px 0px;
+  width: 30%;
+  border: none;
+  background-color: #AD8F8F;
 }
+/*Fin Detail*/
 
 /*media query*/
 
