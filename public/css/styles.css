@@ -9,6 +9,9 @@
 /*Abre Header*/
 .main-header{
     background-color: #AD8F8F;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
 }
 .top-bar{
     align-items: center;
@@ -65,34 +68,42 @@
     color: white;
 }
 /*Cierre Header*/
-
 .main-banner{
     margin: auto;
     text-align: center;
     width: 100%;
     margin: auto;
+    padding-top: 80px;
+}
+.hero{
+    width: 96%;
+    margin: auto;
+}
+.hero video{
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
 }
 .img-slider{
     margin: auto;
     width: 96%;
-    height: 50vh;
+    height: 0vh;
     object-fit: cover;
 }
 .banner-overlay{
-    display: none;
+    transition:5s;
+    color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-} .main-banner:hover .img-slider{
-    opacity: 35%;
-
-}
-.main-banner:hover .banner-overlay{
-    display: block;
 }
 
+.banner-overlay p{
+    font-weight: 400;
+    font-size: 2em;
+}
 .oferta{
     display: flex;
     justify-content: center;
@@ -150,7 +161,7 @@
 }
 
 .contact-in{
-    width: 80%;
+    width: 100%;
     height: auto;
     margin: auto;
     display: flex;
@@ -412,7 +423,7 @@ a:link, a:visited, a:active {
 /* Cart */
 
 .body_cart {
-    width: 1229.2px;
+    width: 100%;
     /*padding: 0 8.5px;*/
     margin: auto;
 }
@@ -616,11 +627,12 @@ a:link, a:visited, a:active {
 .images_cart-position {
     width: 100%;
     display: flex;
+    flex-wrap: no-wrap;
     justify-content: space-between;
 }
 
 .image_bottom-radius, .image_upper-radius, .image_complete-radius, .image_normal {
-    width: 23.9%;
+    max-width: 23.9%;
     height: 408px;
     padding: 0;
 } 
