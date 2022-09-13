@@ -99,11 +99,43 @@
     transform: translate(-50%, -50%);
 
 }
-
 .banner-overlay p{
     font-weight: 400;
     font-size: 2em;
 }
+.vistoEn{
+    background-color: antiquewhite;
+    width: 96%;
+    padding: 2em;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.vistoEn-img{
+    width: 50%;
+    padding: 2em;
+}
+.vistoEn-text{
+    width: 50%;
+}
+.vistoEn-products{
+    font-weight: 400;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.vistoEn-product-img01{
+    width: 95%;
+    border-radius: 45% 45% 45% 45%;
+}
+.vistoEn-product-img02{
+    width: 95%;
+    border-radius: 50% 50% 0 0;
+}
+
+
 .oferta{
     display: flex;
     justify-content: center;
