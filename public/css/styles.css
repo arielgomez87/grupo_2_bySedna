@@ -109,14 +109,15 @@
     padding: 2em;
     margin: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .vistoEn-img{
-    width: 50%;
+    width: 100%;
     padding: 2em;
 }
 .vistoEn-text{
-    width: 50%;
+    width: 100%;
 }
 .vistoEn-products{
     font-weight: 400;
@@ -159,7 +160,7 @@
     flex-wrap: wrap;
     margin: auto;
     width: 95%;
-    background-color: thistle;
+    background-color:;
 }
 .product-oferta{
     max-width: 23%;
@@ -178,7 +179,6 @@
 /* footer */
 .main-footer{ /* Temporal */
     margin-top: 50px;
-    border: dotted 4px blueviolet;
 }
 
 .bod{
@@ -368,7 +368,7 @@ a:link, a:visited, a:active {
 .main-login{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    padding-top: 120px;
     margin-bottom: 60px;
 }
 .form-login{
@@ -416,6 +416,8 @@ a:link, a:visited, a:active {
     flex-direction: column;
     text-align: center;
     margin: 50px;
+    margin-top: 0;
+    padding-top: 130px;
 }
 
 .input-register{
@@ -772,4 +774,21 @@ font-size: 25px;
         width: 70%;
         align-self: center;
     }
+}
+
+@media (min-width:768px) {
+    
+    /* Home */
+    .vistoEn{
+        flex-direction: row;
+    }
+    .vistoEn-img{
+        width: 50%;
+        padding: 2em;
+    }
+    .vistoEn-text{
+        width: 50%;
+    }
+
+    /* Cierra Home */
 }
