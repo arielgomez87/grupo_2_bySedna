@@ -144,6 +144,7 @@
     margin: auto;
     width: 95%;
     background-color: thistle;
+    padding-top: 80px;
 }
 .oferta a, .temporada a{
     color: #4b4b4b;
@@ -160,7 +161,6 @@
     flex-wrap: wrap;
     margin: auto;
     width: 95%;
-    background-color:;
 }
 .product-oferta{
     max-width: 23%;
@@ -415,9 +415,8 @@ a:link, a:visited, a:active {
     flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
-    margin: 50px;
+    padding-top: 100px;
     margin-top: 0;
-    padding-top: 130px;
 }
 
 .input-register{
@@ -689,7 +688,7 @@ a:link, a:visited, a:active {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 50px;
+    padding-top: 80px;
 }
 .product-title-detail{
     font-size: 30px;
