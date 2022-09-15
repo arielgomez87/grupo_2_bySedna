@@ -688,12 +688,7 @@ a:link, a:visited, a:active {
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-<<<<<<< HEAD
-    padding-top: 140px;
-
-=======
     padding-top: 80px;
->>>>>>> dc3e851e4ede8dd58caa9fcb921a5ffc1a0021da
 }
 .product-title-detail{
     font-size: 30px;
