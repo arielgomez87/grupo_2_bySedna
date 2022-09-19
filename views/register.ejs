@@ -12,9 +12,9 @@
 
     <main class="main-register">
         <h4>Crear cuenta</h4>
-        <form class="form-register" action="/register" method="POST">
+        <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
             <div>
-                <input class="input-register" type="text" name="Nombre y apellido" id="Nombre y apellido"
+                <input class="input-register" type="text" name="name" id="Nombre y apellido"
                     placeholder="Nombre y apellido" required>
             </div>
             <br>
@@ -37,13 +37,13 @@
             </div>
             <br>
             <div>
-                <input class="input-register" type="password" name="Contraseña" id="Contraseña" placeholder="Contraseña"
+                <input class="input-register" type="password" name="password" id="Contrasena" placeholder="Contraseña"
                     required>
                 <br>
             </div>
             <br>
             <div>
-                <input class="input-register" type="password" name="Confirmar Contraseña" id="Confirmar Contraseña"
+                <input class="input-register" type="password" name="Confirmar Contrasena" id="Confirmar Contrasena"
                     placeholder="Confirmar Contraseña" required>
                 <br>
             </div>

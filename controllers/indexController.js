@@ -6,11 +6,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const indexController = {
     home: (req,res)=>
-        res.render('home', {products}),
-    login: (req, res)=>
-        res.render('login'),
-    register: (req, res)=>
-        res.render('register'),
+        res.render('home' , {products}),
     cart: (req, res) => {
         res.render('cart');
     }   

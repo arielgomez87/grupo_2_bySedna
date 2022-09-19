@@ -1,0 +1,32 @@
+[
+ {
+  "name": "martin jagodnik",
+  "email": "jagodnikmartin@gmail.com",
+  "password": "$2a$10$ExVqN029WdtdUjMcEsKOdOKCNerH5sbVjRhWQ6Y9lgyBbHXomeyJa",
+  "image": "avatar-1663027388559.png"
+ },
+ {
+  "name": "Martin",
+  "email": "ljagod@gmail.com",
+  "password": "$2a$10$Nm5yfAr/q2RNhWTqTaqFsuNUtk61eOFIWdACa51v6azCJRQCwJ9HC",
+  "image": "avatar-1663028821791.png"
+ },
+ {
+  "Nombre y apellido": "Nicolas",
+  "Nombre de usuari@": "Niqloma",
+  "Domicilio": "Av Santa Fe 2300",
+  "email": "nicolomanto@gmail.com",
+  "telefono": "1153384697",
+  "ContraseÃ±a": "123546",
+  "Confirmar ContraseÃ±a": "123456"
+ },
+ {
+  "name": "fghfgh",
+  "Nombre de usuari@": "fghfgh",
+  "Domicilio": "fghfgh",
+  "email": "fghfghfghf@dsfdff.com",
+  "telefono": "sdfsdf",
+  "password": "123",
+  "Confirmar Contrasena": "123"
+ }
+]
