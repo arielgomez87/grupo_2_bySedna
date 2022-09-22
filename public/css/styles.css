@@ -176,6 +176,13 @@
     padding: 1em;
 }
 
+.imagen404 img{
+    display: block;
+    margin: 0px auto;
+    width: 45%;
+    height: 45%;
+}
+
 /* footer */
 .main-footer{ /* Temporal */
     margin-top: 50px;
@@ -362,6 +369,25 @@
 a:link, a:visited, a:active {
     text-decoration:none;
 }
+
+/*Creador*//*Editor*/
+.mainCreate, .mainEdit{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 100px;
+}
+
+
+.form-input{
+    padding: 4.5px;
+    margin: 4px 4px 4px 0;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
+    width: 100%;
+}
+
 
 /*login*/
 

@@ -36,6 +36,11 @@
               <option value="talleL">L</option>
               <option value="talleXL">XL</option>
               <a href="#"><input class="buy-button" type="button" value="COMPRAR"></a>
+
+              <a href="/products/edit/<%= product.id %>" class="editar-product">EDITAR PRODUCTO</a>
+						<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+							<button type="submit" class="delete-product">ELIMINAR</button>
+						</form>
             </select>
           </div>
           <div class="product-img-detail">

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include ("./partials/head", {title: 'Edicion del producto' }) %>
+</head>
+
+<body>
+
+  <header>
+    <%- include ("./partials/header") %>
+  </header>
+
+  <main class="mainEdit">
+
+    <div>
+      <h3>Estas por editar: </h3>
+    </div>
+    <br>
+    <form action="/products/?_method=PUT" method="POST">
+      <div>
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre" class="form-input">
+      </div>
+      <br>
+      <div>
+        <label for="precio">Precio: </label>
+        <input type="text" id="precio" name="precio" class="form-input">
+      </div>
+      <br>
+      <div>
+        <label for="descuento">Descuento: </label>
+        <input type="text" id="descuento" name="descuento" class="form-input">
+      </div>
+      <br>
+      <div>
+        <label for="talle">Talle:</label>
+        <select name="talle" id="talle" class="form-input">
+          <option value="talleS">S</option>
+          <option value="talleM" selected>M</option>
+          <option value="talleL">L</option>
+          <option value="talleXL">XL</option>
+          </select>
+      </div>
+      <br>
+      <div>
+        <label for="description" class="form-label">Descripción: </label>
+						<textarea name="description" id="description" class="form-input">  </textarea>
+      </div>
+      <br>
+      <div>
+        <button type="submit" class="buy-now-button">Editar producto</button>
+      </div>
+    </form>
+
+  </main>
+
+  <footer>
+    <%- include ("./partials/footer") %>
+  </footer>
+
+</body>
+
+
+</html>

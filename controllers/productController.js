@@ -13,6 +13,27 @@ const productController = {
 		let product = products.find(oneProduct => oneProduct.id == id);
 		res.render("productDetail", {product})
 	},
+
+	create: (req, res) => {
+		res.render("productCreate")
+	},
+
+	store: (req, res) =>{
+		res.render("productCreate")
+	},
+
+	edit: (req, res) =>{
+		res.render("productEdit")
+	},
+
+	update: (req, res) =>{
+		res.render("productCreate")
+	},
+
+	destroy: (req, res) =>{
+		res.render("productCreate")
+	}
+
 }
 
 module.exports = productController;
