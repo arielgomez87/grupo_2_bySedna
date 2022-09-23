@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include ("./partials/head", {title: 'Detalle del producto' }) %>
+  <%- include ("./partials/head", {title: "Detalle de "+ product.name+ " "}) %>
 </head>
 
 <body>
@@ -29,12 +29,12 @@
               <p>Descuento <%= product.discount %>%
               </p>
             </div>
-            <label for="talle">Talle:</label>
-            <select name="talle">
-              <option value="talleS">S</option>
-              <option value="talleM" selected>M</option>
-              <option value="talleL">L</option>
-              <option value="talleXL">XL</option>
+            <label for="size">Talle:</label>
+            <select name="size">
+              <option value="sizeS">S</option>
+              <option value="sizeM" selected>M</option>
+              <option value="sizeL">L</option>
+              <option value="sizeXL">XL</option>
               <a href="#"><input class="buy-button" type="button" value="COMPRAR"></a>
 
               <a href="/products/edit/<%= product.id %>" class="editar-product">EDITAR PRODUCTO</a>
@@ -44,7 +44,7 @@
             </select>
           </div>
           <div class="product-img-detail">
-            <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
+            <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
           </div>
         </div>
     </div>

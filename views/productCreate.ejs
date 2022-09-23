@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include ("./partials/head", {title: 'Detalle del producto' }) %>
+  <%- include ("./partials/head", {title: 'Creacion del producto ' }) %>
 </head>
 
 <body>
@@ -20,36 +20,37 @@
           <h3>Formulario de Creacion: </h3>
         </div>
         <br>
-        <form action="/products/?_method=PUT" method="POST">
+                  <!--importante para que se carguen las imagenes el method y el enctype-->
+        <form action="/products/" method="POST" enctype="multipart/form-data"> 
           <div>
-            <label for="nombre">Nombre: </label>
-            <input type="text" id="nombre" name="nombre" class="form-input">
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" name="name" class="form-input">
           </div>
           <br>
           <div>
-            <label for="precio">Precio: </label>
-            <input type="text" id="precio" name="precio" class="form-input">
+            <label for="price">Precio: </label>
+            <input type="text" id="price" name="price" class="form-input">
           </div>
           <br>
           <div>
-            <label for="descuento">Descuento:</label>
-            <input type="text" id="descuento" name="descuento" class="form-input">
+            <label for="discount">Descuento:</label>
+            <input type="text" id="discount" name="discount" class="form-input">
           </div>
           <br>
           <div>
-						<label for="talle" >Talle:</label>
-						<select name="talle" id="talle" class="form-input" class="form-input">
+						<label for="size" >Talle:</label>
+						<select name="size" id="size" class="form-input" class="form-input">
 							<option value="">Elegí</option>
-							<option value="talleS">S</option>
-							<option value="talleM">M</option>
-              <option value="talleL">L</option>
-							<option value="talleXL">XL</option>
+							<option value="sizeS">S</option>
+							<option value="sizeM">M</option>
+              <option value="sizeL">L</option>
+							<option value="sizeXL">XL</option>
 						</select>
 					</div>
           <br>
-          <div class="col-12 col-md-6">
-            <label for="image">Imagen:</label>
-            <input type="file" name="image">
+          <div>
+            <label for="product-image">Imagen:</label>
+            <input type="file" name="product-image">
           </div>
           <br>
           <div>

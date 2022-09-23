@@ -8,7 +8,7 @@ var multerStorage = multer.diskStorage({
     destination: (req, file, cb)=>{
         cb(null, "public/images/products")
     },
-    filename: (req, file, cd) =>{
+    filename: (req, file, cb) =>{
         cb( null, "img-" + Date.now() + path.extname(file.originalname))
     }
 });
@@ -25,7 +25,7 @@ router.get("/detail/:id", productController.details);
 //muestra el fomrulario de creacion
 router.get("/create", productController.create );
 //recibe los datos del formulario de creacion
-router.post("/", upload.single("image"), productController.store);
+router.post("/", upload.single("product-image"), productController.store);
 
 //ruta par Editar producto
 //ruta que muestra el editor con los datos a completar

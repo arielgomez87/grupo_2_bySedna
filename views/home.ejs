@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include ("./partials/head") %>
+  <%- include ("./partials/head", {title: 'Bienvenidos a ' }) %>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
           <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <a href="/products/detail/<%= product.id %> ">
               <div class="product-img">
-                <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
+                <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
               </div>
               <div class="product-description">
                 <div class="product-title">
@@ -71,7 +71,7 @@
           <div class=" product-temporada col-lg-4 col-md-6 col-sm-6 col-xs-12">
             <a href="/products/detail/<%= product.id %> ">
               <div class="product-img">
-                <img class="img-fluid" src="/images/products/<%= product.img %> " alt="Bikini Gris" class="img-product">
+                <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
               </div>
               <div class="product-description">
                 <div class="product-title mx-auto">
