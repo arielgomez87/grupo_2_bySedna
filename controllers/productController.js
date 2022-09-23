@@ -40,13 +40,35 @@ const productController = {
 		res.render("productEdit" ,{product})
 	},
 
-	//update: (req, res) =>{
-	//	let id = req.params.id
-	//	let productToEdit = products.find
-	//},
+	update: (req, res) =>{
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
 
-	destroy: (req, res) =>{
-		res.render("productCreate")
+			productToEdit = {
+				id: productToEdit.id,
+				...req.body,
+				image: productToEdit.image
+			};
+
+		let newProducts = products.map(product => {
+			if (product.id == productToEdit.id){
+				return product = {...productToEdit}
+			}
+			return product;
+		})
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
+		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); //PROVISORIO//
+		res.redirect("/products/")
+		},
+
+	destroy: (req, res) =>{{
+		let id = req.params.id
+		let finalProducts = products.filter(product => product.id != id)
+		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
+		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); //PROVISORIO//
+		res.redirect("/products/");
+	}
 	}
 
 }

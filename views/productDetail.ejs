@@ -35,17 +35,22 @@
               <option value="sizeM" selected>M</option>
               <option value="sizeL">L</option>
               <option value="sizeXL">XL</option>
-              <a href="#"><input class="buy-button" type="button" value="COMPRAR"></a>
-
-              <a href="/products/edit/<%= product.id %>" class="editar-product">EDITAR PRODUCTO</a>
-						<form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-							<button type="submit" class="delete-product">ELIMINAR</button>
-						</form>
             </select>
+              <a href="#"><input class="buy-button" type="button" value="COMPRAR"></a>
+            
+            <div>
+              <a href="/products/edit/<%= product.id %>"><input type="submit" class="editar-product" value="EDITAR"> </a>
+            </div>
+
+              <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                <input type="submit" class="delete-product" value="ELIMINAR"></input>
+              </form>
+            
           </div>
           <div class="product-img-detail">
             <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
           </div>
+          
         </div>
     </div>
     </section>

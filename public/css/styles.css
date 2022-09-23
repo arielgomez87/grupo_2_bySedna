@@ -388,6 +388,17 @@ a:link, a:visited, a:active {
     width: 100%;
 }
 
+.delete-product, .editar-product{
+    font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0px;
+  width: 30%;
+  border: none;
+  background-color: rgb(134, 106, 106);
+
+}
+
 
 /*login*/
 

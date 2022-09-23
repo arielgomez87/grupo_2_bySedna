@@ -11,10 +11,10 @@
  {
   "id": 2,
   "name": "AGATA",
-  "price": "3900",
+  "price": "4400",
   "discount": "10",
-  "size": "",
-  "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos.",
+  "size": "sizeM",
+  "description": "  Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos.  ",
   "image": "MZA07582.jpg"
  },
  {
@@ -46,16 +46,7 @@
  },
  {
   "id": 6,
-  "name": "PANDORA",
-  "price": "3500",
-  "discount": "10",
-  "size": "",
-  "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos.",
-  "image": "MZA07614.jpg"
- },
- {
-  "id": 7,
-  "name": "Cafetera Moulinex Dolce Gusto Edited",
+  "name": "ONYX",
   "price": "3500",
   "discount": "10",
   "size": "",
@@ -63,12 +54,40 @@
   "image": "MZA07710.jpg"
  },
  {
-  "id": 8,
-  "name": "Cafetera Moulinex Dolce Gusto Edited",
+  "id": 7,
+  "name": "HOWLITA",
   "price": "3500",
   "discount": "10",
-  "size": "",
-  "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos.",
+  "size": "sizeM",
+  "description": " Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos. ",
+  "image": "MZA07614.jpg"
+ },
+ {
+  "id": 8,
+  "name": "ULEXITA",
+  "price": "3500",
+  "discount": "10",
+  "size": "sizeM",
+  "description": " Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos. ",
+  "image": "MZA07740.jpg"
+ }
+ ,
+ {
+  "id": 9,
+  "name": "ULEXITA",
+  "price": "3500",
+  "discount": "10",
+  "size": "sizeM",
+  "description": " Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos. ",
+  "image": "MZA07740.jpg"
+ },
+ {
+  "id": 10,
+  "name": "ULEXITA",
+  "price": "3500",
+  "discount": "10",
+  "size": "sizeM",
+  "description": " Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum ultricies risus at tempus lacus ridiculus metus felis. Nulla egestas dictumst eu arcu eros quis ligula platea semper ante, duis augue est elementum neque leo curae fusce himenaeos. ",
   "image": "MZA07740.jpg"
  }
 ]
