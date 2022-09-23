@@ -13,7 +13,7 @@ var multerStorage = multer.diskStorage({
     }
 });
 
-var upload = multer({multerStorage: storage})
+var upload = multer({storage: multerStorage})
 
 /* ruta a todos los productos */
 router.get("/", productController.products);
