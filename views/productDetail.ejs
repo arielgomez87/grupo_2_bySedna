@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include ("./partials/head", {title: "Detalle de "+ product.name+ " "}) %>
+  <%- include ("./partials/head", {title: "Detalle de " + product.name+ " " }) %>
 </head>
 
 <body>
@@ -36,21 +36,23 @@
               <option value="sizeL">L</option>
               <option value="sizeXL">XL</option>
             </select>
-              <a href="#"><input class="buy-button" type="button" value="COMPRAR"></a>
-            
-            <div>
-              <a href="/products/edit/<%= product.id %>"><input type="submit" class="editar-product" value="EDITAR"> </a>
-            </div>
-
-              <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
-                <input type="submit" class="delete-product" value="ELIMINAR"></input>
-              </form>
+            <a href="#"><input class="buy-button" type="button" value="COMPRAR"></a>
             
           </div>
           <div class="product-img-detail">
             <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
+            <div class="div-BottonEditAndDelete">
+              <div>
+                <a href="/products/edit/<%= product.id %>"><input type="submit" class="editar-product" value="EDITAR">
+                </a>
+              </div>
+
+              <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+                <input type="submit" class="delete-product" value="ELIMINAR"></input>
+              </form>
+            </div>
           </div>
-          
+
         </div>
     </div>
     </section>

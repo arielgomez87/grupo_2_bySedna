@@ -162,11 +162,12 @@
     margin: auto;
     width: 95%;
 }
-.product-oferta{
+.product-oferta, .productsInProducts{
     max-width: 23%;
     margin: 0.5em;
     background-color: #d6f4e7;
 }
+
 .product-temporada{
     max-width: 45%;
     margin: 0.5em;
@@ -185,7 +186,7 @@
 
 /* footer */
 .main-footer{ /* Temporal */
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .bod{
@@ -387,16 +388,29 @@ a:link, a:visited, a:active {
     border-radius: 5px;
     width: 100%;
 }
+.div-BottonEditAndDelete{
+display: flex;
+flex-wrap:wrap;
+justify-content: flex-end;
+align-items: flex-end;
+}
 
 .delete-product, .editar-product{
-    font-size: 14px;
-  padding: 5px;
+  font-size: 14px;
   border-radius: 5px;
-  margin: 5px 0px;
-  width: 30%;
   border: none;
   background-color: rgb(134, 106, 106);
+}
+.editar-product{
+    width: 75px;
+    padding: 5px;
+    margin-top: 70px;
+}
 
+.delete-product{
+    padding: 5px;
+    margin-left: 5px;
+    margin-top: 70px;
 }
 
 
@@ -770,6 +784,15 @@ font-size: 25px;
 }
 
 @media (max-width:768px){
+    .product-oferta{
+        max-width: 35%;
+    }
+    .productsInProducts{
+        max-width: 80%;
+    }
+    .product-temporada{
+        max-width: 60%;
+    }
     .main-login{
         flex-direction: column;
         text-align: center;
