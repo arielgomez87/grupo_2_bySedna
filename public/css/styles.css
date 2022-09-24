@@ -380,7 +380,6 @@ a:link, a:visited, a:active {
     padding-top: 100px;
 }
 
-
 .form-input{
     padding: 4.5px;
     margin: 4px 4px 4px 0;
@@ -388,12 +387,21 @@ a:link, a:visited, a:active {
     border-radius: 5px;
     width: 100%;
 }
+
 .div-BottonEditAndDelete{
 display: flex;
 flex-wrap:wrap;
 justify-content: flex-end;
 align-items: flex-end;
 }
+.edit-button, .create-button{
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 40%;
+    border: none;
+    background-color: #AD8F8F;
+  }
 
 .delete-product, .editar-product{
   font-size: 14px;
