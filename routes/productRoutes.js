@@ -22,7 +22,7 @@ router.get("/", productController.products);
 router.get("/detail/:id", productController.details);
 
 //ruta para Crear producto
-//muestra el fomrulario de creacion
+//muestra el formulario de creacion
 router.get("/create", productController.create );
 //recibe los datos del formulario de creacion
 router.post("/", upload.single("product-image"), productController.store);

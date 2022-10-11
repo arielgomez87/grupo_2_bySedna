@@ -9,7 +9,7 @@ const session = require("express-session");
 app.listen(3000, ()=>{console.log('Server Running on port 3000')});
 
 app.use(express.urlencoded({extended:false})); /*para poder recibir todos los datos de los formularios 
-                                                    (indica que vas a tranajar en formularios)*/
+                                                    (indica que vas a trabajar en formularios)*/
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));

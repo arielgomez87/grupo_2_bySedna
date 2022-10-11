@@ -1,32 +1,64 @@
 [
  {
-  "name": "martin jagodnik",
+  "full_name": "martin jagodnik",
+  "user_name": "martincito",
+  "address": "la pampa 1234",
+  "province": "Jujuy",
+  "phone_number": "1154448885",
   "email": "jagodnikmartin@gmail.com",
   "password": "$2a$10$ExVqN029WdtdUjMcEsKOdOKCNerH5sbVjRhWQ6Y9lgyBbHXomeyJa",
+  "confirm_password": "$2a$10$ExVqN029WdtdUjMcEsKOdOKCNerH5sbVjRhWQ6Y9lgyBbHXomeyJa",
   "image": "avatar-1663027388559.png"
  },
  {
-  "name": "Martin",
+  "full_name": "Martin",
+  "user_name": "martincitos",
+  "address": "la pampa 1234",
+  "province": "Jujuy",
+  "phone_number": "1154448885",
   "email": "ljagod@gmail.com",
   "password": "$2a$10$Nm5yfAr/q2RNhWTqTaqFsuNUtk61eOFIWdACa51v6azCJRQCwJ9HC",
+  "confirm_password": "$2a$10$Nm5yfAr/q2RNhWTqTaqFsuNUtk61eOFIWdACa51v6azCJRQCwJ9HC",
   "image": "avatar-1663028821791.png"
  },
  {
-  "Nombre y apellido": "Nicolas",
-  "Nombre de usuari@": "Niqloma",
-  "Domicilio": "Av Santa Fe 2300",
+  "full_name": "Nicolas",
+  "user_name": "Niqloma",
+  "address": "Av Santa Fe 2300",
+  "province": "Jujuy",
+  "phone_number": "1154448885",
   "email": "nicolomanto@gmail.com",
-  "telefono": "1153384697",
-  "ContraseÃ±a": "123546",
-  "Confirmar ContraseÃ±a": "123456"
+  "password": "123546",
+  "confirm_password": "123456"
  },
  {
-  "name": "fghfgh",
+  "full_name": "fghfgh",
   "Nombre de usuari@": "fghfgh",
-  "Domicilio": "fghfgh",
+  "address": "fghfgh",
+  "province": "Jujuy",
+  "phone_number": "1154448885",
   "email": "fghfghfghf@dsfdff.com",
-  "telefono": "sdfsdf",
   "password": "123",
-  "Confirmar Contrasena": "123"
+  "confirm_password": "123"
+ },
+ {
+  "full_name": "ariel gomez",
+  "user_name": "arielujan",
+  "address": "alberti 610",
+  "province": "Jujuy",
+  "phone_number": "11554488556",
+  "email": "arielgomez.87@gmail.com",
+  "password": "123456",
+  "confirm_password": "123456"
+ },
+ {
+  "full_name": "Pepe",
+  "user_name": "pepes",
+  "address": "birker 26",
+  "province": "Corrientes",
+  "phone_number": "1555644456",
+  "email": "ariele@hotmail.com",
+  "password": "123456",
+  "confirm_password": "123456"
  }
 ]

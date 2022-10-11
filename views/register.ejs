@@ -14,37 +14,50 @@
         <h4>Crear cuenta</h4>
         <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
             <div>
-                <input class="input-register" type="text" name="name" id="Nombre y apellido"
-                    placeholder="Nombre y apellido" required>
+                <input class="input-register" type="text" name="full_name" id="Nombre y apellido"
+                    placeholder="Nombre y apellido" >
             </div>
             <br>
             <div>
-                <input class="input-register" type="text" name="Nombre de usuari@" id="Nombre de usuari@"
-                    placeholder="Nombre de usuari@" required>
+                <input class="input-register" type="text" name="user_name" id="Nombre de usuari@"
+                    placeholder="Nombre de usuari@" >
             </div>
             <br>
             <div>
-                <input class="input-register" type="text" name="Domicilio" id="Domicilio" placeholder="Domicilio"
-                    required>
+                <input class="input-register" type="text" name="address" id="Domicilio" placeholder="Domicilio">
             </div>
             <br>
             <div>
-                <input class="input-register" type="email" name="email" id="email" placeholder="Email" required>
+                <select name="province" class="input-register" >
+                    <option value="">Elegi una Provincia</option>
+                    <% let provincia = [
+                    "Buenos Aires","Córdoba","Santa Fe","Ciudad Autónoma de Buenos Aires","Mendoza","Tucumán","Entre Ríos","Salta",
+                    "Misiones","Chaco", "Corrientes", "Santiago del Estero","San Juan","Jujuy","Río Negro", "Neuquén","Formosa",
+                   "Chubut","San Luis","Catamarca","La Rioja","La Pampa","Santa Cruz","Tierra del Fuego, Antártida e Islas del Atlántico Sur",
+                    ] %> 
+                    <% for (const oneProvince of provincia){ %>
+                        <option value ="<%= oneProvince %>"> <%= oneProvince %> </option>
+                   <% } %>   
+             </select>
             </div>
             <br>
             <div>
-                <input class="input-register" type="tel" name="telefono" id="telefono" placeholder="Telefono" required>
+                <input class="input-register" type="tel" name="phone_number" id="telefono" placeholder="Telefono" >
             </div>
             <br>
             <div>
-                <input class="input-register" type="password" name="password" id="Contrasena" placeholder="Contraseña"
-                    required>
+                <input class="input-register" type="email" name="email" id="email" placeholder="Email" >
+            </div>
+            <br>
+            <div>
+                <input class="input-register" type="password" name="password" id="Contrasena" placeholder="Contrasena"
+                    >
                 <br>
             </div>
             <br>
             <div>
-                <input class="input-register" type="password" name="Confirmar Contrasena" id="Confirmar Contrasena"
-                    placeholder="Confirmar Contraseña" required>
+                <input class="input-register" type="password" name="confirm_password" id="Confirmar Contrasena"
+                    placeholder="Confirmar Contraseña" >
                 <br>
             </div>
             <br>
