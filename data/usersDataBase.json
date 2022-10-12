@@ -60,5 +60,15 @@
   "email": "ariele@hotmail.com",
   "password": "123456",
   "confirm_password": "123456"
+ },
+ {
+  "full_name": "ariel",
+  "user_name": "arieluch",
+  "address": "birkela 1235",
+  "province": "Santa Fe",
+  "phone_number": "1154688845",
+  "email": "ariel@gmail.com",
+  "password": "$2a$10$ID3HxNUSbmFc9R.augwBF.ZZLgkwZWscddgGQbDppqxc8vJ2v/5uy",
+  "confirm_password": "123456"
  }
 ]

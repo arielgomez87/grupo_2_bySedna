@@ -28,25 +28,28 @@ const usersController = {
 	},
 	
 	// Create -  Method to store
-	store: (req, res) => {
-		let errors = validationResult(req);
-		console.log(errors.mapped());
-		// if(!errors.isEmpty()){
-		// let oldData = req.body;
-		// 	return res.render('register', {errors: errors.mapped(), oldData})
-		// } else {
+	processRegister: (req, res) => {
+
+		let resultValidation = validationResult(req);
+		
+		if (resultValidation.errors.length > 0){
+			return res.render("register", {
+				errors:resultValidation.mapped(),
+				oldData:req.body
+			});
+		} else {
 		let userToRegister = req.body;
 		delete userToRegister.password_confirm;
 		let newUser={
-			...userToRegister
-			// password: bcrypt.hashSync(userToRegister.password, 10)
+			...userToRegister,
+			password: bcrypt.hashSync(userToRegister.password, 10),
+			confirm_password: bcrypt.hashSync(userToRegister.password, 10)
 		}
 		users.push(newUser)
 		fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
 		res.redirect('/users/login/');
-		
-	// }
-	},
+		}},
+
 	login:(req,res)=>{
 		res.render('login')
 	},

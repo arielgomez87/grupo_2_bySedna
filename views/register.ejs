@@ -12,19 +12,37 @@
 
     <main class="main-register">
         <h4>Crear cuenta</h4>
+ 
         <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
             <div>
                 <input class="input-register" type="text" name="full_name" id="Nombre y apellido"
-                    placeholder="Nombre y apellido" >
+                    placeholder="Nombre y apellido" 
+                    value="<%= locals.oldData ? oldData.full_name : null %>" >
+                    <% if(locals.errors && errors.full_name) { %>
+                        <div class="text-danger">
+                            <%= errors.full_name.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div>
                 <input class="input-register" type="text" name="user_name" id="Nombre de usuari@"
-                    placeholder="Nombre de usuari@" >
+                    placeholder="Nombre de usuari@" value="<%= locals.oldData ? oldData.user_name : null %>">
+                    <% if(locals.errors && errors.user_name) { %>
+                        <div class="text-danger">
+                            <%= errors.user_name.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div>
-                <input class="input-register" type="text" name="address" id="Domicilio" placeholder="Domicilio">
+                <input class="input-register" type="text" name="address" id="Domicilio" placeholder="Domicilio"
+                value="<%= locals.oldData ? oldData.address : null %>">
+                <% if(locals.errors && errors.address) { %>
+                    <div class="text-danger">
+                        <%= errors.address.msg  %> 
+                    </div>
+               <% } %>
             </div>
             <br>
             <div>
@@ -36,29 +54,55 @@
                    "Chubut","San Luis","Catamarca","La Rioja","La Pampa","Santa Cruz","Tierra del Fuego, Antártida e Islas del Atlántico Sur",
                     ] %> 
                     <% for (const oneProvince of provincia){ %>
-                        <option value ="<%= oneProvince %>"> <%= oneProvince %> </option>
+                        <option value ="<%= oneProvince %>"
+                            <%= locals.oldData && (oneProvince === oldData.province) ? "selected" : null %>
+                            > <%= oneProvince %> </option>
                    <% } %>   
              </select>
+             <% if(locals.errors && errors.province) { %>
+                        <div class="text-danger">
+                            <%= errors.province.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div>
-                <input class="input-register" type="tel" name="phone_number" id="telefono" placeholder="Telefono" >
+                <input class="input-register" type="tel" name="phone_number" id="telefono" placeholder="Telefono" 
+                value="<%= locals.oldData ? oldData.phone_number : null %>">
+                <% if(locals.errors && errors.phone_number) { %>
+                        <div class="text-danger">
+                            <%= errors.phone_number.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div>
-                <input class="input-register" type="email" name="email" id="email" placeholder="Email" >
+                <input class="input-register" type="text" name="email" id="email" placeholder="Email" 
+                value="<%= locals.oldData ? oldData.email : null %>">
+                <% if(locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div>
-                <input class="input-register" type="password" name="password" id="Contrasena" placeholder="Contrasena"
-                    >
-                <br>
+                <input class="input-register" type="password" name="password" id="Contrasena" placeholder="Contraseña">
+                <% if(locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div>
                 <input class="input-register" type="password" name="confirm_password" id="Confirmar Contrasena"
-                    placeholder="Confirmar Contraseña" >
-                <br>
+                    placeholder="Confirmar Contraseña">
+                    <% if(locals.errors && errors.confirm_password) { %>
+                        <div class="text-danger">
+                            <%= errors.confirm_password.msg  %> 
+                        </div>
+                   <% } %>
             </div>
             <br>
             <div class="buttons">
