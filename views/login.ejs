@@ -14,12 +14,29 @@
         <div class="form-login">
             <form action="/users/login" method="POST">
                 <h4>Login</h4>
-                <input class="input-login" type="text" name="user_name" id="Nombre de usuari@"
-                    placeholder="Nombre de usuari@" required>
-                <br>
-                <input class="input-login" type="password" name="password" id="Contraseña" placeholder="Contraseña"
-                    required>
-                <br>
+                <input class="input-login <%= locals.errors && errors.user_name ? "is-invalid" : ""%> "
+                type="text" 
+                name="user_name" 
+                id="Nombre de usuari@"
+                    placeholder="Nombre de usuari@"
+                    value="<%= locals.oldData ? oldData.full_name : null %>" > 
+                    <% if(locals.errors && errors.user_name) { %>
+                        <div class="text-danger">
+                            <%= errors.user_name.msg  %> 
+                        </div>
+                   <% } %>
+
+                <input class="input-login <%= locals.errors && errors.password ? "is-invalid" : ""%> "
+                type="password" 
+                name="password" 
+                id="Contraseña" 
+                placeholder="Contraseña" >
+                    <% if(locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg  %> 
+                        </div>
+                   <% } %>
+
                 <label class="check-recordadUsuario"><input type="checkbox"> Recordar Usuari@ y contraseña</label>
                 <br>
                 <button class="button-login" type="submit">Enviar</button>

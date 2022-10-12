@@ -482,7 +482,13 @@ align-items: flex-end;
     padding: 5px;
     border: 1px solid #bcbcbc;
     border-radius: 5px;
+    margin-bottom: 15px;
     width: 300px;
+}
+
+.is-invalid{
+    border:1px solid red;
+    margin-bottom: 0px;
 }
 
 .button-register{

@@ -54,7 +54,15 @@ const usersController = {
 		res.render('login')
 	},
 	loginProcess: (req, res)=>{
-		console.log("user" + req.body.password);
+		let resultValidationLogin = validationResult(req);
+		
+		if (resultValidationLogin.errors.length > 0){
+			return res.render("login", {
+				errors:resultValidationLogin.mapped(),
+				oldData:req.body
+			});
+
+		/* console.log("user" + req.body.password);
 
 		const userToLogin = users.find(oneUser => oneUser.email === req.body.email);
 
@@ -72,10 +80,10 @@ const usersController = {
 				}
 			return res.redirect('/');
 			}
-		}
-		return res.redirect('/');
+		}*/
+		//return res.redirect('/');
 
-	},
+	}},
 
 	logout:(req, res)=>{
 		req.session.userLogged = undefined;
