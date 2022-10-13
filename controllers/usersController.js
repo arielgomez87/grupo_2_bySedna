@@ -28,7 +28,7 @@ const usersController = {
 	},
 	
 	// Create -  Method to store
-	processRegister: (req, res) => {
+	processRegisterNewUser: (req, res) => {
 
 		let resultValidation = validationResult(req);
 		
@@ -41,6 +41,7 @@ const usersController = {
 		let userToRegister = req.body;
 		delete userToRegister.password_confirm;
 		let newUser={
+			id: users[users.length - 1].id + 1,
 			...userToRegister,
 			password: bcrypt.hashSync(userToRegister.password, 10),
 			confirm_password: bcrypt.hashSync(userToRegister.password, 10)

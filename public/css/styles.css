@@ -484,6 +484,7 @@ align-items: flex-end;
     border-radius: 5px;
     margin-bottom: 15px;
     width: 300px;
+    background-color: white;
 }
 
 .is-invalid{
