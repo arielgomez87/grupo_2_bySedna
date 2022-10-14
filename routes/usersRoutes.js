@@ -11,6 +11,8 @@ const validations = require("../middlewares/validationsMiddleware") /*este requi
                                                                                 contiene las validaciones*/
 
 
+  //mostrara la pagina del usuario                                                                              
+router.get("/", usersController.profile)
 //Mostrará el formulario de creación para un producto
 router.get('/register', guestMiddleware, usersController.register);
 
@@ -21,16 +23,16 @@ router.get('/login', guestMiddleware, usersController.login);
 
 router.post('/login', validations, usersController.loginProcess);
 
-router.get('/logout', usersController.logout);
+//router.get('/logout', usersController.logout);
 
 //Botón MODIFICAR: modificará al usuario
-router.get('/profile', authMiddleware, usersController.profile);
+//router.get('/profile', authMiddleware, usersController.profile);
 //Deberá recibir los datos del formulario de edición
 
-router.put('/:id', usersController.update);
+//router.put('/:id', usersController.update);
 
 //Botón BORRAR: eliminará al usuario
-router.delete('/:id', usersController.destroy);
+//router.delete('/:id', usersController.destroy);
 
 
 module.exports = router;

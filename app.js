@@ -42,8 +42,8 @@ app.use('/products', productRouter);
 
 const usersRouter = require('./routes/usersRoutes');
 const { use } = require('./routes/indexRoutes');
- app.use('/users', usersRouter)
 
- app.use((req, res) => {
-    res.status(404).render("notFound");
- })
+app.use('/users', usersRouter)
+
+app.use((req, res) => {
+    res.status(404).render("notFound");})
