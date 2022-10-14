@@ -18,8 +18,7 @@
                 type="text" 
                 name="user_name" 
                 id="Nombre de usuari@"
-                    placeholder="Nombre de usuari@"
-                    value="<%= locals.oldData ? oldData.full_name : null %>" > 
+                    placeholder="Nombre de usuari@" > 
                     <% if(locals.errors && errors.user_name) { %>
                         <div class="text-danger">
                             <%= errors.user_name.msg  %> 

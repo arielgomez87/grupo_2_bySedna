@@ -92,23 +92,23 @@
  {
   "id": 9,
   "full_name": "ariel",
-  "user_name": "pepe",
-  "address": "oaoaol 15",
-  "province": "Córdoba",
-  "phone_number": "123354654",
-  "email": "ariel@pmail.com",
-  "password": "$2a$10$k.Qn/Uhwb5ZdyUStCFwii.KtWIESSVNmDnMhIlM9P1N2nNdMzjHH6",
-  "confirm_password": "$2a$10$270.SkRKElJIXYxvTEg81efC0Ys7icQa1byz9I/eufjL24loDC0La"
+  "user_name": "ariel",
+  "address": "belgrano 1230",
+  "province": "Ciudad Autónoma de Buenos Aires",
+  "phone_number": "1555646423",
+  "email": "ariel@gmail.com",
+  "password": "$2a$10$y.DjM0WPk0usWnUmTvAY1.gG0qamXiucrF/7EugKYBh1GYaaNxpMW",
+  "confirm_password": "$2a$10$.wLxDwz/yDBr.hBLomPatOqjm0AbT31Nt3dx4gmP2l16cevLQXjYq"
  },
  {
   "id": 10,
-  "full_name": "lala",
-  "user_name": "lala99",
-  "address": "asngn 125",
-  "province": "Buenos Aires",
-  "phone_number": "15556487",
-  "email": "lala@hotmail.com",
-  "password": "$2a$10$puyUGsT6LJIanAX5P8tYDuxrHFoZHkRCVB0O8kN/agWLN2pQaCn3i",
-  "confirm_password": "$2a$10$Geb9rNeuNo6gg9HzVtpYmOl0DQ2PZcf2g3.iCSjM9uo1uT3v2dT7K"
+  "full_name": "eliana",
+  "user_name": "eliana",
+  "address": "berlgrnao",
+  "province": "Mendoza",
+  "phone_number": "546461313",
+  "email": "eliana@hotmail.com",
+  "password": "$2a$10$hlC7n1Seu.5RPcrSv23P8O6lgDKKpe8Q3AOSittxHUV7dsGbPB/pW",
+  "confirm_password": "$2a$10$dRyYGy2AZ2ixd4jvVV1AKevqePH2HJDz3XPawbQRNThklLfCiGTlO"
  }
 ]
