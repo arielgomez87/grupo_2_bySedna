@@ -16,10 +16,10 @@ app.use(express.static('public'));
 
 app.use(express.json()); /*para usar json dentro de los archivos*/
 
-app.use(session({
+app.use(session({  //middleware de aplicacion de session
     secret: "Secreto!!",
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
 }))
 app.use(cookieParser());
 // app.listen(userLogMiddleware);

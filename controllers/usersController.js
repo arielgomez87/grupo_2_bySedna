@@ -7,11 +7,6 @@ const User = require("../models/User");
 
 const usersController = {
 
-	//para entrar a su perfil
-	profile: (req, res) => {
-		res.render("userPage")
-	},
-
 	// Create - Form to create
 	register: (req, res) => {
 		res.render('register')
@@ -55,39 +50,45 @@ const usersController = {
 	},
 
 	loginProcess: (req, res)=>{
-		let resultValidationLogin = validationResult(req);
-		
-		if (resultValidationLogin.errors.length > 0){
-			return res.render("login", {
-				errors:resultValidationLogin.mapped()
-			});
-		}
-		
-	},
-		/* console.log("user" + req.body.password);
-
-		const userToLogin = users.find(oneUser => oneUser.email === req.body.email);
-
-		console.log("pass" + userToLogin.password)
+		let userToLogin = User.findByField("user_name", req.body.user_name);
 		if(userToLogin){
-			const isPasswordCorrect = bcrypt.compareSync(req.body.password, userToLogin.password)
-			if(isPasswordCorrect){
-				delete userToLogin.password;
-				
-				req.session.userLogged= userToLogin;
-			
-				if(req.body.recordame != undefined){
-			
-				res.cookie("recordame", req.session.userLogged.email, {maxAge: 100000})
-				}
-			return res.redirect('/');
+			let thePasswordIsOk = bcrypt.compareSync(req.body.password, userToLogin.password)
+			if(thePasswordIsOk){
+				delete userToLogin.password;     //elimina la passsword de la info que devuelve y no la veo en session
+				delete userToLogin.confirm_password;//elimina la confirm_passsword de la info que devuelve y no la veo en session
+				req.session.userLogged = userToLogin;
+				return res.redirect ("/users/profile")  //si esta correcto usuario y contraseña redirige
 			}
-		}*/
-		//return res.redirect('/');
+			return res.render("login",{ 
+				errors:{
+					user_name: {
+						msg: "Verifica  todos tus datos" //si esta incorrecta la contraseña muestra ese mensaje
+		}}});
+	}
+		
+		return res.render("login",{ 
+		errors:{
+			user_name: {
+				msg: "Verifica tu Usuario"  // si esta mal el usuario muestra ese mensaje
+			}
+		}
+		})
+	},
+
+	//para entrar a su perfil
+	profile: (req, res) => {
+		res.render("userPage", {
+			User: req.session.userLogged  // envia a la vista los datos del usuario logueado y los puedo usar en la vista
+		});
+
+	},
+
+	logout: (req, res) => {
+		req.session.destroy();
+		return res.redirect("/");  /** destruye la session por lo tanto de cierra la session y salis del login */
+	}
 
 	
-
-
 };
 
 module.exports = usersController;
