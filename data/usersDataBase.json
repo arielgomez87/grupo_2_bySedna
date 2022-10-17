@@ -110,5 +110,16 @@
   "email": "eliana@hotmail.com",
   "password": "$2a$10$hlC7n1Seu.5RPcrSv23P8O6lgDKKpe8Q3AOSittxHUV7dsGbPB/pW",
   "confirm_password": "$2a$10$dRyYGy2AZ2ixd4jvVV1AKevqePH2HJDz3XPawbQRNThklLfCiGTlO"
+ },
+ {
+  "id": 11,
+  "full_name": "Nicolas Lomanto",
+  "user_name": "Niqlomaa",
+  "address": "Av Santa Maria 6385",
+  "province": "Buenos Aires",
+  "phone_number": "+545453314869",
+  "email": "nicolomanto@gmail.com",
+  "password": "$2a$10$EN4BR9yluMay0sYTmZVWH.K/HmHWUDPbJuZbGO9MQSRtJE.T5a0Fu",
+  "confirm_password": "$2a$10$ohO9cKvhvNjSITThRKdrdextCHRc9YjiwN.JEE4xEiAgdU4YzWWby"
  }
 ]
