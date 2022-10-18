@@ -28,19 +28,6 @@
                    <% } %>
             </div>
             <div>
-                <input class="input-register <%= locals.errors && errors.user_name ? "is-invalid" : ""%> " 
-                type="text" 
-                name="user_name" 
-                id="Nombre de usuari@"
-                placeholder="Nombre de usuari@" 
-                    value="<%= locals.oldData ? oldData.user_name : null %>">
-                    <% if(locals.errors && errors.user_name) { %>
-                        <div class="text-danger">
-                            <%= errors.user_name.msg  %> 
-                        </div>
-                   <% } %>
-            </div>
-            <div>
                 <input class="input-register <%= locals.errors && errors.address ? "is-invalid" : ""%> " 
                 type="text" 
                 name="address" 
@@ -109,18 +96,6 @@
                 <% if(locals.errors && errors.password) { %>
                         <div class="text-danger">
                             <%= errors.password.msg  %> 
-                        </div>
-                   <% } %>
-            </div>
-            <div>
-                <input class="input-register <%= locals.errors && errors.confirm_password ? "is-invalid" : ""%> " 
-                type="password" 
-                name="confirm_password" 
-                id="Confirmar Contrasena"
-                    placeholder="Confirmar Contraseña">
-                    <% if(locals.errors && errors.confirm_password) { %>
-                        <div class="text-danger">
-                            <%= errors.confirm_password.msg  %> 
                         </div>
                    <% } %>
             </div>

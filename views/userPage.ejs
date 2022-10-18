@@ -12,11 +12,11 @@
     
     <main class="main-login">
         <div class="form-login">
-                <h3>Hola <%= User.full_name  %>  estas es tu pagina de usuario.<h3>
+                <h3>Hola <%= user.full_name  %>  estas es tu pagina de usuario.<h3>
         </div>
 
         <div class="register-from-login">
-            <h5>Tu email es: <%=User.email  %> </h5>
+            <h5>Tu email es: <%=user.email  %> </h5>
             <br>
             <a href="/users/logout"><button class="btn btn-danger" type="button" >Logout</button></a>
         </div>

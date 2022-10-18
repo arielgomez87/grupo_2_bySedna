@@ -23,13 +23,13 @@ const usersController = {
 				oldData:req.body
 			});
 		} 
-		let userInDataBase = User.findByField("user_name", req.body.user_name);
+		let userInDataBase = User.findByField("email", req.body.email);
 
 		if(userInDataBase) {
 			return res.render("register", {
 				errors: {
-					user_name: {
-						msg: "Este usuario ya esta creado"
+					email: {
+						msg: "Este email ya esta creado"
 					}
 				},
 				oldData : req.body
@@ -39,7 +39,6 @@ const usersController = {
 		let newUser={
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
-			confirm_password: bcrypt.hashSync(req.body.confirm_password, 10),
 		}
 		let userCreated = User.create(newUser);
 		res.redirect('/users/login/');
@@ -50,26 +49,25 @@ const usersController = {
 	},
 
 	loginProcess: (req, res)=>{
-		let userToLogin = User.findByField("user_name", req.body.user_name);
+		let userToLogin = User.findByField("email", req.body.email);
 		if(userToLogin){
 			let thePasswordIsOk = bcrypt.compareSync(req.body.password, userToLogin.password)
 			if(thePasswordIsOk){
 				delete userToLogin.password;     //elimina la passsword de la info que devuelve y no la veo en session
-				delete userToLogin.confirm_password;//elimina la confirm_passsword de la info que devuelve y no la veo en session
 				req.session.userLogged = userToLogin;
-				return res.redirect ("/users/profile")  //si esta correcto usuario y contraseña redirige
+				return res.redirect ("/users/profile")  //si esta correcto email y contraseña redirige
 			}
 			return res.render("login",{ 
 				errors:{
-					user_name: {
+					email: {
 						msg: "Verifica  todos tus datos" //si esta incorrecta la contraseña muestra ese mensaje
 		}}});
 	}
 		
 		return res.render("login",{ 
 		errors:{
-			user_name: {
-				msg: "Verifica tu Usuario"  // si esta mal el usuario muestra ese mensaje
+			email: {
+				msg: "Verifica tu Email"  // si esta mal el Email muestra ese mensaje
 			}
 		}
 		})
@@ -78,7 +76,7 @@ const usersController = {
 	//para entrar a su perfil
 	profile: (req, res) => {
 		res.render("userPage", {
-			User: req.session.userLogged  // envia a la vista los datos del usuario logueado y los puedo usar en la vista
+			user: req.session.userLogged  // envia a la vista los datos del usuario logueado y los puedo usar en la vista
 		});
 
 	},

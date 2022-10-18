@@ -2,124 +2,111 @@
  {
   "id": 1,
   "full_name": "martin jagodnik",
-  "user_name": "martincito",
   "address": "la pampa 1234",
   "province": "Jujuy",
   "phone_number": "1154448885",
   "email": "jagodnikmartin@gmail.com",
   "password": "$2a$10$ExVqN029WdtdUjMcEsKOdOKCNerH5sbVjRhWQ6Y9lgyBbHXomeyJa",
-  "confirm_password": "$2a$10$ExVqN029WdtdUjMcEsKOdOKCNerH5sbVjRhWQ6Y9lgyBbHXomeyJa",
   "image": "avatar-1663027388559.png"
  },
  {
   "id": 2,
   "full_name": "Martin",
-  "user_name": "martincitos",
   "address": "la pampa 1234",
   "province": "Jujuy",
   "phone_number": "1154448885",
   "email": "ljagod@gmail.com",
   "password": "$2a$10$Nm5yfAr/q2RNhWTqTaqFsuNUtk61eOFIWdACa51v6azCJRQCwJ9HC",
-  "confirm_password": "$2a$10$Nm5yfAr/q2RNhWTqTaqFsuNUtk61eOFIWdACa51v6azCJRQCwJ9HC",
   "image": "avatar-1663028821791.png"
  },
  {
   "id": 3,
   "full_name": "Nicolas",
-  "user_name": "Niqloma",
   "address": "Av Santa Fe 2300",
   "province": "Jujuy",
   "phone_number": "1154448885",
   "email": "nicolomanto@gmail.com",
-  "password": "123546",
-  "confirm_password": "123456"
+  "password": "123546"
  },
  {
   "id": 4,
   "full_name": "fghfgh",
-  "Nombre de usuari@": "fghfgh",
   "address": "fghfgh",
   "province": "Jujuy",
   "phone_number": "1154448885",
   "email": "fghfghfghf@dsfdff.com",
-  "password": "123",
-  "confirm_password": "123"
+  "password": "123"
  },
  {
   "id": 5,
   "full_name": "ariel gomez",
-  "user_name": "arielujan",
   "address": "alberti 610",
   "province": "Jujuy",
   "phone_number": "11554488556",
   "email": "arielgomez.87@gmail.com",
-  "password": "123456",
-  "confirm_password": "123456"
+  "password": "123456"
  },
  {
   "id": 6,
   "full_name": "Pepe",
-  "user_name": "pepes",
   "address": "birker 26",
   "province": "Corrientes",
   "phone_number": "1555644456",
   "email": "ariele@hotmail.com",
-  "password": "123456",
-  "confirm_password": "123456"
+  "password": "123456"
  },
  {
   "id": 7,
   "full_name": "ariel",
-  "user_name": "arieluch",
   "address": "birkela 1235",
   "province": "Santa Fe",
   "phone_number": "1154688845",
   "email": "ariel@gmail.com",
-  "password": "$2a$10$ID3HxNUSbmFc9R.augwBF.ZZLgkwZWscddgGQbDppqxc8vJ2v/5uy",
-  "confirm_password": "123456"
+  "password": "$2a$10$ID3HxNUSbmFc9R.augwBF.ZZLgkwZWscddgGQbDppqxc8vJ2v/5uy"
  },
  {
   "id": 8,
   "full_name": "Ariel g",
-  "user_name": "AriG",
   "address": "birkedo 12",
   "province": "Córdoba",
   "phone_number": "1154688845",
   "email": "arg@hotmail.com",
-  "password": "$2a$10$ry424ioYlVxYW6GB0y2aOuZzUc3p8S..nBtZilO9r/XmPYyb4LHGe",
-  "confirm_password": "$2a$10$9sdri3xA9UOukqKJwRvemOx1lv8L7PjbhupyoQC.JzZSpwxBDWlKS"
+  "password": "$2a$10$ry424ioYlVxYW6GB0y2aOuZzUc3p8S..nBtZilO9r/XmPYyb4LHGe"
  },
  {
   "id": 9,
   "full_name": "ariel",
-  "user_name": "ariel",
   "address": "belgrano 1230",
   "province": "Ciudad Autónoma de Buenos Aires",
   "phone_number": "1555646423",
   "email": "ariel@gmail.com",
-  "password": "$2a$10$y.DjM0WPk0usWnUmTvAY1.gG0qamXiucrF/7EugKYBh1GYaaNxpMW",
-  "confirm_password": "$2a$10$.wLxDwz/yDBr.hBLomPatOqjm0AbT31Nt3dx4gmP2l16cevLQXjYq"
+  "password": "$2a$10$y.DjM0WPk0usWnUmTvAY1.gG0qamXiucrF/7EugKYBh1GYaaNxpMW"
  },
  {
   "id": 10,
   "full_name": "eliana",
-  "user_name": "eliana",
   "address": "berlgrnao",
   "province": "Mendoza",
   "phone_number": "546461313",
   "email": "eliana@hotmail.com",
-  "password": "$2a$10$hlC7n1Seu.5RPcrSv23P8O6lgDKKpe8Q3AOSittxHUV7dsGbPB/pW",
-  "confirm_password": "$2a$10$dRyYGy2AZ2ixd4jvVV1AKevqePH2HJDz3XPawbQRNThklLfCiGTlO"
+  "password": "$2a$10$hlC7n1Seu.5RPcrSv23P8O6lgDKKpe8Q3AOSittxHUV7dsGbPB/pW"
  },
  {
   "id": 11,
   "full_name": "Nicolas Lomanto",
-  "user_name": "Niqlomaa",
   "address": "Av Santa Maria 6385",
   "province": "Buenos Aires",
   "phone_number": "+545453314869",
   "email": "nicolomanto@gmail.com",
-  "password": "$2a$10$EN4BR9yluMay0sYTmZVWH.K/HmHWUDPbJuZbGO9MQSRtJE.T5a0Fu",
-  "confirm_password": "$2a$10$ohO9cKvhvNjSITThRKdrdextCHRc9YjiwN.JEE4xEiAgdU4YzWWby"
+  "password": "$2a$10$EN4BR9yluMay0sYTmZVWH.K/HmHWUDPbJuZbGO9MQSRtJE.T5a0Fu"
+ },
+ {
+  "id": 12,
+  "full_name": "juana",
+  "address": "riobamba 1234",
+  "province": "Santa Fe",
+  "phone_number": "1224564",
+  "email": "juanita@hotmail.com",
+  "password": "$2a$10$1cg8UuE1neh0NQluXR9GReJfx3ZEInJKjKAI.Hkdmi0VbCGXJjymy"
  }
 ]

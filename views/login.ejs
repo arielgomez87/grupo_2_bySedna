@@ -14,14 +14,14 @@
         <div class="form-login">
             <form action="/users/login" method="POST">
                 <h4>Login</h4>
-                <input class="input-login <%= locals.errors && errors.user_name ? "is-invalid" : ""%> "
+                <input class="input-login <%= locals.errors && errors.email ? "is-invalid" : ""%> "
                 type="text" 
-                name="user_name" 
-                id="Nombre de usuari@"
-                    placeholder="Nombre de usuari@" > 
-                    <% if(locals.errors && errors.user_name) { %>
+                name="email" 
+                id="Email"
+                    placeholder="Email" > 
+                    <% if(locals.errors && errors.email) { %>
                         <div class="text-danger">
-                            <%= errors.user_name.msg  %> 
+                            <%= errors.email.msg  %> 
                         </div>
                    <% } %>
                 <input class="input-login <%= locals.errors && errors.password ? "is-invalid" : ""%> "
@@ -35,7 +35,7 @@
                         </div>
                    <% } %>
 
-                <label class="check-recordadUsuario"><input type="checkbox"> Recordar Usuari@ y contraseña</label>
+                <label class="check-recordarEmail"><input type="checkbox"> Recordar Email y contraseña</label>
                 <br>
                 <button class="button-login" type="submit">Enviar</button>
                 <a class= "recuperarContraseña" href="*">Recuperar contraseña</a>
