@@ -55,6 +55,11 @@ const usersController = {
 			if(thePasswordIsOk){
 				delete userToLogin.password;     //elimina la passsword de la info que devuelve y no la veo en session
 				req.session.userLogged = userToLogin;
+
+				if(req.body.remember_user){
+					res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
+				}
+
 				return res.redirect ("/users/profile")  //si esta correcto email y contraseña redirige
 			}
 			return res.render("login",{ 
@@ -82,11 +87,11 @@ const usersController = {
 	},
 
 	logout: (req, res) => {
+		res.clearCookie("userEmail");
 		req.session.destroy();
 		return res.redirect("/");  /** destruye la session por lo tanto de cierra la session y salis del login */
 	}
 
-	
 };
 
 module.exports = usersController;

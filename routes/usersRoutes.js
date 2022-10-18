@@ -6,7 +6,6 @@ const guestMiddleware = require("../middlewares/guestMiddleware");
 const authMiddleware = require("../middlewares/authMiddleware");
 const upload = require ("../middlewares/multerMiddleware") /* este requiere al multer que ahora es un middleware*/
 const usersController = require('../controllers/usersController');
-const middlewareRutas = require ("../middlewares/ejemploRutas")
 const validations = require("../middlewares/validationsMiddleware") /*este require hace referencia al middleware que 
                                                                                 contiene las validaciones*/
 

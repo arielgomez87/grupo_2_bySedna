@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const path = require('path');
-// const userLogMiddleware = require('./middlewares/userLogs')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 const methodOverride = require('method-override');
 const session = require("express-session");
 
@@ -21,18 +21,14 @@ app.use(session({  //middleware de aplicacion de session
     resave: false,
     saveUninitialized: false,
 }))
-app.use(cookieParser());
-// app.listen(userLogMiddleware);
 
+app.use(cookies());
+
+app.use(userLoggedMiddleware);
 
 app.use(methodOverride('_method')); //sirve para indicar en el formulario que es un put, path o un delete.
-app.use((req, res, next)=> {
-    console.log("Pasaste por el middleware de aplicación");
-    next();
-})
 
 
-  
 //Routing
 const indexRouter = require('./routes/indexRoutes');
 app.use('/', indexRouter);
