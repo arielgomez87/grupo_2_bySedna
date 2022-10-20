@@ -3,7 +3,7 @@ const path = require("path");
 
 function guestMiddleware (req, res, next){
     if( req.session.userLogged) {
-			res.redirect('/users/profile');
+		return res.redirect('/users/profile');  //sin ese return muestra un error cuando entro nuevamente al perfil
         }
         next();
     }

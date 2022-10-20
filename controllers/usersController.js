@@ -9,7 +9,7 @@ const usersController = {
 
 	// Create - Form to create
 	register: (req, res) => {
-		res.render('register')
+		return res.render('register')
 	},
 	
 	// Create -  Method to create
@@ -41,11 +41,11 @@ const usersController = {
 			password: bcrypt.hashSync(req.body.password, 10),
 		}
 		let userCreated = User.create(newUser);
-		res.redirect('/users/login/');
+		return res.redirect('/users/login/');
 		}},
 
 	login:(req,res)=>{
-		res.render('login')
+		return res.render('login')
 	},
 
 	loginProcess: (req, res)=>{
@@ -80,7 +80,7 @@ const usersController = {
 
 	//para entrar a su perfil
 	profile: (req, res) => {
-		res.render("userPage", {
+		return res.render("userPage", {
 			user: req.session.userLogged  // envia a la vista los datos del usuario logueado y los puedo usar en la vista
 		});
 

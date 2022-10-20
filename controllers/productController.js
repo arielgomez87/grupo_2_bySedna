@@ -11,11 +11,11 @@ const productController = {
     details: (req, res) => {
 		let id = req.params.id;
 		let product = products.find(oneProduct => oneProduct.id == id);
-		res.render("productDetail", {product})
+		return res.render("productDetail", {product})
 	},
 
 	create: (req, res) => {
-		res.render("productCreate")
+		return res.render("productCreate")
 	},
 
 	store: (req, res) =>{
@@ -31,13 +31,13 @@ const productController = {
 			products.push(newProduct);  /*agrego el ultimo producto al array productos*/
 			fs.writeFileSync(productsFilePath, JSON.stringify(products, null," "));/*hago stringify de los valores nuevos 
 														del producto para que pueda la base de datos manejarlos*/ 
-		res.redirect("/products/");
+		return res.redirect("/products/");
 	},
 
 	edit: (req, res) =>{
 		let id = req.params.id;
 		let product = products.find(oneProduct => oneProduct.id == id);
-		res.render("productEdit" ,{product})
+		return res.render("productEdit" ,{product})
 	},
 
 	update: (req, res) =>{
@@ -59,7 +59,7 @@ const productController = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, " "));
 		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); //PROVISORIO//
-		res.redirect("/products/")
+		return res.redirect("/products/")
 		},
 
 	destroy: (req, res) =>{{
@@ -67,7 +67,7 @@ const productController = {
 		let finalProducts = products.filter(product => product.id != id)
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, " "));
 		products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); //PROVISORIO//
-		res.redirect("/products/");
+		return res.redirect("/products/");
 	}
 	}
 
