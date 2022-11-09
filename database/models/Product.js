@@ -1,4 +1,3 @@
-const { privateDecrypt } = require("crypto");
 
 module.exports = (sequelize, dataTypes) => {
     let alias = "Products";
