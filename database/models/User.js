@@ -48,14 +48,14 @@ const User = sequelize.define(alias, cols, config);
 User.associate = function(models) {
     User.belongsTo(models.Rol, {
         as: 'rols',
-        foreignKey: 'rol_id'
+        foreignKey: 'rolId'
     });
 }
 
 User.associate = function(models) {
     User.belongsTo(models.Province, {
         as: 'Provinces',
-        foreignKey: 'province_id'
+        foreignKey: 'provinceId'
     });
 }
 

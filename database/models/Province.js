@@ -22,7 +22,7 @@ const Province = sequelize.define(alias, cols, config);
 Province.associate = function(models) {
     Province.hasMany(models.User, {
         as: 'Users',
-        foreignKey: 'province_id'
+        foreignKey: 'provinceId'
     });
 }
 
