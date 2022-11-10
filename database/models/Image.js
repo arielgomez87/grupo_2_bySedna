@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Images";
+    let alias = "Image";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -24,9 +24,9 @@ module.exports = (sequelize, dataTypes) => {
 const Image = sequelize.define(alias, cols, config);
 
 Image.associate = function(models){
-    Image.belongsTo(models.Products, {
+    Image.belongsTo(models.Product, {
         foreignKey: "productId",
-        as: "products"
+        as: "product" //cada imagen tiene un solo producto, por eso en singular.
     })
 }
 

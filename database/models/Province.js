@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Provinces";
+    let alias = "Province";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -21,7 +21,7 @@ const Province = sequelize.define(alias, cols, config);
 
 Province.associate = function(models) {
     Province.hasMany(models.User, {
-        as: 'Users',
+        as: 'Users',  // cada provincia puede tener varios usuario por eso en plural
         foreignKey: 'provinceId'
     });
 }

@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Users";
+    let alias = "User";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -47,14 +47,14 @@ const User = sequelize.define(alias, cols, config);
 
 User.associate = function(models) {
     User.belongsTo(models.Rol, {
-        as: 'rols',
+        as: 'rol',  //esta en singular porque cada usuario tiene un rol
         foreignKey: 'rolId'
     });
 }
 
 User.associate = function(models) {
     User.belongsTo(models.Province, {
-        as: 'Provinces',
+        as: 'Province',  // esta en singular porque cada usuario tiene una sola provincia
         foreignKey: 'provinceId'
     });
 }
