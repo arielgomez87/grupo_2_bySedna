@@ -12,7 +12,7 @@
 
     <main class="main-register">
         <h4>Crear cuenta</h4>
- 
+                                                                
         <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
             <div>
                 <input class="input-register <%= locals.errors && errors.full_name ? "is-invalid" : ""%> "
@@ -61,6 +61,20 @@
                         </div>
                    <% } %>
             </div>
+            <div>
+            <label for="imageUser">Imagen de perfil</label>
+            <div>
+                <input 
+                class="input-register"
+                type="file" 
+                name="imageUser">
+                <% if(locals.errors && errors.imageUser) { %>
+                        <div class="text-danger">
+                            <%= errors.imageUser.msg  %> 
+                        </div>
+                   <% } %>
+            </div>
+        </div>
             <div>
                 <input class="input-register <%= locals.errors && errors.phone_number ? "is-invalid" : ""%> "
                 type="tel" 

@@ -15,7 +15,7 @@ const validations = require("../middlewares/validationsMiddleware") /*este requi
 router.get('/register', guestMiddleware, usersController.register);
 
 //Deberá recibir los datos del formulario de creación
-router.post('/register', upload.single("avatar"), validations , usersController.processRegisterNewUser);
+router.post('/register', upload.single("imageUser"), validations , usersController.processRegisterNewUser);
 
 router.get('/login', guestMiddleware, usersController.login);
 

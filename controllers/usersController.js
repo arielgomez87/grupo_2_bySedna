@@ -15,11 +15,11 @@ const usersController = {
 	// Create -  Method to create
 	processRegisterNewUser: (req, res) => {
 
-		let resultValidation = validationResult(req);
+		let resultValidation = validationResult(req);/*sirve para capturar las validaciones y me trae los datos en un array*/
 		
-		if (resultValidation.errors.length > 0){
+		if (resultValidation.errors.length > 0){ /**errors es una propiedad de validation results */
 			return res.render("register", {
-				errors:resultValidation.mapped(),
+				errors:resultValidation.mapped(), /**.mapped convierte el array en un objeto literal **/
 				oldData:req.body
 			});
 		} 
@@ -29,7 +29,7 @@ const usersController = {
 			return res.render("register", {
 				errors: {
 					email: {
-						msg: "Este email ya esta creado"
+						msg: "Este email ya esta registrado"
 					}
 				},
 				oldData : req.body
@@ -39,6 +39,7 @@ const usersController = {
 		let newUser={
 			...req.body,
 			password: bcrypt.hashSync(req.body.password, 10),
+			imageUser: req.file.filename
 		}
 		let userCreated = User.create(newUser);
 		return res.redirect('/users/login/');
