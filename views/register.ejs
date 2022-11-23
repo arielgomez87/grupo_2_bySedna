@@ -15,15 +15,15 @@
                                                                 
         <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
             <div>
-                <input class="input-register <%= locals.errors && errors.full_name ? "is-invalid" : ""%> "
+                <input class="input-register <%= locals.errors && errors.fullName ? "is-invalid" : ""%> "
                     type="text" 
-                    name="full_name" 
+                    name="fullName" 
                     id="Nombre y apellido"
                     placeholder="Nombre y apellido" 
-                    value="<%= locals.oldData ? oldData.full_name : null %>" >
-                    <% if(locals.errors && errors.full_name) { %>
+                    value="<%= locals.oldData ? oldData.fullName : null %>" >
+                    <% if(locals.errors && errors.fullName) { %>
                         <div class="text-danger">
-                            <%= errors.full_name.msg  %> 
+                            <%= errors.fullName.msg  %> 
                         </div>
                    <% } %>
             </div>
@@ -76,15 +76,15 @@
             </div>
         </div>
             <div>
-                <input class="input-register <%= locals.errors && errors.phone_number ? "is-invalid" : ""%> "
+                <input class="input-register <%= locals.errors && errors.phoneNumber ? "is-invalid" : ""%> "
                 type="tel" 
-                name="phone_number" 
+                name="phoneNumber" 
                 id="telefono" 
                 placeholder="Telefono" 
-                value="<%= locals.oldData ? oldData.phone_number : null %>">
-                <% if(locals.errors && errors.phone_number) { %>
+                value="<%= locals.oldData ? oldData.phoneNumber : null %>">
+                <% if(locals.errors && errors.phoneNumber) { %>
                         <div class="text-danger">
-                            <%= errors.phone_number.msg  %> 
+                            <%= errors.phoneNumber.msg  %> 
                         </div>
                    <% } %>
             </div>

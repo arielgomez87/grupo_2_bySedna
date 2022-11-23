@@ -2,7 +2,7 @@ const { check } = require("express-validator");
 const path = require('path');
 
 const validations = [ /*este array contiene a los check del registro*/
-    check('full_name').isLength({min:1}).withMessage('Debe ingresar un nombre'),
+    check('fullName').isLength({min:1}).withMessage('Debe ingresar un nombre'),
     check('address').isLength({min:1}).withMessage('Debe ingresar un direccion'),
     check("province").notEmpty().withMessage('Debe seleccionar una provincia'),
     check("imageUser").custom((value, {req}) => {
@@ -19,7 +19,7 @@ const validations = [ /*este array contiene a los check del registro*/
         }
         return true;
     }),
-    check("phone_number").notEmpty().withMessage('Debe ingresar un numero telefonico'),
+    check("phoneNumber").notEmpty().withMessage('Debe ingresar un numero telefonico'),
     check('email')
         .notEmpty().withMessage("Debes escribir un Email").bail()
         .isEmail().withMessage('Debes ingresar un email valido'),

@@ -1,5 +1,5 @@
 <div class="main-header">
-    <div class="top-bar">
+    <div class="top-bar"> 
         <div class="hamburger-menu">
             <a href="#" class="hamburger-button"><i class="fa-solid fa-bars"></i></a>
         </div>
@@ -12,7 +12,7 @@
                 <a class="icons-search" href="/search"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>
             <div class="icons">
-                <% if (locals.isLogged) { %>
+                <% if (locals.isLogged) { %>    <!-- si isLogged que es un middleware es true se muestra lo primero -->
                     <a href="/users/login"><i class="fa-solid fa-user"></i></a>
                     <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     <a href="/users/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
@@ -24,3 +24,4 @@
         </div>
     </div>
 </div>
+

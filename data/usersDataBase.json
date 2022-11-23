@@ -1,138 +1,138 @@
 [
  {
   "id": 1,
-  "full_name": "martin jagodnik",
+  "fullName": "martin jagodnik",
   "address": "la pampa 1234",
   "province": "Jujuy",
-  "phone_number": "1154448885",
+  "phoneNumber": "1154448885",
   "email": "jagodnikmartin@gmail.com",
   "password": "$2a$10$ExVqN029WdtdUjMcEsKOdOKCNerH5sbVjRhWQ6Y9lgyBbHXomeyJa",
-  "image": "avatar-1663027388559.png"
+  "imageUser": "avatar-1663027388559.png"
  },
  {
   "id": 2,
-  "full_name": "Martin",
+  "fullName": "Martin",
   "address": "la pampa 1234",
   "province": "Jujuy",
-  "phone_number": "1154448885",
+  "phoneNumber": "1154448885",
   "email": "ljagod@gmail.com",
   "password": "$2a$10$Nm5yfAr/q2RNhWTqTaqFsuNUtk61eOFIWdACa51v6azCJRQCwJ9HC",
-  "image": "avatar-1663028821791.png"
+  "imageUser": "avatar-1663028821791.png"
  },
  {
   "id": 3,
-  "full_name": "Nicolas",
+  "fullName": "Nicolas",
   "address": "Av Santa Fe 2300",
   "province": "Jujuy",
-  "phone_number": "1154448885",
+  "phoneNumber": "1154448885",
   "email": "nicolomanto@gmail.com",
   "password": "123546"
  },
  {
   "id": 4,
-  "full_name": "fghfgh",
+  "fullName": "fghfgh",
   "address": "fghfgh",
   "province": "Jujuy",
-  "phone_number": "1154448885",
+  "phoneNumber": "1154448885",
   "email": "fghfghfghf@dsfdff.com",
   "password": "123"
  },
  {
   "id": 5,
-  "full_name": "ariel gomez",
+  "fullName": "ariel gomez",
   "address": "alberti 610",
   "province": "Jujuy",
-  "phone_number": "11554488556",
+  "phoneNumber": "11554488556",
   "email": "arielgomez.87@gmail.com",
   "password": "123456"
  },
  {
   "id": 6,
-  "full_name": "Pepe",
+  "fullName": "Pepe",
   "address": "birker 26",
   "province": "Corrientes",
-  "phone_number": "1555644456",
+  "phoneNumber": "1555644456",
   "email": "ariele@hotmail.com",
   "password": "123456"
  },
  {
   "id": 7,
-  "full_name": "ariel",
+  "fullName": "ariel",
   "address": "birkela 1235",
   "province": "Santa Fe",
-  "phone_number": "1154688845",
+  "phoneNumber": "1154688845",
   "email": "ariel@gmail.com",
   "password": "$2a$10$ID3HxNUSbmFc9R.augwBF.ZZLgkwZWscddgGQbDppqxc8vJ2v/5uy"
  },
  {
   "id": 8,
-  "full_name": "Ariel g",
+  "fullName": "Ariel g",
   "address": "birkedo 12",
   "province": "Córdoba",
-  "phone_number": "1154688845",
+  "phoneNumber": "1154688845",
   "email": "arg@hotmail.com",
   "password": "$2a$10$ry424ioYlVxYW6GB0y2aOuZzUc3p8S..nBtZilO9r/XmPYyb4LHGe"
  },
  {
   "id": 9,
-  "full_name": "ariel",
+  "fullName": "ariel",
   "address": "belgrano 1230",
   "province": "Ciudad Autónoma de Buenos Aires",
-  "phone_number": "1555646423",
+  "phoneNumber": "1555646423",
   "email": "ariel@gmail.com",
   "password": "$2a$10$y.DjM0WPk0usWnUmTvAY1.gG0qamXiucrF/7EugKYBh1GYaaNxpMW"
  },
  {
   "id": 10,
-  "full_name": "eliana",
+  "fullName": "eliana",
   "address": "berlgrnao",
   "province": "Mendoza",
-  "phone_number": "546461313",
+  "phoneNumber": "546461313",
   "email": "eliana@hotmail.com",
   "password": "$2a$10$hlC7n1Seu.5RPcrSv23P8O6lgDKKpe8Q3AOSittxHUV7dsGbPB/pW"
  },
  {
   "id": 11,
-  "full_name": "Nicolas Lomanto",
+  "fullName": "Nicolas Lomanto",
   "address": "Av Santa Maria 6385",
   "province": "Buenos Aires",
-  "phone_number": "+545453314869",
+  "phoneNumber": "+545453314869",
   "email": "nicolomanto@gmail.com",
   "password": "$2a$10$EN4BR9yluMay0sYTmZVWH.K/HmHWUDPbJuZbGO9MQSRtJE.T5a0Fu"
  },
  {
   "id": 12,
-  "full_name": "juana",
+  "fullName": "juana",
   "address": "riobamba 1234",
   "province": "Santa Fe",
-  "phone_number": "1224564",
+  "phoneNumber": "1224564",
   "email": "juanita@hotmail.com",
   "password": "$2a$10$1cg8UuE1neh0NQluXR9GReJfx3ZEInJKjKAI.Hkdmi0VbCGXJjymy"
  },
  {
   "id": 13,
-  "full_name": "miasticul",
+  "fullName": "miasticul",
   "address": "pelele 1234",
   "province": "Santa Fe",
-  "phone_number": "2323444685",
+  "phoneNumber": "2323444685",
   "email": "maisticul@gmail.com",
   "password": "$2a$10$ZEmXUw2iUjtmLaPvHrPDK.vo1lTgbQgptHMIrl1rR7CG1dFHAwtcC"
  },
  {
   "id": 14,
-  "full_name": "ariel",
+  "fullName": "ariel",
   "address": "amvk1 23",
   "province": "Ciudad Autónoma de Buenos Aires",
-  "phone_number": "1324654",
+  "phoneNumber": "1324654",
   "email": "arielgomez@gmail.com",
   "password": "$2a$10$qEi44KUMqtAcikwPMjW0xe/C/dQbFbYk/GSZ6kb/pTjZ1osn98wru"
  },
  {
   "id": 15,
-  "full_name": "pepe",
+  "fullName": "pepe",
   "address": "carilo 1234",
   "province": "Buenos Aires",
-  "phone_number": "12345678",
+  "phoneNumber": "12345678",
   "email": "pepe@pepes.com",
   "password": "$2a$10$iGbKtgIqOeOKIvSJHF.c..6xki4L7PbUEAvt6riQW.698GJ1Js3hm",
   "imageUser": "avatar-1669162953326.jpg"
