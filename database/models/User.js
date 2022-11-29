@@ -1,44 +1,35 @@
 
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     let alias = "User";
     let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: DataTypes.INTEGER,
             primaryKey: true,
-            autoIncrement: true,
-            allowNull: false
+            autoIncrement: true
         },
         fullName: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+            type: DataTypes.STRING
         },
         imageUser: {
-            type: dataTypes.STRING(150),
-            allowNull: false
+            type: DataTypes.STRING
         },
         address: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+            type: DataTypes.STRING
         },
         phoneNumber: {
-            type: dataTypes.STRING(20),
-            allowNull: false
+            type: DataTypes.STRING
         },
         email: {
-            type: dataTypes.STRING(45),
-            allowNull: false
+            type: DataTypes.STRING
         },
         password: {
-            type: dataTypes.STRING(90),
-            allowNull: false
+            type: DataTypes.STRING
         },
         provinceId: {
-            type: dataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
         },
         rolId: {
-            type: dataTypes.INTEGER,
-            allowNull: false
+            type: DataTypes.INTEGER
         }
     };
 
@@ -49,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
 
 const User = sequelize.define(alias, cols, config);
 
-User.associate = function(models) {
+/* User.associate = function(models) {
     User.belongsTo(models.Rol, {
         as: 'rol',  //esta en singular porque cada usuario tiene un rol
         foreignKey: 'rolId'
@@ -61,7 +52,7 @@ User.associate = function(models) {
         as: 'Province',  // esta en singular porque cada usuario tiene una sola provincia
         foreignKey: 'provinceId'
     });
-}
+} */
 
     return User; 
 }

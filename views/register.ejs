@@ -12,118 +12,109 @@
 
     <main class="main-register">
         <h4>Crear cuenta</h4>
-                                                                
+
         <form class="form-register" action="/users/register" method="POST" enctype="multipart/form-data">
             <div>
-                <input class="input-register <%= locals.errors && errors.fullName ? "is-invalid" : ""%> "
-                    type="text" 
-                    name="fullName" 
-                    id="Nombre y apellido"
-                    placeholder="Nombre y apellido" 
-                    value="<%= locals.oldData ? oldData.fullName : null %>" >
+                <input class="input-register <%= locals.errors && errors.fullName ? " is-invalid" : "" %> "
+                type="text"
+                name="fullName"
+                id="Nombre y apellido"
+                placeholder="Nombre y apellido"
+                value="<%= locals.oldData ? oldData.fullName : null %>" >
                     <% if(locals.errors && errors.fullName) { %>
                         <div class="text-danger">
-                            <%= errors.fullName.msg  %> 
+                            <%= errors.fullName.msg %>
                         </div>
-                   <% } %>
+                        <% } %>
             </div>
             <div>
-                <input class="input-register <%= locals.errors && errors.address ? "is-invalid" : ""%> " 
-                type="text" 
-                name="address" 
-                id="Domicilio" 
+                <input class="input-register <%= locals.errors && errors.address ? " is-invalid" : "" %> "
+                type="text"
+                name="address"
+                id="Domicilio"
                 placeholder="Domicilio"
                 value="<%= locals.oldData ? oldData.address : null %>">
-                <% if(locals.errors && errors.address) { %>
-                    <div class="text-danger">
-                        <%= errors.address.msg  %> 
+                    <% if(locals.errors && errors.address) { %>
+                        <div class="text-danger">
+                            <%= errors.address.msg %>
+                        </div>
+                        <% } %>
+            </div>
+            <select name="province" class="input-register <%= locals.errors && errors.province ? " is-invalid" : "" %>
+                ">
+                <% for( let i=0; i < provinces.length; i++ ) {%>
+                    <option value="<%= provinces[i].id %> " <%=provinces[i].name %>
+                        <%= locals.oldData && (oneProvince===oldData.province) ? "selected" : null %>>
+                            <%= oneProvince %>
+                    </option>
+                    <% } %>
+            </select>
+            <% if(locals.errors && errors.province) { %>
+                <div class="text-danger">
+                    <%= errors.province.msg %>
+                </div>
+                <% } %>
                     </div>
-               <% } %>
-            </div>
-            <div>
-                <select name="province" 
-                class="input-register <%= locals.errors && errors.province ? "is-invalid" : ""%> " >
-                    <option value="">Elegi una Provincia</option>
-                    <% let provincia = [
-                    "Buenos Aires","Córdoba","Santa Fe","Ciudad Autónoma de Buenos Aires","Mendoza","Tucumán","Entre Ríos","Salta",
-                    "Misiones","Chaco", "Corrientes", "Santiago del Estero","San Juan","Jujuy","Río Negro", "Neuquén","Formosa",
-                   "Chubut","San Luis","Catamarca","La Rioja","La Pampa","Santa Cruz","Tierra del Fuego, Antártida e Islas del Atlántico Sur",
-                    ] %> 
-                    <% for (const oneProvince of provincia){ %>
-                        <option value ="<%= oneProvince %>"
-                            <%= locals.oldData && (oneProvince === oldData.province) ? "selected" : null %>
-                            > <%= oneProvince %> </option>
-                   <% } %>   
-             </select>
-             <% if(locals.errors && errors.province) { %>
-                        <div class="text-danger">
-                            <%= errors.province.msg  %> 
+                    <div>
+                        <label for="imageUser">Imagen de perfil</label>
+                        <div>
+                            <input class="input-register" type="file" name="imageUser">
+                            <% if(locals.errors && errors.imageUser) { %>
+                                <div class="text-danger">
+                                    <%= errors.imageUser.msg %>
+                                </div>
+                                <% } %>
                         </div>
-                   <% } %>
-            </div>
-            <div>
-            <label for="imageUser">Imagen de perfil</label>
-            <div>
-                <input 
-                class="input-register"
-                type="file" 
-                name="imageUser">
-                <% if(locals.errors && errors.imageUser) { %>
-                        <div class="text-danger">
-                            <%= errors.imageUser.msg  %> 
-                        </div>
-                   <% } %>
-            </div>
-        </div>
-            <div>
-                <input class="input-register <%= locals.errors && errors.phoneNumber ? "is-invalid" : ""%> "
-                type="tel" 
-                name="phoneNumber" 
-                id="telefono" 
-                placeholder="Telefono" 
-                value="<%= locals.oldData ? oldData.phoneNumber : null %>">
-                <% if(locals.errors && errors.phoneNumber) { %>
-                        <div class="text-danger">
-                            <%= errors.phoneNumber.msg  %> 
-                        </div>
-                   <% } %>
-            </div>
-            <div>
-                <input class="input-register <%= locals.errors && errors.email ? "is-invalid" : ""%> " 
-                type="text" 
-                name="email" 
-                id="email" 
-                placeholder="Email" 
-                value="<%= locals.oldData ? oldData.email : null %>">
-                <% if(locals.errors && errors.email) { %>
-                        <div class="text-danger">
-                            <%= errors.email.msg  %> 
-                        </div>
-                   <% } %>
-            </div>
-            <div>
-                <input class="input-register <%= locals.errors && errors.password ? "is-invalid" : ""%> " 
-                type="password" 
-                name="password" 
-                id="Contrasena" 
-                placeholder="Contraseña">
-                <% if(locals.errors && errors.password) { %>
-                        <div class="text-danger">
-                            <%= errors.password.msg  %> 
-                        </div>
-                   <% } %>
-            </div>
-            <div class="buttons">
-                <button class="button-register" type="reset">Borrar</button>
-                <button class="button-register" type="submit">Enviar</button>
-            </div>
+                    </div>
+                    <div>
+                        <input class="input-register <%= locals.errors && errors.phoneNumber ? " is-invalid" : "" %> "
+                        type="tel"
+                        name="phoneNumber"
+                        id="telefono"
+                        placeholder="Telefono"
+                        value="<%= locals.oldData ? oldData.phoneNumber : null %>">
+                            <% if(locals.errors && errors.phoneNumber) { %>
+                                <div class="text-danger">
+                                    <%= errors.phoneNumber.msg %>
+                                </div>
+                                <% } %>
+                    </div>
+                    <div>
+                        <input class="input-register <%= locals.errors && errors.email ? " is-invalid" : "" %> "
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                        value="<%= locals.oldData ? oldData.email : null %>">
+                            <% if(locals.errors && errors.email) { %>
+                                <div class="text-danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                                <% } %>
+                    </div>
+                    <div>
+                        <input class="input-register <%= locals.errors && errors.password ? " is-invalid" : "" %> "
+                        type="password"
+                        name="password"
+                        id="Contrasena"
+                        placeholder="Contraseña">
+                        <% if(locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
+                    </div>
+                    <div class="buttons">
+                        <button class="button-register" type="reset">Borrar</button>
+                        <button class="button-register" type="submit">Enviar</button>
+                    </div>
         </form>
     </main>
 
     <footer>
         <%- include ("./partials/footer") %>
     </footer>
-    
+
 </body>
 
 </html>
