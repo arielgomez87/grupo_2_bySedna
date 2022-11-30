@@ -23,7 +23,8 @@ const usersController = {
 			phoneNumber: req.body.phoneNumber,
 			email: req.body.email,
 			password: req.body.password,
-			province: req.body.province //que como pongo con Id o sin??
+			provinceId: req.body.province, //que como pongo con Id o sin??
+			rolId: req.body.rol
 		});
 
 		return res.redirect('/users/login/');

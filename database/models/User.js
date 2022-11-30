@@ -40,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
 
 const User = sequelize.define(alias, cols, config);
 
-/* User.associate = function(models) {
+ User.associate = function(models) {
     User.belongsTo(models.Rol, {
         as: 'rol',  //esta en singular porque cada usuario tiene un rol
         foreignKey: 'rolId'
@@ -52,7 +52,7 @@ User.associate = function(models) {
         as: 'Province',  // esta en singular porque cada usuario tiene una sola provincia
         foreignKey: 'provinceId'
     });
-} */
+}
 
     return User; 
 }

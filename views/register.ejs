@@ -40,22 +40,23 @@
                         </div>
                         <% } %>
             </div>
-            <select name="province" class="input-register <%= locals.errors && errors.province ? " is-invalid" : "" %>
-                ">
-                <% for( let i=0; i < provinces.length; i++ ) {%>
-                    <option value="<%= provinces[i].id %> " <%=provinces[i].name %>
-                        <%= locals.oldData && (oneProvince===oldData.province) ? "selected" : null %>>
-                            <%= oneProvince %>
-                    </option>
-                    <% } %>
-            </select>
-            <% if(locals.errors && errors.province) { %>
-                <div class="text-danger">
-                    <%= errors.province.msg %>
-                </div>
-                <% } %>
+            <div>
+                <select name="province" class="input-register <%= locals.errors && errors.province ? " is-invalid" : "" %>
+                    ">
+                    <% for( let i=0; i < provinces.length; i++ ) {%>
+                        <option value="<%= provinces[i].id %>">
+                            <%=provinces[i].name %>
+                            
+                        </option>
+                        <% } %>
+                </select>
+                <% if(locals.errors && errors.province) { %>
+                    <div class="text-danger">
+                        <%= errors.province.msg %>
                     </div>
-                    <div>
+                    <% } %>
+            </div>
+            <div>
                         <label for="imageUser">Imagen de perfil</label>
                         <div>
                             <input class="input-register" type="file" name="imageUser">
@@ -65,8 +66,8 @@
                                 </div>
                                 <% } %>
                         </div>
-                    </div>
-                    <div>
+            </div>
+            <div>
                         <input class="input-register <%= locals.errors && errors.phoneNumber ? " is-invalid" : "" %> "
                         type="tel"
                         name="phoneNumber"
@@ -78,8 +79,8 @@
                                     <%= errors.phoneNumber.msg %>
                                 </div>
                                 <% } %>
-                    </div>
-                    <div>
+            </div>
+            <div>
                         <input class="input-register <%= locals.errors && errors.email ? " is-invalid" : "" %> "
                         type="text"
                         name="email"
@@ -91,8 +92,8 @@
                                     <%= errors.email.msg %>
                                 </div>
                                 <% } %>
-                    </div>
-                    <div>
+            </div>
+            <div>
                         <input class="input-register <%= locals.errors && errors.password ? " is-invalid" : "" %> "
                         type="password"
                         name="password"
@@ -103,7 +104,14 @@
                                 <%= errors.password.msg %>
                             </div>
                             <% } %>
-                    </div>
+            </div>
+            <div>
+                        <input class="input-register "
+                        type="number"
+                        name="rol"
+                        id="rol"
+                        placeholder="rol">
+            </div>
                     <div class="buttons">
                         <button class="button-register" type="reset">Borrar</button>
                         <button class="button-register" type="submit">Enviar</button>
