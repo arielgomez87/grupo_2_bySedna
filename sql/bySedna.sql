@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2022 a las 01:23:31
+-- Tiempo de generación: 01-12-2022 a las 17:50:54
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -221,7 +221,7 @@ CREATE TABLE `user` (
   `email` varchar(45) NOT NULL,
   `password` varchar(90) NOT NULL,
   `provinceId` int(11) NOT NULL,
-  `rolId` int(11) NOT NULL
+  `rolId` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -229,38 +229,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullName`, `imageUser`, `address`, `phoneNumber`, `email`, `password`, `provinceId`, `rolId`) VALUES
-(1, 'eliana', '', 'cacahuete 20', '4561225512', 'eliana@gmail.com', '123456', 8, 2),
-(2, 'ariel', '', 'talcahuano 24', '124564874', 'ariel@hotmail.com', '123456', 16, 2),
-(4, 'Wadsworth Churchward', '', '1 Killdeer Park', '960-408-8869', 'wchurchward0@usda.gov', 'fiE5C9', 23, 2),
-(5, 'Nels Showalter', '', '6 Dayton Trail', '835-229-4706', 'nshowalter1@typepad.com', '4N7UsuKp', 3, 2),
-(6, 'Wendeline Kenewel', '', '00882 Fremont Circle', '351-243-5507', 'wkenewel2@washingtonpost.com', 'sAmpvdclNq', 10, 1),
-(7, 'Vergil Dunphy', '', '128 Warner Alley', '364-743-9245', 'vdunphy3@yahoo.com', 'jVAMe35zj', 2, 2),
-(8, 'Ursulina Pring', '', '945 Bonner Center', '325-635-3628', 'upring4@amazonaws.com', 'OgqHQjb', 13, 2),
-(9, 'De Rablen', '', '93 Express Parkway', '405-377-2521', 'drablen5@symantec.com', '0c2yvnLX', 15, 1),
-(10, 'Adolph Brownsey', '', '216 American Circle', '655-776-1225', 'abrownsey6@wp.com', 'lPXvd6uumwaS', 17, 1),
-(11, 'Laney Carvil', '', '43855 Morrow Hill', '493-138-0056', 'lcarvil7@cnet.com', '2bElBbdCxfn', 8, 2),
-(12, 'Marcia Guislin', '', '09179 Heffernan Court', '807-618-5202', 'mguislin8@amazonaws.com', '9UyOYgwS', 24, 2),
-(13, 'Amabel Wilcox', '', '91 Bayside Hill', '154-926-4602', 'awilcox9@domainmarket.com', 'AeHBpwgXT', 3, 1),
-(14, 'Tarra Watson', '', '0674 Jay Way', '727-873-6823', 'twatsona@aol.com', 'kXfHXfjh', 4, 2),
-(15, 'Christyna Hauger', '', '5823 Nevada Way', '959-128-0136', 'chaugerb@cpanel.net', 'aMaV9UxW2', 17, 2),
-(16, 'Morna Measen', '', '371 Buena Vista Drive', '961-113-2315', 'mmeasenc@china.com.cn', '3KdKly4', 23, 1),
-(17, 'Colette Whilder', '', '3599 Hoffman Point', '413-914-1687', 'cwhilderd@fastcompany.com', 'H1encff', 24, 1),
-(18, 'Sigvard Cobbald', '', '58 Monica Point', '261-983-1209', 'scobbalde@diigo.com', 'y7ObvC3I6ydt', 2, 1),
-(19, 'Emelia Gatenby', '', '823 Ridgeway Hill', '917-808-5535', 'egatenbyf@gnu.org', 'XncmGNN5N92L', 1, 1),
-(20, 'Dolores Brookzie', '', '09781 Leroy Court', '437-559-4311', 'dbrookzieg@businessinsider.com', '1bEtpZ', 20, 1),
-(21, 'Nolie Cadlock', '', '54 Ruskin Crossing', '627-167-7289', 'ncadlockh@list-manage.com', 'btFtil9bt', 13, 2),
-(22, 'Opal Whichelow', '', '408 Center Court', '208-265-4605', 'owhichelowi@amazon.de', 'S6OxPSJWISp', 1, 2),
-(23, 'Kalvin Iredell', '', '58 Londonderry Way', '803-135-3570', 'kiredellj@unesco.org', '0xkkZOviOA', 13, 1),
-(24, 'Cassandre L\'Episcopi', '', '71694 Union Center', '322-703-6768', 'clepiscopik@dailymotion.com', 'khfppqNd', 17, 2),
-(25, 'Ronnie Gollin', '', '85160 Ludington Lane', '623-673-3052', 'rgollinl@ehow.com', 'zRWxEj', 4, 1),
-(26, 'Mag Islep', '', '2 Charing Cross Pass', '542-919-8171', 'mislepm@altervista.org', 'ZAFPKsZiH', 22, 1),
-(27, 'Renee Lupson', '', '0298 Ryan Terrace', '877-741-2797', 'rlupsonn@joomla.org', 'J3vjIG', 4, 1),
-(28, 'Jean MacCurley', '', '7776 Southridge Avenue', '716-702-4102', 'jmaccurleyo@sitemeter.com', 'No1AMvrTLt', 8, 1),
-(29, 'Eal Roadnight', '', '6663 Mccormick Court', '334-168-4899', 'eroadnightp@studiopress.com', 'h6ghmgj', 25, 1),
-(30, 'Nerti Burton', '', '4646 David Drive', '201-971-2838', 'nburtonq@wiley.com', 'V3IT2tit46SB', 21, 2),
-(31, 'Aldo Catterick', '', '982 Hintze Trail', '259-415-6545', 'acatterickr@buzzfeed.com', 'ZRNJ3MxI', 1, 1),
-(32, 'Erv Spurge', '', '6 Continental Circle', '173-497-9895', 'espurges@edublogs.org', 'ayJMVF', 20, 1),
-(33, 'Lenci Duggon', '', '13970 Katie Way', '470-726-2283', 'lduggont@cpanel.net', 'WNM1R03', 1, 1);
+(57, 'Ariel Gomez', 'avatar-1669913258737.jpg', 'birkeroy 1588', '4455665499', 'arielgomez.87@gmail.com', '$2a$10$fLCvTlG0djnrXgo4Lw5LoOJkVWxax0H3HWQJs4fseozB0iupW2AxG', 7, 1),
+(58, 'eliana', 'avatarDefault.png', 'cangallo 1558', '456656546546', 'eliana@gmail.com', '$2a$10$MB7IuxBcmF1.OmP5LxZ4Uu/6mrgnXwneZPtNuZSYH4lbWIj82QgJq', 1, 1),
+(59, 'Nicolas', 'avatarDefault.png', 'lucila 1568', '4566897946', 'nicolas@gmail.com', '$2a$10$etTKpxhAnGLPTi1StfWZ4uT/tNhgThQapnlL/6cHVJqymHB4RjTKe', 1, 1),
+(60, 'Lionel Messi', 'avatarDefault.png', 'Paris 2022', '45656543', 'messi@gmail.com', '$2a$10$B6Ba8n9bhOYQXlZRHXoUoe6mReS8AvltdfO12krAoIeP6OrHahbKi', 6, 1);
 
 --
 -- Índices para tablas volcadas
@@ -345,7 +317,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- Restricciones para tablas volcadas

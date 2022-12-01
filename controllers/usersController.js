@@ -22,6 +22,14 @@ const usersController = {
 
     if (userInDataBase) {
       const provinces = await db.Province.findAll();
+      
+      let resultValidation = validationResult(req);/*sirve para capturar las validaciones y me trae los datos en un array*/
+  	if (resultValidation.errors.length > 0) { /**errors es una propiedad de validation results */
+   		return res.render("register", {
+   			errors: resultValidation.mapped(), /**.mapped convierte el array en un objeto literal **/
+   			oldData: req.body
+   		});
+   	}
       return res.render("register", {
         errors: {
           email: {
@@ -32,10 +40,11 @@ const usersController = {
         provinces,
       });
     }
-    const imgUser = req.file.filename
+    const imgUser = req.file
       ? req.file.filename
-      : "avatar-1669851368278.png";
+      : "avatarDefault.png";
     //avatar de usuario
+    
 
     db.User.create({
       fullName: req.body.fullName,
@@ -44,8 +53,7 @@ const usersController = {
       phoneNumber: req.body.phoneNumber,
       email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
-      provinceId: req.body.province,
-      rolId: req.body.rol,
+      provinceId: req.body.province
     })
 
       .then((user) => {
