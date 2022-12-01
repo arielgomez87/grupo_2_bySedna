@@ -12,17 +12,17 @@ const validations = require("../middlewares/validationsMiddleware") /*este requi
 
 
 //Mostrará el formulario de creación para un producto
-router.get('/register', /*guestMiddleware*/ usersController.register);
+router.get('/register', guestMiddleware, usersController.register);
 
 //Deberá recibir los datos del formulario de creación
 router.post('/register', upload.single("imageUser"), /*validations*/  usersController.processRegisterNewUser);
 
- router.get('/login', /*guestMiddleware*/ usersController.login);
+ router.get('/login', guestMiddleware, usersController.login);
 
  router.post('/login', /*validations*/ usersController.loginProcess);
 
  //mostrara la pagina del usuario                                                                              
- router.get("/profile", /*authMiddleware*/ usersController.profile)
+ router.get("/profile", authMiddleware, usersController.profile)
 
  router.get('/logout', usersController.logout);
 

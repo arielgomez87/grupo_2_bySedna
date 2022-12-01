@@ -70,7 +70,6 @@ const usersController = {
     })
       .then((userToLogin) => {
         if (userToLogin) {
-          console.log("funciona");
           let thePasswordIsOk = bcrypt.compareSync(
             req.body.password,
             userToLogin.password
@@ -97,7 +96,7 @@ const usersController = {
           throw {
             errors: {
               email: {
-                msg: "Cuenta inexistente", //si esta incorrecta la contraseña muestra ese mensaje
+                msg: "Verificar los datos", //si esta incorrecta la contraseña muestra ese mensaje
               },
             },
           };
