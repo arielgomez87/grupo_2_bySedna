@@ -1,4 +1,4 @@
-const User = require("../controllers/OldUser")  //traigo el modelo con todos las operaciones de la base de datos
+const User = require("../controllers/usersController")  //traigo el modelo con todos las operaciones de la base de datos
 
 function userLoggedMiddleware(req, res, next) {  //funciona cuando el usuario esta logeado y muestra el logout del navbar
     res.locals.isLogged = false;

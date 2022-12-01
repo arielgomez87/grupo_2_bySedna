@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cookies = require('cookie-parser');
 const path = require('path');
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
+//const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 const methodOverride = require('method-override');
 const session = require("express-session");
 
@@ -24,7 +24,7 @@ app.use(session({  //middleware de aplicacion de session
 
 app.use(cookies());
 
-app.use(userLoggedMiddleware);
+//app.use(userLoggedMiddleware);
 
 app.use(methodOverride('_method')); //sirve para indicar en el formulario que es un put, path o un delete.
 
