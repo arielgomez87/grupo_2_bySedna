@@ -19,22 +19,24 @@ var upload = multer({storage: multerStorage})
 router.get("/", productController.products);
 
 /*ruta a un solo producto*/
-router.get("/detail/:id", productController.details);
+router.get("/detail/:id", productController.detail);
 
 //ruta para Crear producto
 //muestra el formulario de creacion
 router.get("/create", productController.create );
 //recibe los datos del formulario de creacion
-router.post("/", upload.single("product-image"), productController.store);
+router.post("/create", upload.single("product-image"), productController.store);
 
 //ruta par Editar producto
 //ruta que muestra el editor con los datos a completar
 router.get("/edit/:id", productController.edit);
 //ruta que recibe las modificaciones
-router.put("/:id", productController.update);
+router.post("/:id", productController.update);
 
 //ruta para eliminar productos
-router.delete("/:id", productController.destroy); /*store, update y destroy. tiene solo "/dato" no hace falta referenciar la otra
+router.post("/delete/:id", productController.delete);
+
+                                                    /*store, update y destroy. tiene solo "/dato" no hace falta referenciar la otra
                                                     parte de la ruta porque como son post, put y delete nunca van a venir por url
                                                     por ende nunca se va v acunfundir el navegador.*/
 

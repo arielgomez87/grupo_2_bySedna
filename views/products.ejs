@@ -17,8 +17,9 @@
                     <div class=" productsInProducts col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <a href="/products/detail/<%= product.id %> ">
                         <div class="product-img">
-                            <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris"
+                            <img class="img-fluid" src="/images/products/<%= product.image.name %> " alt="Bikini Gris"
                                 class="img-product">
+                                <p>img-src: <%= console.dir(product.image) %></p>
                         </div>
                         <div class="product-description">
                             <div class="product-title">

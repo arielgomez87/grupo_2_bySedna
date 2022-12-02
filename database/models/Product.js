@@ -35,11 +35,11 @@ const Product = sequelize.define(alias, cols, config);
 Product.associate = function(models){
     Product.hasMany(models.Image, {
         foreignKey: "productId",
-        as: "images"
+        as: "image"
     })
 
     Product.belongsToMany(models.Size, {
-        as:"sizes",
+        as:"productSize",
         through: "product_size",
         foreignKey: "productId",
         otherKey:"sizeId",
