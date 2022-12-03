@@ -4,7 +4,6 @@ const path = require('path');
 const validations = [ /*este array contiene a los check del registro*/
     check('fullName').isLength({min:1}).withMessage('Debe ingresar un nombre'),
     check('address').isLength({min:1}).withMessage('Debe ingresar un direccion'),
-    check("province").notEmpty().withMessage('Debe seleccionar una provincia'),
     check("imageUser").custom((value, {req}) => {
         let file = req.file;
         let acceptedExtensions = [".jpg", ".png", "gif"];

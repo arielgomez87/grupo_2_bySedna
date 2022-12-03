@@ -41,12 +41,10 @@
                         <% } %>
             </div>
             <div>
-                <select name="province" class="input-register <%= locals.errors && errors.province ? " is-invalid" : "" %>
-                    ">
+                <select name="province" class="input-register <%= locals.errors && errors.province ? "is-invalid" : "" %>">
                     <% for( let i=0; i < provinces.length; i++ ) {%>
                         <option value="<%= provinces[i].id %>">
                             <%=provinces[i].name %>
-                            
                         </option>
                         <% } %>
                 </select>

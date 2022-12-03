@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include ("./partials/head", {title: 'Registro a ' }) %>
+</head>
+
+<body>
+    <header class="main-header">
+        <%- include ("./partials/header") %>
+    </header>
+
+    <main class="main-register">
+        <h4>Editar cuenta</h4>
+
+        <form class="form-register" action="/users/edit/<%=user.id%> " method="POST" enctype="multipart/form-data">
+            <div>
+                <input class="input-register"
+                type="text"
+                name="fullName"
+                id="Nombre y apellido"
+                value="<%= user.fullName %>" 
+                placeholder="Nombre y apellido"
+                >
+            </div>
+            <div>
+                <input class="input-register"
+                type="text"
+                name="address"
+                id="Domicilio"
+                placeholder="Domicilio"
+                value="<%= user.address %>">
+            </div>
+            <div>
+                <select name="province" class="input-register"%>>
+                    <% for( let i=0; i < provinces.length; i++ ) {%>
+                        <% if (provinces[i].id == user.provinceId) { %>
+                            <option value="<%= provinces[i].id %>" selected>
+                                <%=provinces[i].name %>
+                            </option>
+                        <% } else { %>
+                            <option value="<%= provinces[i].id %>">
+                                <%=provinces[i].name %>
+                            </option>
+                        <% } %>
+                        <% } %>
+                </select>
+            </div>
+            <div>
+                        <label for="imageUser">Imagen de perfil</label>
+                        <div>
+                            <input class="input-register" type="file" name="imageUser">
+                        </div>
+            </div>
+            <div>
+                        <input class="input-register"
+                        type="tel"
+                        name="phoneNumber"
+                        id="telefono"
+                        placeholder="Telefono"
+                        value="<%= user.phoneNumber %>">       
+            </div>
+            <div>
+                        <input class="input-register"
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                        value="<%= user.email %>"
+                        <%= locals.errors && errors.email ? " is-invalid" : "" %>>
+                        <% if(locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
+            </div>
+            <div>
+                        <input class="input-register"
+                        type="password"
+                        name="password"
+                        id="Contrasena"
+                        placeholder="Contraseña">
+            </div>
+                    <div class="buttons">
+                        <button class="button-register" type="submit">Editar</button>
+                    </div>
+        </form>
+    </main>
+
+    <footer>
+        <%- include ("./partials/footer") %>
+    </footer>
+
+</body>
+
+</html>
