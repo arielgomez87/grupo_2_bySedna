@@ -19,6 +19,21 @@ router.post('/register', upload.single("imageUser"), /*este array contiene a los
     body('fullName').isLength({min:1}).withMessage('Debe ingresar un nombre'),
     body('address').isLength({min:1}).withMessage('Debe ingresar un direccion'),
     body("phoneNumber").notEmpty().withMessage('Debe ingresar un numero telefonico'),
+    body("province").notEmpty().withMessage('Debe seleccionar una provincia'),
+    body("imageUser").custom((value, {req}) => {
+        let file = req.file;
+        let acceptedExtensions = [".jpg", ".png", "gif"];
+        
+        if (!file){
+            throw new Error("Tienes que adjuntar un imagen");
+        } else{
+            let fileExtension = path.extname(file.originalname);
+            if(!acceptedExtensions.includes(fileExtension)){
+                throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(", ")}`)
+            }
+        }
+        return true;
+    }),
     body('email')
         .notEmpty().withMessage("Debes escribir un Email").bail()
         .isEmail().withMessage('Debes ingresar un email valido'),
@@ -38,7 +53,7 @@ router.post('/register', upload.single("imageUser"), /*este array contiene a los
 router.get('/edit/:id', usersController.edit);
 
 //Deberá recibir los datos del formulario de edición
-router.post('/edit/:id', usersController.update);
+router.post('/edit/:id',upload.single("imageUser"), usersController.update);
 
 //Botón BORRAR: eliminará al usuario
 router.post("/delete/:id", usersController.delete);

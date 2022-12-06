@@ -42,6 +42,7 @@
             </div>
             <div>
                 <select name="province" class="input-register <%= locals.errors && errors.province ? "is-invalid" : "" %> province">
+                    <option value="" selected>Elegir Provincia</option>
                     <% for( let i=0; i < provinces.length; i++ ) {%>
                         <option value="<%= provinces[i].id %>">
                             <%=provinces[i].name %>

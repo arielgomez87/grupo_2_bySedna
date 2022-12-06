@@ -16,9 +16,13 @@ const usersController = {
   processRegisterNewUser: async (req, res) => {
     let errors = validationResult(req)
     if (!errors.isEmpty()) {
+      const provinces = await db.Province.findAll()
+
+      console.log(provinces);
       return res.render("register", {
         errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
-        oldData: req.body
+        oldData: req.body,
+        provinces
       })
     };
 
@@ -142,7 +146,7 @@ const usersController = {
       ? req.file.filename
       : "avatarDefault.png";
     //avatar de usuario
-
+console.log(req);
     db.User.update({
       fullName: req.body.fullName,
       imageUser: imgUser,
@@ -162,6 +166,7 @@ const usersController = {
         return res.redirect("/users/login/");
       })
       .catch((error) => {
+        console.log(error);
         //redirect a una vista de error!!
         console.log("error de la base de datos");
       });
