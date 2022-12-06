@@ -28,7 +28,7 @@
                         <% } %>
             </div>
             <div>
-                <input class="input-register <%= locals.errors && errors.address ? " is-invalid" : "" %> address "
+                <input class="input-register <%= locals.errors && errors.address ? " is-invalid" : "" %> address"
                 type="text"
                 name="address"
                 id="Domicilio"
@@ -58,7 +58,7 @@
             <div>
                         <label for="imageUser">Imagen de perfil</label>
                         <div>
-                            <input class="input-register imageUser" type="file" name="imageUser">
+                            <input class="input-register <%= locals.errors && errors.imageUser ? "is-invalid" : "" %> imageUser" type="file" name="imageUser">
                             <% if(locals.errors && errors.imageUser) { %>
                                 <div class="text-danger">
                                     <%= errors.imageUser.msg %>

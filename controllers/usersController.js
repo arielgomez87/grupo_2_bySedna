@@ -18,7 +18,6 @@ const usersController = {
     if (!errors.isEmpty()) {
       const provinces = await db.Province.findAll()
 
-      console.log(provinces);
       return res.render("register", {
         errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
         oldData: req.body,
@@ -140,13 +139,23 @@ const usersController = {
   },
 
   // Update -  Metodo para actualizar Usuario
-  update: (req, res) => {
+  update: async (req, res) => {
+    let errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      const provinces = await db.Province.findAll()
+
+      return res.render("edit", {
+        errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
+        oldData: req.body,
+        provinces
+      })
+    };
 
     const imgUser = req.file
       ? req.file.filename
       : "avatarDefault.png";
     //avatar de usuario
-console.log(req);
+
     db.User.update({
       fullName: req.body.fullName,
       imageUser: imgUser,
@@ -163,6 +172,7 @@ console.log(req);
 
       .then((user) => {
         console.log(user);
+        req.session.destroy();
         return res.redirect("/users/login/");
       })
       .catch((error) => {
