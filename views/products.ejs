@@ -17,9 +17,12 @@
                     <div class=" productsInProducts col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <a href="/products/detail/<%= product.id %> ">
                         <div class="product-img">
-                            <img class="img-fluid" src="/images/products/<%= product.image.name %> " alt="Bikini Gris"
-                                class="img-product">
-                                <p>img-src: <%= console.dir(product.image) %></p>
+                            <!-- if de imagen x default -->
+                            <% if(product.image[0]){%>
+                                <img class="img-fluid" src="/images/products/<%= product.image[0].dataValues.name %> " alt="Bikini Gris" class="img-product">
+                                <% }else { %>
+                                  <img class="img-fluid" src="/images/users/avatarDefault.png " alt="Bikini Gris" class="img-product">
+                                  <% } %>
                         </div>
                         <div class="product-description">
                             <div class="product-title">

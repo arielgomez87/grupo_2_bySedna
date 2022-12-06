@@ -31,6 +31,7 @@ const productController = {
 		})
 			.then(function(Product) {
 				res.render('products', {products: Product})
+				//res.json(Product) API
 			})
 	},
  	detail: function(req, res){
@@ -38,6 +39,8 @@ const productController = {
 			include: [{association: 'image'},{association: 'productSize'}]
 		})
 			.then(function(Product) {
+				//console.log(Product.image[0].dataValues.name)
+				//console.log(Product.productSize[0].dataValues.name)
 				res.render('productDetail', {product: Product})
 			})
 	},

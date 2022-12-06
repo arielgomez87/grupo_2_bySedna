@@ -38,9 +38,17 @@
             </select>
             <a href="#"><input class="buy-button" type="button" value="Agregar al Carrito"></a>
             
+
           </div>
           <div class="product-img-detail">
-            <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
+
+            <% if(product.image[0]){%>
+              <p><% console.log(product.image)%></p>
+            <img class="img-fluid" src="/images/products/<%= product.image[0].dataValues.name %> " alt="Bikini Gris" class="img-product">
+            <% }else { %>
+              <img class="img-fluid" src="/images/users/avatarDefault.png " alt="Bikini Gris" class="img-product">
+              <% } %>
+
             <div class="div-BottonEditAndDelete">
               <div>
                 <a href="/products/edit/<%= product.id %>"><input type="submit" class="editar-product" value="EDITAR">
