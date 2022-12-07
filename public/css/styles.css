@@ -500,7 +500,14 @@ align-items: flex-end;
     padding: 5px;
     border: 1px solid #bcbcbc;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 300px;
+    background-color: white;
+}
+.image-register{
+    padding: 5px;
+    border: 1px solid #bcbcbc;
+    border-radius: 5px;
     width: 300px;
     background-color: white;
 }
@@ -514,6 +521,7 @@ align-items: flex-end;
     border: 1px solid black;
     padding: 7px;
     border: none;
+    margin-top: 10px;
     background-color: #AD8F8F;
     border-radius: 5px;
 }
@@ -534,6 +542,15 @@ align-items: flex-end;
     vertical-align: bottom;
     position: relative;
     top: -3px;
+}
+
+.error{
+    color: red;
+    display: block;
+    font-size: 12px;
+}
+.invalid{
+    border:solid 1px red;
 }
 
 
