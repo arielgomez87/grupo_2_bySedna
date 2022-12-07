@@ -92,7 +92,7 @@
                         name="email"
                         id="email"
                         placeholder="Email"
-                        value="<%= user.email %>">
+                        value="<%= user.email %>" readonly>
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>

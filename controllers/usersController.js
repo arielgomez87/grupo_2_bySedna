@@ -139,15 +139,17 @@ const usersController = {
   },
 
   // Update -  Metodo para actualizar Usuario
-  update: async (req, res) => {
+  update:  (req, res) => {
     let errors = validationResult(req)
     if (!errors.isEmpty()) {
-      const provinces = await db.Province.findAll()
-
-      return res.render("edit", {
-        errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
+      let userEdit = db.User.findByPk(req.params.id);
+    let allProvinces = db.Province.findAll()
+    Promise.all([userEdit, allProvinces])
+      .then(function ([user, provinces]) {
+        res.render("editUser", { user: user, provinces: provinces, 
+          errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
         oldData: req.body,
-        provinces
+        provinces })
       })
     };
 

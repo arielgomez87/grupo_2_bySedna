@@ -380,7 +380,16 @@ a:link, a:visited, a:active {
     text-decoration:none;
 }
 
+/*User Page*/
+
+.btn-userPage{
+    margin:5px;
+}
+.btn-success, .btn-danger, .btn-outline-danger{
+    margin: 5px;
+}
 /*Creador*//*Editor*/
+
 .mainCreate, .mainEdit{
     display: flex;
     flex-wrap: wrap;
