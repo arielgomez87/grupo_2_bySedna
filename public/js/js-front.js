@@ -1,66 +1,89 @@
-window.addEventListener("load", function(){
-    let formulario = document.querySelector(".form-register");
+const fullNameField = document.querySelector("input.fullName");
+const addressField = document.querySelector("input.address");
+const provinceField = document.querySelector("select.province");
+const imageUserField = document.querySelector("input.imageUser");
+const phoneNumberField = document.querySelector("input.phoneNumber");
+const emailField = document.querySelector("input.email");
+const passwordField =  document.querySelector("input.password");
 
-    
-    
-    
-    // Validacion Email
-    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-    const input = document.querySelector('input.email');
 
-    function isEmailValid(value) {
- 	    return EMAIL_REGEXP.test(value);
+const validacionCampoNombre = (e) => {
+        const campo = e.target;
+        const valorDelCampo = e.target.value;
+        if (valorDelCampo.trim().length < 2){
+            campo.classList.add("invalid");
+            campo.nextElementSibling.classList.add("error");
+            campo.nextElementSibling.innerText = "Nombre y apellido debe tener minimo 2 caracteres";
+        } else{
+            campo.classList.remove("invalid");
+            campo.nextElementSibling.classList.remove("error");
+            campo.nextElementSibling.innerText = "";
         }
+};
 
-    function onInput() {
-	    if (isEmailValid(input.value)) {
-		input.style.borderColor = 'green';
-	} else {
-		input.style.borderColor = 'red';
-	    }
+const validacionCampoVacio = (mensaje, e) => {
+    const campo = e.target;
+    const valorDelCampo = e.target.value;
+    if (valorDelCampo.trim().length < 5){
+        campo.classList.add("invalid");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = mensaje;
+    } else{
+        campo.classList.remove("invalid");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText = "";
+    }
 }
 
-    input.addEventListener('input', onInput);
+const validacionCampoTelefono = (e) => {
+    const campo = e.target;
+    const valorDelCampo = e.target.value;
+    if (valorDelCampo.trim().length < 8){
+        campo.classList.add("invalid");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = "Telefono debe tener minimo 8 numeros";
+    } else{
+        campo.classList.remove("invalid");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText = "";
+    }
+};
 
-    // Fin validacion Email
+const validacionEmailValido = e => {
+    const campo = e.target;
+    const valorDelCampo = e.target.value;
+    const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+    if (valorDelCampo.trim().length > 5 && !regex.test(valorDelCampo)){
+        campo.classList.add("invalid");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = "Por favor ingrese un email valido";
+    } else{
+        campo.classList.remove("invalid");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText = "";
+    }
+}
+
+const validacionCampoContraseña = (e) => {
+    const campo = e.target;
+    const valorDelCampo = e.target.value;
+    if (valorDelCampo.trim().length < 8){
+        campo.classList.add("invalid");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = "Contraseña debe tener minimo 8 caracteres";
+    } else{
+        campo.classList.remove("invalid");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText = "";
+    }
+};
 
 
-    formulario.addEventListener("submit", function(e){
-        e.preventDefault();
 
-        let fullName = document.querySelector("input.fullName" );
 
-        if(fullName.value == ""){
-            alert("el campo de Nombre tiene que estar completo");
-        } else if( fullName.value.length < 3){
-            alert("El campo de Nombre tiene que ser mayor a 3 caracteres")
-        }
-        
-        let address = document.querySelector("input.address" );
-
-        if(address.value == ""){
-            alert("el campo del Domicilio tiene que estar completo");
-        } else if( address.value.length < 3){
-            alert("El campo del Domicilio tiene que ser mayor a 3 caracteres")
-        }
-
-        let phoneNumber = document.querySelector("input.phoneNumber" );
-
-        if(phoneNumber.value == ""){
-            alert("el campo del Telefono tiene que estar completo");
-        } else if( phoneNumber.value.length < 8){
-            alert("El campo del Telefono tiene que ser mayor a 8 caracteres")
-        }
-
-      
-        let password = document.querySelector("input.password" );
-
-        if(password.value == ""){
-            alert("el campo del Contraseña tiene que estar completo");
-        } else if( password.value.length < 8){
-            alert("El campo del Contraseña tiene que ser mayor a 8 caracteres")
-        }
-        
-        
-    })
-})
+fullNameField.addEventListener("blur", validacionCampoNombre);
+phoneNumberField.addEventListener("blur", validacionCampoTelefono);
+addressField.addEventListener("blur", (e) => validacionCampoVacio("Domicilio debe tener minimo 5 caracteres", e));
+emailField.addEventListener("blur", (e) => validacionCampoVacio("Completa tu email con minimo 5 caracteres validos", e));
+emailField.addEventListener("input", validacionEmailValido);
+passwordField.addEventListener("blur", validacionCampoContraseña);
