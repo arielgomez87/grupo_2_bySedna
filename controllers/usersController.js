@@ -163,7 +163,6 @@ const usersController = {
       imageUser: imgUser,
       address: req.body.address,
       phoneNumber: req.body.phoneNumber,
-      email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
       provinceId: req.body.province
     }, {

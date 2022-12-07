@@ -10,14 +10,12 @@ body("imageUser").custom((value, {req}) => {
     let file = req.file;
     let acceptedExtensions = [".jpg", ".jpeg",".png", "gif"];
     
-    if (!file){
-        throw new Error("Tienes que adjuntar un imagen");
-    } else{
+    if (file){
         let fileExtension = path.extname(file.originalname);
         if(!acceptedExtensions.includes(fileExtension)){
             throw new Error(`Las extensiones de archivos permitidas son ${acceptedExtensions.join(", ")}`)
         }
-    }
+    } 
     return true;
 }),
 body('email')
