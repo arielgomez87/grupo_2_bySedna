@@ -139,31 +139,34 @@ const usersController = {
   },
 
   // Update -  Metodo para actualizar Usuario
-  update:  (req, res) => {
+  update:  async (req, res) => {
     let errors = validationResult(req)
+    console.log(errors);
     if (!errors.isEmpty()) {
       let userEdit = db.User.findByPk(req.params.id);
     let allProvinces = db.Province.findAll()
     Promise.all([userEdit, allProvinces])
       .then(function ([user, provinces]) {
-        res.render("editUser", { user: user, provinces: provinces, 
+       return res.render("editUser", { user: user, provinces: provinces, 
           errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
         oldData: req.body,
         provinces })
       })
+      return
     };
 
     const imgUser = req.file
       ? req.file.filename
       : "avatarDefault.png";
     //avatar de usuario
+      const userToUpdate = await db.User.findByPk(req.params.id)
+
 
     db.User.update({
       fullName: req.body.fullName,
       imageUser: imgUser,
       address: req.body.address,
       phoneNumber: req.body.phoneNumber,
-      email: req.body.email,
       password: bcrypt.hashSync(req.body.password, 10),
       provinceId: req.body.province
     }, {
@@ -172,10 +175,13 @@ const usersController = {
       }
     })
 
-      .then((user) => {
+    
+
+      .then(async (user) => {
+        const userUpdated = await db.User.findByPk(req.params.id)
         console.log(user);
-        req.session.destroy();
-        return res.redirect("/users/login/");
+        req.session.userLogged = userUpdated;  
+        return res.redirect("/users/profile/");
       })
       .catch((error) => {
         console.log(error);
