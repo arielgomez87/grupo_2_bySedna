@@ -503,6 +503,12 @@ input[type=number] {
 
 /* Register*/
 
+.text-danger{
+    color:red;
+    font-size: 12px;
+    display: block;
+}
+
 .main-register{
     display: flex;
     flex-wrap: wrap;

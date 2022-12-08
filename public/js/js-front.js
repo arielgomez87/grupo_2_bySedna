@@ -1,3 +1,6 @@
+window.addEventListener("load", function(){
+
+
 const fullNameField = document.querySelector("input.fullName");
 const addressField = document.querySelector("input.address");
 const provinceField = document.querySelector("select.province");
@@ -49,6 +52,21 @@ const validacionCampoProvincia = (e) => {
     }
 };
 
+const validacionCampoImagen= (e)=> {
+const campo = e.target;
+const fileExtension = e.target.files[0].name.split(".").pop().toLowerCase();
+const validExtension = ["jpg", "jpeg", "png", "gif"];
+if (!validExtension.includes(fileExtension)){
+    campo.classList.add("invalid");
+    campo.nextElementSibling.classList.add("error");
+    campo.nextElementSibling.innerText = `Las extensiones de archivos permitidas son:  ${validExtension.join(", ")}`;
+} else{
+    campo.classList.remove("invalid");
+    campo.nextElementSibling.classList.remove("error");
+    campo.nextElementSibling.innerText = "";
+}
+}
+
 const validacionCampoTelefono = (e) => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
@@ -93,12 +111,14 @@ const validacionCampoContraseña = (e) => {
 };
 
 
-
-
 fullNameField.addEventListener("blur", validacionCampoNombre);
 phoneNumberField.addEventListener("blur", validacionCampoTelefono);
 provinceField.addEventListener("blur", validacionCampoProvincia);
+imageUserField.addEventListener("change", validacionCampoImagen);
 addressField.addEventListener("blur", (e) => validacionCampoVacio("Domicilio debe tener minimo 5 caracteres", e));
 emailField.addEventListener("blur", (e) => validacionCampoVacio("Completa tu email con minimo 5 caracteres validos", e));
 emailField.addEventListener("input", validacionEmailValido);
 passwordField.addEventListener("blur", validacionCampoContraseña);
+
+
+})

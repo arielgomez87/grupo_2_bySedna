@@ -58,6 +58,7 @@
                 <div>
                     <input class="image-register <%= locals.errors && errors.imageUser ? " is-invalid" : "" %>
                     imageUser" type="file" id= "Imagen de perfil" name="imageUser">
+                    <span></span>
                     <% if(locals.errors && errors.imageUser) { %>
                         <div class="text-danger">
                             <%= errors.imageUser.msg %>

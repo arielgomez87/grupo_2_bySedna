@@ -13,7 +13,7 @@
     <main class="main-register">
         <h4>Editar cuenta</h4>
 
-        <form class="form-register" action="/users/edit/<%=user.id%> " method="POST" enctype="multipart/form-data">
+        <form class="form-register formview"  action="/users/edit/<%=user.id%> " method="POST" enctype="multipart/form-data">
             <div>
                 <input class="input-register <%= locals.errors && errors.fullName ? " is-invalid" : "" %> fullName"
                 type="text"
@@ -45,6 +45,7 @@
             </div>
             <div>
                 <select name="province" id= "Provincia" class="input-register <%= locals.errors && errors.province ? "is-invalid" : "" %> province">
+                    <option value="" selected>Elegir Provincia</option>
                     <% for( let i=0; i < provinces.length; i++ ) {%>
                         <% if (provinces[i].id == user.provinceId) { %>
                             <option value="<%= provinces[i].id %>" selected>
@@ -57,6 +58,7 @@
                         <% } %>
                         <% } %>
                 </select>
+                <span></span>
                 <% if(locals.errors && errors.province) { %>
                     <div class="text-danger">
                         <%= errors.province.msg %>
@@ -68,6 +70,7 @@
                         <div>
                             <input class="input-register <%= locals.errors && errors.imageUser ? "is-invalid" : "" %> imageUser" 
                             type="file" id= "Imagen de perfil" name="imageUser">
+                            <span></span>
                             <% if(locals.errors && errors.imageUser) { %>
                                 <div class="text-danger">
                                     <%= errors.imageUser.msg %>
