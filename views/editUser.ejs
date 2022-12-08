@@ -21,6 +21,7 @@
                 id="Nombre y apellido"
                 value="<%= user.fullName %>" 
                 placeholder="Nombre y apellido">
+                <span></span>
                 <% if(locals.errors && errors.fullName) { %>
                     <div class="text-danger">
                         <%= errors.fullName.msg %>
@@ -35,6 +36,7 @@
                 id="Domicilio"
                 placeholder="Domicilio"
                 value="<%= user.address %>">
+                <span></span>
                 <% if(locals.errors && errors.address) { %>
                     <div class="text-danger">
                         <%= errors.address.msg %>
@@ -42,7 +44,7 @@
                     <% } %>
             </div>
             <div>
-                <select name="province" class="input-register <%= locals.errors && errors.province ? "is-invalid" : "" %> province">
+                <select name="province" id= "Provincia" class="input-register <%= locals.errors && errors.province ? "is-invalid" : "" %> province">
                     <% for( let i=0; i < provinces.length; i++ ) {%>
                         <% if (provinces[i].id == user.provinceId) { %>
                             <option value="<%= provinces[i].id %>" selected>
@@ -64,7 +66,8 @@
             <div>
                         <label for="imageUser">Imagen de perfil</label>
                         <div>
-                            <input class="input-register <%= locals.errors && errors.imageUser ? "is-invalid" : "" %> imageUser" type="file" name="imageUser">
+                            <input class="input-register <%= locals.errors && errors.imageUser ? "is-invalid" : "" %> imageUser" 
+                            type="file" id= "Imagen de perfil" name="imageUser">
                             <% if(locals.errors && errors.imageUser) { %>
                                 <div class="text-danger">
                                     <%= errors.imageUser.msg %>
@@ -74,12 +77,12 @@
             </div>
             <div>
                         <input class="input-register <%= locals.errors && errors.phoneNumber ? " is-invalid" : "" %> phoneNumber"
-                        type="tel"
+                        type="number"
                         name="phoneNumber"
-                        id="telefono"
+                        id="Telefono"
                         placeholder="Telefono"
                         value="<%= user.phoneNumber %>">  
-
+                        <span></span>
                         <% if(locals.errors && errors.phoneNumber) { %>
                             <div class="text-danger">
                                 <%= errors.phoneNumber.msg %>
@@ -90,9 +93,10 @@
                         <input class="input-register <%= locals.errors && errors.email ? " is-invalid" : "" %> email"
                         type="text"
                         name="email"
-                        id="email"
+                        id="Email"
                         placeholder="Email"
                         value="<%= user.email %>" readonly>
+                        <span></span>
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
@@ -103,8 +107,9 @@
                         <input class="input-register <%= locals.errors && errors.password ? " is-invalid" : "" %> password"
                         type="password"
                         name="password"
-                        id="Contrasena"
+                        id="Contraseña"
                         placeholder="Contraseña">
+                        <span></span>
                         <% if(locals.errors && errors.password) { %>
                             <div class="text-danger">
                                 <%= errors.password.msg %>

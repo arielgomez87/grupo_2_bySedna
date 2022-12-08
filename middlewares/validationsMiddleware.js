@@ -21,7 +21,7 @@ body("imageUser").custom((value, {req}) => {
     return true;
 }),
 body('email')
-    .isLength({min:5}).withMessage("Debes escribir un Email con miimo 5 caracteres").bail()
+    .isLength({min:5}).withMessage("Debes escribir un Email con minimo 5 caracteres").bail()
     .isEmail().withMessage('Debes ingresar un email valido'),
 body('password').isLength({min:8}).withMessage('Debe ingresar una contraseña de mas de 8 caracteres'),  
 ]

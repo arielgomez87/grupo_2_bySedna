@@ -46,6 +46,7 @@
                         </option>
                         <% } %>
                 </select>
+                <span></span>
                 <% if(locals.errors && errors.province) { %>
                     <div class="text-danger">
                         <%= errors.province.msg %>
@@ -67,7 +68,7 @@
             <div>
                 <input class="input-register <%= locals.errors && errors.phoneNumber ? " is-invalid" : "" %>
                 phoneNumber"
-                type="tel" name="phoneNumber" id="Telefono" placeholder="Telefono"
+                type="number" name="phoneNumber" id="Telefono" placeholder="Telefono"
                 value="<%= locals.oldData ? oldData.phoneNumber : null %>">
                 <span></span>
                     <% if(locals.errors && errors.phoneNumber) { %>

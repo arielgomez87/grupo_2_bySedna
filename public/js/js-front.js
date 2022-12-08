@@ -35,6 +35,20 @@ const validacionCampoVacio = (mensaje, e) => {
     }
 }
 
+const validacionCampoProvincia = (e) => {
+    const campo = e.target;
+    const valorDelCampo = e.target.value;
+    if (valorDelCampo == ""){
+        campo.classList.add("invalid");
+        campo.nextElementSibling.classList.add("error");
+        campo.nextElementSibling.innerText = "Debe seleccionar una provincia";
+    } else{
+        campo.classList.remove("invalid");
+        campo.nextElementSibling.classList.remove("error");
+        campo.nextElementSibling.innerText = "";
+    }
+};
+
 const validacionCampoTelefono = (e) => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
@@ -83,6 +97,7 @@ const validacionCampoContraseña = (e) => {
 
 fullNameField.addEventListener("blur", validacionCampoNombre);
 phoneNumberField.addEventListener("blur", validacionCampoTelefono);
+provinceField.addEventListener("blur", validacionCampoProvincia);
 addressField.addEventListener("blur", (e) => validacionCampoVacio("Domicilio debe tener minimo 5 caracteres", e));
 emailField.addEventListener("blur", (e) => validacionCampoVacio("Completa tu email con minimo 5 caracteres validos", e));
 emailField.addEventListener("input", validacionEmailValido);
