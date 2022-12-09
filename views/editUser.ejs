@@ -94,10 +94,7 @@
             </div>
             <div>
                         <input class="input-register <%= locals.errors && errors.email ? " is-invalid" : "" %> email"
-                        type="text"
-                        name="email"
-                        id="Email"
-                        placeholder="Email"
+                        type="text" name="email" id="Email" placeholder="Email"
                         value="<%= user.email %>" disabled>
                         <span></span>
                         <% if(locals.errors && errors.email) { %>

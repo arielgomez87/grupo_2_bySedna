@@ -85,7 +85,7 @@ const validacionEmailValido = e => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
     const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-    if (valorDelCampo.trim().length > 5 && !regex.test(valorDelCampo)){
+    if (valorDelCampo.trim().length < 5 && !regex.test(valorDelCampo)){
         campo.classList.add("invalid");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = "Por favor ingrese un email valido";
