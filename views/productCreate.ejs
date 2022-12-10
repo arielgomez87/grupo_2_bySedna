@@ -40,11 +40,12 @@
           <div>
 						<label for="size" >Talle:</label>
 						<select name="size" id="size" class="form-input" class="form-input">
-							<option value="">Elegí</option>
-							<option value="sizeS">S</option>
-							<option value="sizeM">M</option>
-              <option value="sizeL">L</option>
-							<option value="sizeXL">XL</option>
+							<option value="" selected>Elegir Talle</option>
+                    <% for( let i=0; i < sizes.length; i++ ) {%>
+                        <option value="<%= sizes[i].id %>">
+                            <%=sizes[i].name %>
+                        </option>
+                        <% } %>
 						</select>
 					</div>
           <br>

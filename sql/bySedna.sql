@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-12-2022 a las 17:50:54
+-- Tiempo de generación: 10-12-2022 a las 16:03:21
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -26,6 +26,25 @@ USE `bysedna`;
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `category`
+--
+
+CREATE TABLE `category` (
+  `id` int(11) NOT NULL,
+  `name` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `category`
+--
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'Oferta'),
+(2, 'Ultimos Lanzamientos');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `image`
 --
 
@@ -40,10 +59,44 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`id`, `name`, `productId`) VALUES
-(2, 'foto 2', 2),
-(3, 'foto 22', 2),
-(4, 'foto nueva', 4),
-(9, 'otra foto', 3);
+(34, 'img-1670676354726.JPG', 78),
+(40, 'MZA07580.jpg', 67),
+(41, 'MZA07588-600X900.jpg', 67),
+(42, 'MZA07602.jpg', 67),
+(43, 'MZA07581.jpg', 67),
+(47, 'MZA07513.jpg', 68),
+(48, 'MZA07517-600x900.jpg', 68),
+(49, 'MZA07522-600x900.jpg', 68),
+(80, 'MAZ04240-600x900.jpg', 69),
+(81, 'MAZ04287-600x900.jpg', 69),
+(82, 'MAZ04304-600x900.jpg', 69),
+(83, 'MAZ04352.jpg', 69),
+(84, 'MAZ04321.jpg', 69),
+(85, 'MZA07693.jpg', 70),
+(86, 'MZA07690.jpg', 70),
+(87, 'MZA07686.jpg', 70),
+(88, 'MZA07686.jpg', 70),
+(89, 'MZA07704.jpg', 71),
+(90, 'MZA07709-600x900.jpg', 71),
+(91, 'MZA07705-600x900.jpg', 71),
+(92, 'MZA07695-600x900.jpg', 72),
+(93, 'MZA07696-600x900.jpg', 72),
+(94, 'MZA07699-600x900.jpg', 72),
+(95, 'MZA07702-600x900.jpg', 72),
+(96, 'MZA07553.jpg', 73),
+(97, 'MZA07557-600x900.jpg', 73),
+(98, 'MZA07555.jpg', 73),
+(99, 'MZA07721.jpg', 74),
+(100, 'MZA07720-600x900.jpg', 74),
+(101, 'MZA07725-600x900.jpg', 74),
+(102, 'MZA07722-600x900.jpg', 74),
+(103, 'MZA07657.jpg', 75),
+(104, 'MZA07660.jpg', 75),
+(105, 'MZA07655.jpg', 75),
+(106, 'MZA07653.jpg', 75),
+(107, 'MZA07614.jpg', 76),
+(108, 'MZA07623-600x900.jpg', 76),
+(109, 'MZA07615.jpg', 76);
 
 -- --------------------------------------------------------
 
@@ -56,50 +109,26 @@ CREATE TABLE `product` (
   `name` varchar(45) NOT NULL,
   `price` double NOT NULL,
   `discount` int(11) DEFAULT NULL,
-  `description` varchar(250) NOT NULL
+  `description` varchar(250) NOT NULL,
+  `categoryId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `product`
 --
 
-INSERT INTO `product` (`id`, `name`, `price`, `discount`, `description`) VALUES
-(1, 'lacquita', 54622, 10, 'aksndvoiansfv sdvasdvnosd vdsanhvoajsdbv adsjvnaojsdbvk  '),
-(2, 'lacquita', 54622, 10, 'aksndvoiansfv sdvasdvnosd vdsanhvoajsdbv adsjvnaojsdbvk  '),
-(3, 'GALENE AVELLANA', 2400, 10, 'Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum u'),
-(4, 'GALENE AVELLANA', 2400, 10, 'Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum u'),
-(8, 'AMATISTA', 12554, 10, 'afosdhvoaus ounhfoaisdhv oaisdhvouashv oavhaodhfvoa aosdhoahvoa'),
-(10, 'AGATA', 25440, 15, 'Lorem ipsum dolor sit amet consectetur adipiscing elit, semper luctus egestas tellus porta curabitur tristique platea, quisque pharetra risus leo vel habitasse. Habitant pharetra purus vitae magna dui pretium justo fringilla bibendum nam, fermentum u'),
-(11, 'Bili', 3466, 15, 'lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus'),
-(12, 'Elfrida', 3267, 10, 'vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non'),
-(13, 'Babette', 3234, 15, 'consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc'),
-(14, 'Lari', 4801, 11, 'amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu'),
-(15, 'Catharine', 4118, 15, 'suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum'),
-(16, 'Peg', 4823, 10, 'a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habit'),
-(17, 'Devon', 4898, 11, 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in'),
-(18, 'Cordie', 3982, 14, 'bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat '),
-(19, 'Inesita', 3021, 11, 'ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper'),
-(20, 'Marcellina', 3282, 15, 'maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est qua'),
-(21, 'Winnie', 3292, 14, 'sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus'),
-(22, 'Roxane', 3113, 15, 'hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer'),
-(23, 'Billye', 3554, 11, 'augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit'),
-(24, 'Lucita', 3350, 13, 'non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagitt'),
-(25, 'Goldie', 4638, 11, 'justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est'),
-(26, 'Tine', 4356, 11, 'felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae'),
-(27, 'Alix', 3591, 13, 'odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus'),
-(28, 'Hestia', 3212, 10, 'curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet'),
-(29, 'Dulcia', 4904, 14, 'tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat'),
-(30, 'Ariela', 4140, 12, 'in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam'),
-(31, 'Van', 3548, 10, 'pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper'),
-(32, 'Caryl', 3348, 15, 'pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus'),
-(33, 'Marcia', 4901, 13, 'turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non'),
-(34, 'Aubry', 4688, 13, 'mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at'),
-(35, 'Carlota', 4653, 11, 'nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero'),
-(36, 'Genovera', 3359, 15, 'vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id'),
-(37, 'Eadith', 4374, 15, 'pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut mas'),
-(38, 'Evangelina', 3897, 13, 'et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel'),
-(39, 'Maribel', 3892, 11, 'placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor'),
-(40, 'Meryl', 4624, 11, 'donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci');
+INSERT INTO `product` (`id`, `name`, `price`, `discount`, `description`, `categoryId`) VALUES
+(67, 'Agata ', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
+(68, 'Amatista', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 2),
+(69, 'Artemisa Blanco', 5000, 5, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 2),
+(70, 'Atenea Blanco', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
+(71, 'Atenea Negro', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
+(72, 'Atenea Nude', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 2),
+(73, 'Esmeralda', 4600, 7, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
+(74, 'Gelene Avellana', 5000, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 2),
+(75, 'Obsidiana', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
+(76, 'Pandora', 4500, 10, 'donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci  ', 2),
+(78, 'Para eliminar 1', 1564, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', NULL);
 
 -- --------------------------------------------------------
 
@@ -118,10 +147,17 @@ CREATE TABLE `product_size` (
 --
 
 INSERT INTO `product_size` (`id`, `sizeId`, `productId`) VALUES
-(2, 2, 4),
-(3, 5, 2),
-(4, 5, 4),
-(5, 3, 4);
+(10, 3, 67),
+(11, 2, 68),
+(12, 3, 69),
+(13, 2, 70),
+(14, 3, 71),
+(15, 2, 72),
+(16, 3, 73),
+(17, 3, 74),
+(18, 4, 75),
+(19, 2, 76),
+(21, 3, 78);
 
 -- --------------------------------------------------------
 
@@ -229,14 +265,21 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullName`, `imageUser`, `address`, `phoneNumber`, `email`, `password`, `provinceId`, `rolId`) VALUES
-(57, 'Ariel Gomez', 'avatar-1669913258737.jpg', 'birkeroy 1588', '4455665499', 'arielgomez.87@gmail.com', '$2a$10$fLCvTlG0djnrXgo4Lw5LoOJkVWxax0H3HWQJs4fseozB0iupW2AxG', 7, 1),
-(58, 'eliana', 'avatarDefault.png', 'cangallo 1558', '456656546546', 'eliana@gmail.com', '$2a$10$MB7IuxBcmF1.OmP5LxZ4Uu/6mrgnXwneZPtNuZSYH4lbWIj82QgJq', 1, 1),
-(59, 'Nicolas', 'avatarDefault.png', 'lucila 1568', '4566897946', 'nicolas@gmail.com', '$2a$10$etTKpxhAnGLPTi1StfWZ4uT/tNhgThQapnlL/6cHVJqymHB4RjTKe', 1, 1),
-(60, 'Lionel Messi', 'avatarDefault.png', 'Paris 2022', '45656543', 'messi@gmail.com', '$2a$10$B6Ba8n9bhOYQXlZRHXoUoe6mReS8AvltdfO12krAoIeP6OrHahbKi', 6, 1);
+(98, 'Ariel Gomez', 'avatar-1670682600657.jpg', 'cangallo 1234', '445566887', 'ariel@gmail.com', '$2a$10$i90WWkdY69.8SNfGy4ypWeXAskFEUGX5GPqHYrp56jzP3nz9V614K', 4, 1),
+(99, 'Eliana Burgos', 'avatar-1670682634170.jpg', 'la lucila 1234', '5656461313', 'eliana@gmail.com', '$2a$10$3o/2JTIOjdFvl0uUAovr3ue5PGZd3H.rR2MFwnU2UA7/4mPRxQEYK', 2, 1),
+(100, 'Nicolas Lomanto', 'avatar-1670682671541.jpg', 'San isidro 4565', '64654654165', 'nicolas@gmail.com', '$2a$10$VbknDbFlMsD.8Rac5GdwL.wdxdQ/LE.MnF8OQVBUhxON0D37/YdHW', 1, 1),
+(101, 'Bob Esponja', 'avatarDefault.png', 'lavalle 464', '54654132165', 'bob@gmail.com', '$2a$10$iP8sLGUcSWx8kQ4b84G0c.SdsNJ96wpEoCSFmgjN.K/WNQsq91tQC', 8, 1),
+(102, 'Pepa pig', 'avatar-1670682756657.jpg', 'calcuta 464', '646546546', 'pepa@gmail.com', '$2a$10$MrwpdWOb5OPsMBpzojsYAe4dpWDWiwNcT8HzUZo2Y8jopuAvZ4MEe', 10, 1);
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `image`
@@ -249,7 +292,9 @@ ALTER TABLE `image`
 -- Indices de la tabla `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `CategoriaId` (`id`),
+  ADD KEY `categoryId` (`categoryId`);
 
 --
 -- Indices de la tabla `product_size`
@@ -290,22 +335,28 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `category`
+--
+ALTER TABLE `category`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de la tabla `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- AUTO_INCREMENT de la tabla `product_size`
 --
 ALTER TABLE `product_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
@@ -317,7 +368,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- Restricciones para tablas volcadas
@@ -328,6 +379,12 @@ ALTER TABLE `user`
 --
 ALTER TABLE `image`
   ADD CONSTRAINT `image_ibfk_1` FOREIGN KEY (`productId`) REFERENCES `product` (`id`);
+
+--
+-- Filtros para la tabla `product`
+--
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`);
 
 --
 -- Filtros para la tabla `product_size`

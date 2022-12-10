@@ -31,7 +31,7 @@ router.post("/create", upload.single("product-image"), productController.store);
 //ruta que muestra el editor con los datos a completar
 router.get("/edit/:id", productController.edit);
 //ruta que recibe las modificaciones
-router.post("/:id", productController.update);
+router.post("/edit/:id", upload.single("product-image"), productController.update);
 
 //ruta para eliminar productos
 router.post("/delete/:id", productController.delete);
