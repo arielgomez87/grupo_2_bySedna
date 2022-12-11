@@ -175,8 +175,6 @@ const usersController = {
       }
     })
 
-    
-
       .then(async (user) => {
         const userUpdated = await db.User.findByPk(req.params.id)
         console.log(user);

@@ -17,7 +17,7 @@
       <h3>Estas por editar: <%=product.name%></h3>
     </div>
     <br>
-    <form action="/products/<%=product.id%>" method="POST">
+    <form action="/products/edit/<%=product.id%>" method="POST">
       <div>
         <label for="name">Nombre: </label>
         <input type="text" id="name" name="name" value="<%=product.name%>" class="form-input">
@@ -35,11 +35,13 @@
       <br>
       <div>
         <label for="size">Talle:</label>
-        <select name="size" id="size" class="form-input">
-          <option value="sizeS">S</option>
-          <option value="sizeM" selected>M</option>
-          <option value="sizeL">L</option>
-          <option value="sizeXL">XL</option>
+        <select name="sizes" id="size" class="form-input" multiple>
+          <option value="" selected>Elegir talle</option>
+          <% for( let i=0; i < sizes.length; i++ ) {%>
+            <option value="<%= sizes[i].id %>">
+                <%=sizes[i].name %>
+            </option>
+            <% } %>
           </select>
       </div>
       <br>

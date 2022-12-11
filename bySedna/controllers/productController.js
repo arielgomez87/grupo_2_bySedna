@@ -27,10 +27,13 @@ const productController = {
 		productId: newProduct.id
 		});
 		
-		await db.Product_size.create({
-			sizeId: req.body.size,
-			productId: newProduct.id
-		})
+		req.body.sizes.forEach(async talle => {
+			await db.Product_size.create({
+				sizeId: talle,
+				productId: newProduct.id
+			})
+		});
+		
 
 		
 		// newProduct.product-image
@@ -43,57 +46,87 @@ const productController = {
 		db.Product.findAll({
 			include: [{association: 'image'},{association: 'productSize'}]
 		})
-			.then(function(Product) {
-				res.render('products', {products: Product})
+			.then(function(product) {
+				res.render('products', {products: product})
 				//res.json(Product) API
 			})
 	},
  	detail: function(req, res){
-		db.Product.findByPk(req.params.id, {
+		const detalle = db.Product.findByPk(req.params.id, {
 			include: [{association: 'image'},{association: 'productSize'}]
 		})
-			.then(function(Product) {
+		
+			.then(function(product) {
 				//console.log(Product.image[0].dataValues.name)
-				//console.log(Product.productSize[0].dataValues.name)
-				res.render('productDetail', {product: Product})
+				const talles = product.productSize.map(function (talle){
+					return {
+						id:talle.id, name:talle.name
+					}
+				})
+				
+				res.render('productDetail', {product: product, talles})
+			})
+			
+	},
+
+	edit: function(req, res){
+		const editar = db.Product.findByPk(req.params.id, {
+			include: [{association: 'image'},{association: 'productSize'}]
+		})
+			.then(function(product) {
+					 db.Size.findAll()
+					.then(function(sizes){
+						return res.render('productEdit', {product: product, sizes});
+				})
 			})
 	},
-	edit: function(req, res){
-			let product = db.Product.findByPk(req.params.id);
 
-			let image = db.Image.findAll();
-			let productSize = db.Product_size.findAll();
+	update: async function(req, res){
+        const productUpdate = await db.Product.update({
+            name: req.body.name,        //todo esto se podria abreviar con un "...req.body"//
+            price: req.body.price,
+            discount: req.body.discount,
+            description: req.body.description,
 
-			Promise.all([product, image, productSize])
-				.then(function([product, image, productSize]){
-					res.render('productEdit', {product: product, image: image, productSize: productSize})
+        },{
+            where: {
+                id: req.params.id
+            }
+        })
 
-				})
+        req.body.sizes.forEach(async talle => {
+            await db.Product_size.update({
+                sizeId: talle
+            },{
+                where: {
+                    productId: req.params.id
+                }
+
+            })
+        });
+
+        return res.redirect("/products");
+
 	},
-	update: function(req, res){
-		db.Product.update({
-			name: req.body.name,		//todo esto se podria abreviar con un "...req.body"//
-			price: req.body.price,
-			discount: req.body.discount,
-        	size: req.body.size,
-        	description: req.body.description,
-			image: req.file? req.file.filename : "MZA07660.jpg"
-		},{
+
+	delete: function(req, res){
+
+		db.Product_size.destroy({
 			where: {
-				id: req.params.id
+				productId: req.params.id
 			}
 		})
-
-		res.redirect('productsDetail/'+ req.params.id)
-
-	},
-	delete: function(req, res){
+		db.Image.destroy({
+			where:{
+				productId: req.params.id
+			}
+		})
 		db.Product.destroy({
 			where: {
 				id: req.params.id
 			}
 		})
-		res.redirect('products');
+		return res.redirect('/products');
 	}
 
 }

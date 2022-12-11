@@ -895,7 +895,6 @@ font-size: 25px;
     .product-detail{
         display:flex;
         flex-direction: column-reverse;
-        margin-top: 50px;
     }
     .product-description-full-content{
         width: 90%;
