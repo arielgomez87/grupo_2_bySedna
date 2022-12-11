@@ -82,30 +82,40 @@ const productController = {
 	},
 
 	update: async function(req, res){
-        const productUpdate = await db.Product.update({
-            name: req.body.name,        //todo esto se podria abreviar con un "...req.body"//
-            price: req.body.price,
-            discount: req.body.discount,
-            description: req.body.description,
-
-        },{
-            where: {
-                id: req.params.id
-            }
-        })
-
-        req.body.sizes.forEach(async talle => {
-            await db.Product_size.update({
-                sizeId: talle
-            },{
-                where: {
-                    productId: req.params.id
-                }
-
-            })
-        });
-
-        return res.redirect("/products");
+        const productUpdate = await db.Product.update(
+			{
+			  name: req.body.name,
+			  price: req.body.price,
+			  discount: req.body.discount,
+			  description: req.body.description,
+			},
+			{
+			  where: {
+				id: req.params.id,
+			  },
+			}
+		  );
+	  
+		  // Busco los talles en la tabla por id
+		  const sizesToUpdate = await db.Size.findAll({
+			where: { id: req.body.sizes },
+		  });
+	  
+		  // Creo un objeto con los filtros para buscar el producto
+		  const filter = {
+			where: {
+			  id: req.params.id,
+			},
+			include: [{ association: "productSize" }],
+		  };
+	  
+		  // Busco el producto
+		  await db.Product.findOne(filter).then((product) => {
+			// Actualizo los talles del producto (approach usando OOP - Object Oriented Programming)
+			product.setProductSize(sizesToUpdate);
+		  });
+	  
+		  res.redirect("/products");
 
 	},
 
