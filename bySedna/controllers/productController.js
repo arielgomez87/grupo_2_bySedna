@@ -82,30 +82,30 @@ const productController = {
 	},
 
 	update: async function(req, res){
-        const productUpdate = await db.Product.update({
-            name: req.body.name,        //todo esto se podria abreviar con un "...req.body"//
-            price: req.body.price,
-            discount: req.body.discount,
-            description: req.body.description,
+		const productUpdate = await db.Product.update({
+			name: req.body.name,		//todo esto se podria abreviar con un "...req.body"//
+			price: req.body.price,
+			discount: req.body.discount,
+        	description: req.body.description,
+		
+		},{
+			where: {
+				id: req.params.id
+			}
+		})
 
-        },{
-            where: {
-                id: req.params.id
-            }
-        })
+		req.body.sizes.forEach(async talle => {
+			await db.Product_size.update({
+				sizeId: talle
+			},{
+				where: {
+					productId: req.params.id
+				}
+				
+			})		
+		});
 
-        req.body.sizes.forEach(async talle => {
-            await db.Product_size.update({
-                sizeId: talle
-            },{
-                where: {
-                    productId: req.params.id
-                }
-
-            })
-        });
-
-        return res.redirect("/products");
+		return res.redirect("/products");
 
 	},
 
