@@ -31,10 +31,13 @@
             </div>
             <label for="size">Talle:</label>
             <select name="size">
-              <option value="sizeS">S</option>
-              <option value="sizeM" selected>M</option>
-              <option value="sizeL">L</option>
-              <option value="sizeXL">XL</option>
+              <option value="" selected>Elegir talle</option>
+              <% for( let i=0; i < (talles.length); i++ ) {%>
+                <option value="<%= (talles[i].id) %>">
+                    <%=talles[i].name %>
+                </option>
+                <% } %>
+
             </select>
             <a href="#"><input class="buy-button" type="button" value="Agregar al Carrito"></a>
             
@@ -51,8 +54,7 @@
                     <div class="carousel-item active">
                       <img src="/images/products/<%= product.image[i].dataValues.name %>" class="d-block w-100" alt="Bikini">
                     </div>
-                    
-                    <% }   %>
+                    <% } %>
                     <% }else { %>
                       <div class="carousel-item active">
                         <img class="img-fluid" src="/images/users/avatarDefault.png " alt="Bikini Gris" class="img-product">
