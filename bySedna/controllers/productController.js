@@ -10,10 +10,19 @@ const { Session } = require("inspector");
 const productController = {
 
 	create: async function(req, res) {
-			await db.Size.findAll()
-			.then(function(sizes){
-				return res.render('productCreate', {sizes});
-		})
+		let userLogged = req.session.userLogged;
+		if(userLogged){
+			if(userLogged.rolId == 2){
+				await db.Size.findAll()
+				.then(function(sizes){
+					return res.render('productCreate', {sizes});
+			})
+			} else {
+				return res.redirect('/');
+			}
+		} else{
+			return res.redirect('/');
+		}
 	},
 
 	store: async function (req, res) {
@@ -82,7 +91,7 @@ const productController = {
 			
 	},
  	detail: function(req, res){
-				let user = req.session.userLogged
+
 			
 		const detalle = db.Product.findByPk(req.params.id, {
 			include: [{association: 'image'},{association: 'productSize'}]
@@ -99,17 +108,28 @@ const productController = {
 				//res.json({product, talles, user})
 				res.render('productDetail', {product, talles, user})
 			})
+	
 			
 	},
 
 	edit: (req, res) => {
-		let productEdit = db.Product.findByPk(req.params.id)
-		let AllSizes =  db.Size.findAll()
+		let userLogged = req.session.userLogged;
+		if(userLogged){
+			if(userLogged.rolId == 2){
+				let productEdit = db.Product.findByPk(req.params.id)
+				let AllSizes =  db.Size.findAll()
 
-		Promise.all([productEdit, AllSizes])
-			.then(function([product, sizes]) {
-				return res.render('productEdit', {product, sizes});
-			})
+				Promise.all([productEdit, AllSizes])
+					.then(function([product, sizes]) {
+						return res.render('productEdit', {product, sizes});
+				})
+
+			}else{
+				res.redirect('/');
+			}
+			}else{
+				res.redirect('/');
+			}
 		},
 
 	update: async (req, res) => {
