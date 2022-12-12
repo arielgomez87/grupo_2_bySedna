@@ -3,6 +3,9 @@ const router = express.Router();
 const multer = require ("multer");
 const path = require ("path");
 const productController = require('../controllers/productController');
+const validationsProduct = require("../middlewares/validationsMiddlewareProduct") /*este require hace referencia al middleware que 
+                                                                                contiene las validaciones*/
+const { body, validationResult } = require('express-validator');
 
 var multerStorage = multer.diskStorage({
     destination: (req, file, cb)=>{
@@ -25,13 +28,13 @@ router.get("/detail/:id", productController.detail);
 //muestra el formulario de creacion
 router.get("/create", productController.create );
 //recibe los datos del formulario de creacion
-router.post("/create", upload.single("product-image"), productController.store);
+router.post("/create", upload.single("productImage"),validationsProduct, productController.store);
 
 //ruta par Editar producto
 //ruta que muestra el editor con los datos a completar
 router.get("/edit/:id", productController.edit);
 //ruta que recibe las modificaciones
-router.post("/edit/:id", upload.single("product-image"), productController.update);
+router.post("/edit/:id", upload.single("productImage"),validationsProduct, productController.update);
 
 //ruta para eliminar productos
 router.post("/delete/:id", productController.delete);
