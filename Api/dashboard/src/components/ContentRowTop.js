@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentRowCenter from './ContentRowCenter';
 import ContentRowData from './ContentRowData';
-import Chart from './Chart';
+
 
 function ContentRowTop({props}){
     return(
@@ -15,7 +15,6 @@ function ContentRowTop({props}){
 				
 					<ContentRowData props={props}/>
 					<ContentRowCenter />
-					<Chart />
 	
 				</div>
 		

@@ -2,7 +2,7 @@ import React from 'react';
 import imgLogo from '../assets/images/BySedna.png';
 import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
-import LastMovieInDb from './LastMovieInDb';
+
 import ContentRowData from './ContentRowData';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
@@ -67,7 +67,6 @@ function SideBar({props}){
                 <Route path="/Products" element={<Products props={props}/>}/>
                 <Route path="/Users" element={<Users props={props}/>}/>
                 <Route path="/CategoriesInDb" element={<CategoriesInDb  />}/>
-                <Route path="/LastMovieInDb" element={<LastMovieInDb />}/>
                 <Route path="/ContentRowData" element={<ContentRowData props={props}/>}/>
                 <Route path="/SearchMovies" element={<SearchMovies />}/>
 
