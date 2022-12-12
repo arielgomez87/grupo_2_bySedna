@@ -6,15 +6,16 @@ import React, {useState, useEffect} from "react";
     console.log(props.products)
    
      return (
-    
-    <div className="row">
-
+    <>
+<div className="row mx-auto">
+<div className="col-lg-12 text-center card-header">
+<h1 className="m-2">Products in DB</h1>
+</div>
 {props.products.length > 0 && 
             props.products.map(product => (
                 
               <>
-              <div class="card" style={{width: "18rem", margin: "1rem"}}>
-                  <img src={product.img} class="card-img-top" alt="..."/>
+              <div class="card shadow" style={{width: "18rem", margin: "1rem",maxHeight: "20rem"}}>
                   <div class="card-body">
                     <h5 class="card-title">{product.name}</h5>
                     <p class="card-text"> <strong>Price: </strong> {product.price}</p>
@@ -26,14 +27,10 @@ import React, {useState, useEffect} from "react";
                 </div> 
               </>
   ))}
-
-
-
-          
-      
-
-
-    </div>)
+    </div>
+    </>
+    
+      )
 }
 
 export default Products;

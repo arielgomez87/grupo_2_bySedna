@@ -8,12 +8,17 @@ const usersControllerApi = {
 
     users: function(req, res) {
 		db.User.findAll({
+			include: [{association: 'Province'}]
 
 		})
-			.then(function(user) {
-				res.json(user)
+			.then(function(User) {
+				res.status(200).json({
+					total: User.length,
+					data: User,
+					status: 200
+				})
 			})
-	},
+	}
 
 };
 

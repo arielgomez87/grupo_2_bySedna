@@ -23,7 +23,7 @@ function App() {
     fetch('/api/users')
         .then(response => response.json())
         .then(datos=> {
-            setUsers(datos);
+            setUsers(datos.data);
         })
         
 }
@@ -35,6 +35,9 @@ function App() {
   useEffect(()=> {
     fetchUsers()
 },[])
+
+console.log(products)
+console.log(users)
 
  const props = {
     products: products,

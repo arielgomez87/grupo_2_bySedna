@@ -8,63 +8,64 @@ import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom';
 import Products from './Products';
+import Users from './Users';
 
 function SideBar({props}){
 
     return(
         <React.Fragment>
-            {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-                {/*<!-- Sidebar - Brand -->*/}
+            <ul className="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar" style={{backgroundColor: '#AD8F8F'}}>
+
+        
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
                         <img className="w-100" src={imgLogo} alt="Digital House"/>
                     </div>
                 </a>
 
-                {/*<!-- Divider -->*/}
+            
                 <hr className="sidebar-divider my-0"/>
 
-                {/*<!-- Nav Item - Dashboard -->*/}
+            
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - BySedna</span></Link>
                 </li>
 
-                {/*<!-- Divider -->*/}
+             
                 <hr className="sidebar-divider"/>
 
-                {/*<!-- Heading -->*/}
+            
                 <div className="sidebar-heading">Actions</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
+             
                 <li className="nav-item">
                 <Link className="nav-link" to="/CategoriesInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categories</span>
                     </Link>
                 </li>
 
-                {/*<!-- Nav Item - Charts -->*/}
-                <li className="nav-item">
-                    <Link className="nav-link" to="/LastMovieInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/Users">
+                        <i class="fas fa-users"></i>
+                        <span>Users in DB</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowData">
+                <Link className="nav-link" to="/Products">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Products in DB</span></Link>
                 </li>
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             <Routes>
                 <Route exact path="/" element={<ContentWrapper  props={props}/>}/>
                 <Route path="/Products" element={<Products props={props}/>}/>
+                <Route path="/Users" element={<Users props={props}/>}/>
                 <Route path="/CategoriesInDb" element={<CategoriesInDb  />}/>
                 <Route path="/LastMovieInDb" element={<LastMovieInDb />}/>
                 <Route path="/ContentRowData" element={<ContentRowData props={props}/>}/>
@@ -72,7 +73,6 @@ function SideBar({props}){
 
                 <Route element={NotFound} />
             </Routes>
-            {/*<!-- End Microdesafio 2 -->*/}
         </React.Fragment>
     )
 }
