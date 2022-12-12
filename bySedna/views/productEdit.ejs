@@ -71,8 +71,8 @@
       <br>
       <div>
         <label for="description" class="form-label">Descripción: </label>
-						<textarea name="description" id="description" class="form-input <%= locals.errors && errors.description ? " is-invalid" : "" %> 
-              description"> <%=product.description%> </textarea>
+        <textarea name="description" id="description" class="form-input <%= locals.errors && errors.description ? " is-invalid" : "" %>
+          description"><%=product.description%></textarea>
               <span></span>
                     <% if(locals.errors && errors.description) { %>
                         <div class="text-danger">
@@ -85,7 +85,7 @@
         <button type="submit" class="edit-button">Editar producto</button>
       </div>
     </form>
-
+    <script src="/js/js-frontProduct.js"></script>
   </main>
 
   <footer>
