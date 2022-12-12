@@ -9,7 +9,7 @@ const validationsProduct = [//validacion producto
  body("description").isLength({min:10}).withMessage("Completa una descripcion del producto con minimo 10 caracteres"),
  body("productImage").custom((value, {req}) => {
      let file = req.file;
-     let acceptedExtensions = [".jpg", ".jpeg",".png", "gif"];
+     let acceptedExtensions = [".jpg", ".jpeg",".png", ".gif"];
      
      if (file){
          let fileExtension = path.extname(file.originalname);
