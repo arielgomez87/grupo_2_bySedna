@@ -3,8 +3,7 @@ import ContentRowCenter from './ContentRowCenter';
 import ContentRowData from './ContentRowData';
 import Chart from './Chart';
 
-function ContentRowTop({products}){
-	console.log(products)
+function ContentRowTop({props}){
     return(
         <React.Fragment>
 				{/*<!-- Content Row Top -->*/}
@@ -14,7 +13,7 @@ function ContentRowTop({products}){
 					</div>
 				
 					{/*<!-- Content Row Movies-->*/}
-					<ContentRowData products={products}/>
+					<ContentRowData props={props}/>
 					<ContentRowCenter />
 					<Chart />
 	

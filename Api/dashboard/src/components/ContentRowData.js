@@ -32,7 +32,9 @@ let actorsQuantity = {
 
 let cartProps = [productsTotal, usersTotal, actorsQuantity];
 
-function ContentRowData({products}){
+function ContentRowData({props}){
+
+
 
     return (
     
@@ -40,7 +42,7 @@ function ContentRowData({products}){
             
             {cartProps.map( (data, i) => {
 
-                return <SmallCard {...data} key={i} products={products}/>
+                return <SmallCard {...data} key={i} props={props}/>
             
             })}
 

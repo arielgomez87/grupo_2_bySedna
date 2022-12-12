@@ -7,6 +7,7 @@ import Products from './Products';
 function App() {
 
   const [products, setProducts] = useState([]);
+  const [users, setUsers] = useState([]);
 
   const fetchProducts = () => {
       fetch('/api/products')
@@ -17,14 +18,33 @@ function App() {
           
   }
 
+  
+  const fetchUsers = () => {
+    fetch('/api/users')
+        .then(response => response.json())
+        .then(datos=> {
+            setUsers(datos);
+        })
+        
+}
+
   useEffect(()=> {
       fetchProducts()
   },[])
 
+  useEffect(()=> {
+    fetchUsers()
+},[])
+
+ const props = {
+    products: products,
+    users: users
+ }
+
   return (
     <React.Fragment>  
       	<div id="wrapper">
-          <SideBar products = {products}/>
+          <SideBar props={props}/>
         </div>
         
     </React.Fragment>

@@ -8,7 +8,8 @@ import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom';
 
-function SideBar({products}){
+function SideBar({props}){
+    
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
@@ -61,10 +62,10 @@ function SideBar({products}){
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             <Routes>
-                <Route exact path="/" element={<ContentWrapper  products = {products}/>}/>
-                <Route path="/GenresInDb" element={<GenresInDb  products = {products}/>}/>
+                <Route exact path="/" element={<ContentWrapper  props={props}/>}/>
+                <Route path="/GenresInDb" element={<GenresInDb  />}/>
                 <Route path="/LastMovieInDb" element={<LastMovieInDb />}/>
-                <Route path="/ContentRowData" element={<ContentRowData  products = {products}/>}/>
+                <Route path="/ContentRowData" element={<ContentRowData props={props}/>}/>
                 <Route path="/SearchMovies" element={<SearchMovies />}/>
 
                 <Route element={NotFound} />
