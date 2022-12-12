@@ -4,6 +4,7 @@ const path = require("path");
 const db = require("../database/models");
 const Product = require("../database/models/Product");
 const { validationResult } = require("express-validator");
+const { Session } = require("inspector");
 
 
 const productController = {
@@ -56,7 +57,7 @@ const productController = {
 
 	products: function(req, res) {
 		db.Product.findAll({
-			include: [{association: 'image'},{association: 'productSize'}]
+			include: [{association: 'image'},{association: 'productSize'},{association: 'category'}]
 		})
 			.then(function(product) {
 				res.render('products', {products: product})
@@ -64,6 +65,7 @@ const productController = {
 			})
 	},
  	detail: function(req, res){
+		
 		const detalle = db.Product.findByPk(req.params.id, {
 			include: [{association: 'image'},{association: 'productSize'}]
 		})

@@ -40,7 +40,7 @@ Product.associate = function(models){
     Product.hasMany(models.Image, {
         foreignKey: "productId",
         as: "image"
-    })
+    }),
 
     Product.belongsToMany(models.Size, {
         as:"productSize",
@@ -48,14 +48,13 @@ Product.associate = function(models){
         foreignKey: "productId",
         otherKey:"sizeId",
         timestamps: false
+    }),
+        
+    Product.belongsTo(models.Category, {
+        as: 'category',
+        foreignKey: 'categoryId'
     })
-
-    Product.associate = function(models) {
-        Product.belongsTo(models.Category, {
-            as: 'category',
-            foreignKey: 'categoryId'
-        })
-    }
+    
 }
 
     return Product; 
