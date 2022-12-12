@@ -74,6 +74,9 @@
               </div>
 
             <div class="div-BottonEditAndDelete">
+              <% if (user) { %>
+                            
+              <% if(user.rolId == 2){ %> 
               <div>
                 <a href="/products/edit/<%= product.id %>"><input type="submit" class="editar-product" value="EDITAR">
                 </a>
@@ -83,6 +86,8 @@
                 <input type="submit" class="delete-product" value="ELIMINAR"></input>
               </form>
             </div>
+            <% } %> 
+            <% } %>
           </div>
 
         </div>
