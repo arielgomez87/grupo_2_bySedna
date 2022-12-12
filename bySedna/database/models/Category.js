@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Categories";
+    let alias = "Category";
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -22,8 +22,8 @@ const Category = sequelize.define(alias, cols, config);
 
 Category.associate = function(models) {
     Category.hasMany(models.Product, {
-        foreignKey: "categoryId",
-        as: "products"  // cada rol puede tener varios usuario por eso en plural
+        as: "products",
+        foreignKey: "categoryId"
     });
 }
     

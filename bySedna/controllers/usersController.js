@@ -130,13 +130,17 @@ const usersController = {
 
 // Edit -  Method to Edit user
   edit: (req, res) => {
-    let userEdit = db.User.findByPk(req.params.id);
-    let allProvinces = db.Province.findAll()
+    let userEdit = req.session.userLogged;
+    if(userEdit){
+      let allProvinces = db.Province.findAll()
 
-    Promise.all([userEdit, allProvinces])
-      .then(function ([user, provinces]) {
-        res.render("editUser", { user: user, provinces: provinces })
-      })
+      Promise.all([userEdit, allProvinces])
+        .then(function ([user, provinces]) {
+          res.render("editUser", { user: user, provinces: provinces })
+        })
+    } else {
+      return res.redirect('/')
+    }
   },
 
   // Update -  Metodo para actualizar Usuario
