@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-12-2022 a las 22:17:07
+-- Tiempo de generación: 12-12-2022 a las 23:04:35
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -73,8 +73,8 @@ INSERT INTO `image` (`id`, `name`, `productId`) VALUES
 (84, 'MAZ04321.jpg', 69),
 (85, 'MZA07693.jpg', 70),
 (86, 'MZA07690.jpg', 70),
-(87, 'MZA07686.jpg', 70),
-(88, 'MZA07686.jpg', 70),
+(87, 'MZA07688.jpg', 70),
+(88, 'MZA07686-600x900.jpg', 70),
 (89, 'MZA07704.jpg', 71),
 (90, 'MZA07709-600x900.jpg', 71),
 (91, 'MZA07705-600x900.jpg', 71),
@@ -290,11 +290,11 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `fullName`, `imageUser`, `address`, `phoneNumber`, `email`, `password`, `provinceId`, `rolId`) VALUES
-(98, 'Ariel Gomez', 'avatar-1670682600657.jpg', 'cangallo 1234', '445566887', 'ariel@gmail.com', '$2a$10$i90WWkdY69.8SNfGy4ypWeXAskFEUGX5GPqHYrp56jzP3nz9V614K', 4, 1),
-(99, 'Eliana Burgos', 'avatar-1670682634170.jpg', 'la lucila 1234', '5656461313', 'eliana@gmail.com', '$2a$10$3o/2JTIOjdFvl0uUAovr3ue5PGZd3H.rR2MFwnU2UA7/4mPRxQEYK', 2, 1),
-(100, 'Nicolas Lomanto', 'avatar-1670682671541.jpg', 'San isidro 4565', '64654654165', 'nicolas@gmail.com', '$2a$10$VbknDbFlMsD.8Rac5GdwL.wdxdQ/LE.MnF8OQVBUhxON0D37/YdHW', 1, 1),
-(101, 'Bob Esponja', 'avatarDefault.png', 'lavalle 464', '54654132165', 'bob@gmail.com', '$2a$10$iP8sLGUcSWx8kQ4b84G0c.SdsNJ96wpEoCSFmgjN.K/WNQsq91tQC', 8, 1),
-(102, 'Pepa pig', 'avatar-1670682756657.jpg', 'calcuta 464', '646546546', 'pepa@gmail.com', '$2a$10$MrwpdWOb5OPsMBpzojsYAe4dpWDWiwNcT8HzUZo2Y8jopuAvZ4MEe', 10, 1);
+(98, 'Ariel Gomez', 'avatar-1670867224365.jpg', 'Cangallo 12', '445566887', 'ariel@gmail.com', '$2a$10$SeBRqeNu5k.iqJYcIGE7O.NeD3fkLL5u6Vj9TchmmCni2V0gi790G', 4, 2),
+(99, 'Eliana Burgos', 'avatar-1670682634170.jpg', 'La lucila 1234', '5656461313', 'eliana@gmail.com', '$2a$10$3o/2JTIOjdFvl0uUAovr3ue5PGZd3H.rR2MFwnU2UA7/4mPRxQEYK', 2, 1),
+(100, 'Nicolas Lomanto', 'avatar-1670682671541.jpg', 'San isidro 4565', '64654654165', 'nicolas@gmail.com', '$2a$10$VbknDbFlMsD.8Rac5GdwL.wdxdQ/LE.MnF8OQVBUhxON0D37/YdHW', 1, 2),
+(101, 'Bob Esponja', 'avatarDefault.png', 'Lavalle 464', '54654132165', 'bob@gmail.com', '$2a$10$iP8sLGUcSWx8kQ4b84G0c.SdsNJ96wpEoCSFmgjN.K/WNQsq91tQC', 8, 1),
+(102, 'Pepa pig', 'avatar-1670682756657.jpg', 'Calcuta 464', '646546546', 'pepa@gmail.com', '$2a$10$MrwpdWOb5OPsMBpzojsYAe4dpWDWiwNcT8HzUZo2Y8jopuAvZ4MEe', 10, 1);
 
 --
 -- Índices para tablas volcadas
@@ -369,19 +369,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT de la tabla `product_size`
 --
 ALTER TABLE `product_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
