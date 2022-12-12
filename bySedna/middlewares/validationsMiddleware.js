@@ -8,7 +8,7 @@ body("phoneNumber").isLength({min:8}).withMessage('Telefono debe tener minimo 8 
 body("province").notEmpty().withMessage('Debe seleccionar una provincia'),
 body("imageUser").custom((value, {req}) => {
     let file = req.file;
-    let acceptedExtensions = [".jpg", ".jpeg",".png", "gif"];
+    let acceptedExtensions = [".jpg", ".jpeg",".png", ".gif"];
     
     if (file){
         let fileExtension = path.extname(file.originalname);

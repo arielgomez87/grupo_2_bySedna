@@ -91,7 +91,7 @@
             <div>
                         <input class="input-register <%= locals.errors && errors.email ? " is-invalid" : "" %> email"
                         type="text" name="email" id="Email" placeholder="Email"
-                        value="<%= user.email %>" disabled>
+                        value="<%= user.email %>" hidden>
                         <span></span>
                         <% if(locals.errors && errors.email) { %>
                             <div class="text-danger">
