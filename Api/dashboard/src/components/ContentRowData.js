@@ -1,38 +1,35 @@
 import React from 'react';
 import SmallCard from './SmallCard';
 
-/*  Cada set de datos es un objeto literal */
 
-/* <!-- Movies in DB --> */
+function ContentRowData({props}){
 
-let productsTotal = {
-    title: 'Products in Data Base',
-    color: 'primary', 
-    cuantity: 21,
-    icon: 'fa-clipboard-list'
-}
 
-/* <!-- Total awards --> */
+    let productsTotal = {
+        title: 'Products in Data Base',
+        color: 'primary', 
+        quantity: props.products.length,
+        icon: 'fa-clipboard-list'
+    }
 
-let usersTotal = {
-    title:' Users in DataBase', 
-    color:'success', 
-    cuantity: '79',
-    icon:'fa-award'
-}
+    
+    let usersTotal = {
+        title:' Users in DataBase', 
+        color:'success', 
+        quantity: props.users.length,
+        icon:'far fa-users'
+    }
+    
 
-/* <!-- Actors quantity --> */
+    let actorsQuantity = {
+        title:'Actors quantity' ,
+        color:'warning',
+        quantity:'49',
+        icon:'fa-user-check'
+    }
+    
+    let cartProps = [productsTotal, usersTotal, actorsQuantity];
 
-let actorsQuantity = {
-    title:'Actors quantity' ,
-    color:'warning',
-    cuantity:'49',
-    icon:'fa-user-check'
-}
-
-let cartProps = [productsTotal, usersTotal, actorsQuantity];
-
-function ContentRowData({products}){
 
     return (
     
@@ -40,7 +37,7 @@ function ContentRowData({products}){
             
             {cartProps.map( (data, i) => {
 
-                return <SmallCard {...data} key={i} products={products}/>
+                return <SmallCard {...data} key={i} props={props}/>
             
             })}
 

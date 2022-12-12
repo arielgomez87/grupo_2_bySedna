@@ -1,41 +1,36 @@
 import React, {useState, useEffect} from "react";
 
 
-  function Products({products}){
+  function Products({props}){
   {/* xq no funciona el products.data.data? */}
-    console.log(products.length)
+    console.log(props.products)
    
      return (
     
-    <div>
+    <div className="row">
 
-        
-<p>{products.total}</p>
-
-
-
-        {products.length > 0 && 
-            products.map(product => (
+{props.products.length > 0 && 
+            props.products.map(product => (
                 
-                <>
-                <p >{product.name}</p>
-                <p >{product.name}</p>
-            <p >{product.image[0].name}</p>
-            <img src=""></img>
+              <>
+              <div class="card" style={{width: "18rem", margin: "1rem"}}>
+                  <img src={product.img} class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">{product.name}</h5>
+                    <p class="card-text"> <strong>Price: </strong> {product.price}</p>
+                    <p class="card-text"> <strong>Stock: </strong> {product.productSize.length}</p>
+                    <p class="card-text"> <strong>Images: </strong> {product.image.length}</p>
+                    <p class="card-text"> <strong>Discount: </strong> {product.discount}%</p> 
+                    <a href={"Products/" + product.id} class="btn btn-primary">Detalles de producto</a>
+                  </div>
+                </div> 
+              </>
+  ))}
 
 
-{/* <div class="card" style="width: 18rem;">
-  <img src={"../../../../bySedna/public/images/products" + product.image.name} class="card-img-top" alt="..."/>
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div> */}
 
-
-            </>)) 
-        }
+          
+      
 
 
     </div>)
