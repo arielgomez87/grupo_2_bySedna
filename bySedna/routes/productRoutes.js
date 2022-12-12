@@ -22,6 +22,8 @@ var upload = multer({storage: multerStorage})
 /* ruta a todos los productos */
 router.get("/", productController.products);
 
+router.get("/search", productController.search);
+
 /*ruta a un solo producto*/
 router.get("/detail/:id", productController.detail);
 

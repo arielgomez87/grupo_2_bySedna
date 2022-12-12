@@ -65,8 +65,25 @@ const productController = {
 			})
 			
 	},
+	search: function(req, res) {
+		let search = req.params.body
+		db.Product.findAll({
+			where: {
+				name:'Agata'
+			},
+			include: [{association: 'image'},{association: 'productSize'},{association: 'category'}]
+	
+		})
+			.then(function(product) {
+				console.log(search);
+				res.render('products', {products: product})
+				//res.json(Product) API
+			})
+			
+	},
  	detail: function(req, res){
-		
+				let user = req.session.userLogged
+			
 		const detalle = db.Product.findByPk(req.params.id, {
 			include: [{association: 'image'},{association: 'productSize'}]
 		})
@@ -75,11 +92,12 @@ const productController = {
 				//console.log(Product.image[0].dataValues.name)
 				const talles = product.productSize.map(function (talle){
 					return {
-						id:talle.id, name:talle.name
+						id:talle.id, 
+						name:talle.name,
 					}
 				})
-				
-				res.render('productDetail', {product: product, talles})
+				//res.json({product, talles, user})
+				res.render('productDetail', {product, talles, user})
 			})
 			
 	},

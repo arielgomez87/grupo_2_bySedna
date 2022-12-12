@@ -4,10 +4,10 @@
             <a href="/"><img class="logo-img" src="/images/BySedna.png" alt="Logo BySedna"></a>
         </div>
         <div class="search-icons">
-            <div class="search-bar">
-                <input class="bar" type="text" placeholder="Buscar...">
-                <a class="icons-search" href="/search"><i class="fa-solid fa-magnifying-glass"></i></a>
-            </div>
+            <form class="search-bar" action="/products/search" method="GEt">
+                <input class="bar" type="text" name="search" placeholder="Buscar...">
+                <button type="submit" class="searchButton"><i class="fa-solid fa-magnifying-glass mx-auto"></i></button>
+            </form>
             <div class="icons">
                 <% if (locals.isLogged) { %>    <!-- si isLogged que es un middleware es true se muestra lo primero -->
                     <a href="/users/login"><i class="fa-solid fa-user"></i></a>

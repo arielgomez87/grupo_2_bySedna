@@ -11,7 +11,6 @@
   </header>
 
   <main>
-    <% console.log(products) %>
     <div class="main-banner">
       <div class="hero">
         <video loop muted autoplay preload="auto"> <source src="../images/bannerVideo.mp4" type="video/mp4"> </video>
@@ -24,11 +23,11 @@
     <div>
       <section class="vistoEn">
         <div class="vistoEn-img">
-          <img src="./images/_H7A8207-bc.jpg" class="img-fluid" alt="">
+          <img src="./images/_H7A8207-bc.jpg" class="img-fluid" style="width: 80%">
         </div>
         <div class="vistoEn-text">
-          <h3>Get the Look</h3>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero cum culpa eveniet voluptatibus nam porro corrupti suscipit nobis. Temporibus optio culpa totam iure quae, officiis molestias exercitationem assumenda quibusdam illo, dolore nisi! Voluptatibus numquam beatae harum magnam dolore quam fuga earum non nostrum ducimus ut cum qui sed pariatur eos officiis ad, quas optio, temporibus, quo odio eligendi aspernatur amet nesciunt. Maxime aliquid unde, inventore quidem recusandae id. Laudantium voluptates maxime sunt, voluptas perspiciatis dolores rem consectetur doloribus repudiandae quibusdam officiis. Perspiciatis illum facere voluptatum eius modi aspernatur quae optio?</p>
+          <h3>PRIMAVERA</h3>
+          <p>Corpiño de bikini tipo top entero en forma de triangulo fijo, de lycra texturada estampada premium, con bretel de lenceria regulable. Se abrocha en espalda con un broche de zamac inoxidable que no calientan con la exposición solar. El lazo es removible. Es resistente al cloro y mar.</p>
           <div class="vistoEn-products">
            <div class="vistoEn-product-01">
             <img src="../images/_H7A8333.jpg" class="vistoEn-product-img01" alt="">
@@ -46,44 +45,50 @@
       </section>
       <section class="oferta">
         <% products.forEach(product=> { %>
-          <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <a href="/products/detail/<%= product.id %> ">
-              <div class="product-img">
-                <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
+            <% if(product.categoryId == 1) {%>
+              <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <a href="/products/detail/<%= product.id %> ">
+                  <div class="product-img">
+                    <% console.log()%>
+                    <img class="img-fluid" src="/images/products/<%= product.image[0].dataValues.name %>" alt="Bikini Gris" class="img-product">
+                  </div>
+                  <div class="product-description">
+                    <div class="product-title">
+                      <%= product.name %>
+                    </div>
+                    <div class="product-price">
+                      <p>$ <%= product.price %>
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-              <div class="product-description">
-                <div class="product-title">
-                  <%= product.name %>
-                </div>
-                <div class="product-price">
-                  <p>$ <%= product.price %>
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <% }) %>
+          <% }}) %>
     </div>
     </section>
     </div>
     <div>
       <section class="temporada">
         <% products.forEach(product=> { %>
-          <div class=" product-temporada col-lg-4 col-md-6 col-sm-6 col-xs-12">
-            <a href="/products/detail/<%= product.id %> ">
-              <div class="product-img">
-                <img class="img-fluid" src="/images/products/<%= product.image %> " alt="Bikini Gris" class="img-product">
-              </div>
-              <div class="product-description">
-                <div class="product-title mx-auto">
-                  <p style="text-align: center; ">
-                    <%= product.name %>
-                  </p>
+          <% if(product.categoryId == 2) {%>
+            <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <a href="/products/detail/<%= product.id %> ">
+                <div class="product-img">
+                  <% console.log()%>
+                  <img class="img-fluid" src="/images/products/<%= product.image[0].dataValues.name %>" alt="Bikini Gris" class="img-product">
                 </div>
-              </div>
-            </a>
-          </div>
-          <% }) %>
+                <div class="product-description">
+                  <div class="product-title">
+                    <%= product.name %>
+                  </div>
+                  <div class="product-price">
+                    <p>$ <%= product.price %>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+        <% }}) %>
     </div>
     </section>
     </div>
