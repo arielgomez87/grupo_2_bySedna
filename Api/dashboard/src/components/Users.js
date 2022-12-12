@@ -11,7 +11,7 @@ import React, {useState, useEffect} from "react";
 
 <div className="row mx-auto">
 <div className="col-lg-12 text-center card-header">
-<h1 className="m-2">Products in DB</h1>
+<h1 className="m-2">Users in Database</h1>
 </div>
 
 {props.users.length > 0 && 

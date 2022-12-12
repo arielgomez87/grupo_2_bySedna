@@ -22,6 +22,10 @@ module.exports = (sequelize, dataTypes) => {
         description: {
             type: dataTypes.STRING(250),
             allowNull: false
+        },
+        categoryId: {
+            type: dataTypes.INTEGER,
+            allowNull: false
         }
     };
 
@@ -45,6 +49,13 @@ Product.associate = function(models){
         otherKey:"sizeId",
         timestamps: false
     })
+
+    Product.associate = function(models) {
+        Product.belongsTo(models.Category, {
+            as: 'category',
+            foreignKey: 'categoryId'
+        })
+    }
 }
 
     return Product; 
