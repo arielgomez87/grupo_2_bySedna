@@ -123,9 +123,13 @@ const usersController = {
 
   //para entrar a su perfil
   profile: (req, res) => {
-    return res.render("userPage", {
-      user: req.session.userLogged, // envia a la vista los datos del usuario logueado y los puedo usar en la vista
-    });
+    const allProvinces = db.Province.findAll()
+    const loggedUser= req.session.userLogged
+    
+    Promise.all([loggedUser, allProvinces])
+    .then(function([user, provinces]){
+      res.render("userPage", {user, provinces  // envia a la vista los datos del usuario logueado y los puedo usar en la vista
+    })});
   },
 
 // Edit -  Method to Edit user

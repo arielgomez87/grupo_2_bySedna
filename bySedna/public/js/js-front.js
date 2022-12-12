@@ -1,5 +1,6 @@
 window.addEventListener("load", function(){
 
+const form = document.querySelector("form-register");
 
 const fullNameField = document.querySelector("input.fullName");
 const addressField = document.querySelector("input.address");
@@ -9,11 +10,13 @@ const phoneNumberField = document.querySelector("input.phoneNumber");
 const emailField = document.querySelector("input.email");
 const passwordField =  document.querySelector("input.password");
 
+const errorFrontUser = false;
 
 const validacionCampoNombre = (e) => {
         const campo = e.target;
         const valorDelCampo = e.target.value;
         if (valorDelCampo.trim().length < 2){
+            const errorFrontUser = true;
             campo.classList.add("invalid");
             campo.nextElementSibling.classList.add("error");
             campo.nextElementSibling.innerText = "Nombre y apellido debe tener minimo 2 caracteres";
@@ -28,6 +31,7 @@ const validacionCampoVacio = (mensaje, e) => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
     if (valorDelCampo.trim().length < 5){
+        const errorFrontUser = true;
         campo.classList.add("invalid");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = mensaje;
@@ -42,6 +46,7 @@ const validacionCampoProvincia = (e) => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
     if (valorDelCampo == ""){
+        const errorFrontUser = true;
         campo.classList.add("invalid");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = "Debe seleccionar una provincia";
@@ -57,6 +62,7 @@ const campo = e.target;
 const fileExtension = e.target.files[0].name.split(".").pop().toLowerCase();
 const validExtension = ["jpg", "jpeg", "png", "gif"];
 if (!validExtension.includes(fileExtension)){
+    const errorFrontUser = true;
     campo.classList.add("invalid");
     campo.nextElementSibling.classList.add("error");
     campo.nextElementSibling.innerText = `Las extensiones de archivos permitidas son:  ${validExtension.join(", ")}`;
@@ -71,6 +77,7 @@ const validacionCampoTelefono = (e) => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
     if (valorDelCampo.trim().length < 8){
+        const errorFrontUser = true;
         campo.classList.add("invalid");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = "Telefono debe tener minimo 8 numeros";
@@ -86,6 +93,7 @@ const validacionEmailValido = e => {
     const valorDelCampo = e.target.value;
     const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     if (valorDelCampo.trim().length < 5 && !regex.test(valorDelCampo)){
+        const errorFrontUser = true;
         campo.classList.add("invalid");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = "Por favor ingrese un email valido";
@@ -100,6 +108,7 @@ const validacionCampoContraseña = (e) => {
     const campo = e.target;
     const valorDelCampo = e.target.value;
     if (valorDelCampo.trim().length < 8){
+        const errorFrontUser = true;
         campo.classList.add("invalid");
         campo.nextElementSibling.classList.add("error");
         campo.nextElementSibling.innerText = "Contraseña debe tener minimo 8 caracteres";
@@ -110,6 +119,11 @@ const validacionCampoContraseña = (e) => {
     }
 };
 
+form.addEventListener("submit", (e)=>{
+    if (errorFrontUser){
+        e.preventDefault()
+    }
+})
 
 fullNameField.addEventListener("blur", validacionCampoNombre);
 phoneNumberField.addEventListener("blur", validacionCampoTelefono);
