@@ -20,7 +20,7 @@ function TopBar(){
 							<a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
 								<i className="fas fa-bell fa-fw"></i>
 								{/*<!-- Counter - Alerts -->*/}
-								<span className="badge badge-danger badge-counter">3+</span>
+								<span className="badge badge-danger badge-counter"></span>
 							</a>
 						</li>
 
@@ -29,7 +29,7 @@ function TopBar(){
 							<a className="nav-link dropdown-toggle" href="/" id="messagesDropdown">
 								<i className="fas fa-envelope fa-fw"></i>
 								{/*<!-- Counter - Messages -->*/}
-								<span className="badge badge-danger badge-counter">7</span>
+								<span className="badge badge-danger badge-counter"></span>
 							</a>
 						</li>
 
