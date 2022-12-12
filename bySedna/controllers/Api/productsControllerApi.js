@@ -8,7 +8,7 @@ const Product = require("../../database/models/Product");
 const productControllerApi = {
 	products: function(req, res) {
 		db.Product.findAll({
-			include: [{association: 'image'},{association: 'productSize'}]
+			include: [{association: 'image'},{association: 'productSize'},{association: 'category'}]
 		})
 			.then(function(Product) {
 				res.status(200).json({

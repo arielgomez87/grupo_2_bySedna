@@ -4,7 +4,6 @@ import ContentWrapper from './ContentWrapper';
 import CategoriesInDb from './CategoriesInDb';
 
 import ContentRowData from './ContentRowData';
-import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom';
 import Products from './Products';
@@ -66,9 +65,8 @@ function SideBar({props}){
                 <Route exact path="/" element={<ContentWrapper  props={props}/>}/>
                 <Route path="/Products" element={<Products props={props}/>}/>
                 <Route path="/Users" element={<Users props={props}/>}/>
-                <Route path="/CategoriesInDb" element={<CategoriesInDb  />}/>
+                <Route path="/CategoriesInDb" element={<CategoriesInDb  props={props}/>}/>
                 <Route path="/ContentRowData" element={<ContentRowData props={props}/>}/>
-                <Route path="/SearchMovies" element={<SearchMovies />}/>
 
                 <Route element={NotFound} />
             </Routes>
