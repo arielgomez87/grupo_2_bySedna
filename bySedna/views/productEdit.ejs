@@ -42,12 +42,18 @@
       <br>
       <div>
         <label for="discount">Descuento: </label>
-        <input type="text" id="discount" name="discount" value="<%=product.discount%>" class="form-input">
+        <input type="text" id="discount" name="discount" value="<%=product.discount%>" class="form-input <%= locals.errors && errors.discount ? " is-invalid" : "" %> discount">
+        <span></span>
+        <% if(locals.errors && errors.discount) { %>
+            <div class="text-danger">
+                <%= errors.discount.msg %>
+            </div>
+            <% } %>
       </div>
       <br>
       <div>
         <label for="size">Talle:</label>
-        <select name="sizes" id="size" class="form-input" multiple>
+        <select name="sizes" id="size" class="form-input <%= locals.errors && errors.sizes ? " is-invalid" : "" %> sizes" multiple>
           <option value="" selected>Elegir talle</option>
           <% for( let i=0; i < sizes.length; i++ ) {%>
             <option value="<%= sizes[i].id %>">
@@ -55,11 +61,24 @@
             </option>
             <% } %>
           </select>
+          <span></span>
+                <% if(locals.errors && errors.sizes) { %>
+                    <div class="text-danger">
+                        <%= errors.sizes.msg %>
+                    </div>
+                    <% } %>
       </div>
       <br>
       <div>
         <label for="description" class="form-label">Descripción: </label>
-						<textarea name="description" id="description" class="form-input"> <%=product.description%> </textarea>
+						<textarea name="description" id="description" class="form-input <%= locals.errors && errors.description ? " is-invalid" : "" %> 
+              description"> <%=product.description%> </textarea>
+              <span></span>
+                    <% if(locals.errors && errors.description) { %>
+                        <div class="text-danger">
+                            <%= errors.description.msg %>
+                        </div>
+                        <% } %>
       </div>
       <br>
       <div>
