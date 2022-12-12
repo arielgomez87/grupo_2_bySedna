@@ -91,8 +91,7 @@ const productController = {
 			
 	},
  	detail: function(req, res){
-
-			
+		let user = req.session.userLogged;
 		const detalle = db.Product.findByPk(req.params.id, {
 			include: [{association: 'image'},{association: 'productSize'}]
 		})
