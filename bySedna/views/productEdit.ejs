@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <%- include ("./partials/head", {title: 'Edicion del producto ' + product.name + " " }) %>
+  <%- include ("./partials/head", {title: 'Edicion del producto ' }) %>
 </head>
 
 <body>
@@ -14,18 +14,30 @@
   <main class="mainEdit">
 
     <div>
-      <h3>Estas por editar: <%=product.name%></h3>
+      <h3>Editar producto</h3>
     </div>
     <br>
-    <form action="/products/edit/<%=product.id%>" method="POST">
+    <form class="form-register formview"  action="/products/edit/<%=product.id%> " method="POST" enctype="multipart/form-data">
       <div>
         <label for="name">Nombre: </label>
-        <input type="text" id="name" name="name" value="<%=product.name%>" class="form-input">
+        <input type="text" id="name" name="name" value="<%=product.name%>" class="form-input <%= locals.errors && errors.name ? " is-invalid" : "" %> name">
+        <span></span>
+        <% if(locals.errors && errors.name) { %>
+            <div class="text-danger">
+                <%= errors.name.msg %>
+            </div>
+            <% } %>
       </div>
       <br>
       <div>
         <label for="price">Precio: </label>
-        <input type="text" id="price" name="price" value="<%=product.price%>" class="form-input">
+        <input type="text" id="price" name="price" value="<%=product.price%>" class="form-input <%= locals.errors && errors.price ? " is-invalid" : "" %> price">
+        <span></span>
+        <% if(locals.errors && errors.price) { %>
+            <div class="text-danger">
+                <%= errors.price.msg %>
+            </div>
+            <% } %>
       </div>
       <br>
       <div>

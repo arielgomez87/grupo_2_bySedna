@@ -81,19 +81,31 @@ const productController = {
 			
 	},
 
-	edit: function(req, res){
-		const editar = db.Product.findByPk(req.params.id, {
-			include: [{association: 'image'},{association: 'productSize'}]
-		})
-			.then(function(product) {
-					 db.Size.findAll()
-					.then(function(sizes){
-						return res.render('productEdit', {product: product, sizes});
-				})
-			})
-	},
+	edit: (req, res) => {
+		let productEdit = db.Product.findByPk(req.params.id)
+		let AllSizes =  db.Size.findAll()
 
-	update: async function(req, res){
+		Promise.all([productEdit, AllSizes])
+			.then(function([product, sizes]) {
+				return res.render('productEdit', {product, sizes});
+			})
+		},
+
+	update: async (req, res) => {
+		let errors = validationResult(req)
+		if (!errors.isEmpty()) {
+			let productEdit =  db.Product.findByPk(req.params.id);
+		  	let AllSizes =  db.Size.findAll()
+
+			Promise.all([productEdit, AllSizes])
+      .then(function ([product, sizes]) {
+       return res.render("productEdit", { product, sizes, 
+          errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
+		})
+      })
+      return
+	};
+
         const productUpdate = await db.Product.update(
 			{
 			  name: req.body.name,

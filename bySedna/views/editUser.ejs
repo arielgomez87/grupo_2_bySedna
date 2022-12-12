@@ -16,11 +16,7 @@
         <form class="form-register formview"  action="/users/edit/<%=user.id%> " method="POST" enctype="multipart/form-data">
             <div>
                 <input class="input-register <%= locals.errors && errors.fullName ? " is-invalid" : "" %> fullName"
-                type="text"
-                name="fullName"
-                id="Nombre y apellido"
-                value="<%= user.fullName %>" 
-                placeholder="Nombre y apellido">
+                type="text" name="fullName" id="Nombre y apellido" value="<%= user.fullName %>" placeholder="Nombre y apellido">
                 <span></span>
                 <% if(locals.errors && errors.fullName) { %>
                     <div class="text-danger">

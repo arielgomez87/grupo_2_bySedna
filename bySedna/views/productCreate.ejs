@@ -79,11 +79,11 @@
           <div>
             <label for="productImage">Imagen:</label>
             <input type="file" name="productImage" class="form-input <%= locals.errors && errors.productImage ? " is-invalid" : "" %>
-            productImage" >
+            productImage">
             <span></span>
-                    <% if(locals.errors && errors.imageUser) { %>
+                    <% if(locals.errors && errors.productImage) { %>
                         <div class="text-danger">
-                            <%= errors.imageUser.msg %>
+                            <%= errors.productImage.msg %>
                         </div>
                         <% } %>
           </div>
