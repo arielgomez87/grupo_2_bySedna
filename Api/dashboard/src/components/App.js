@@ -7,6 +7,7 @@ import Products from './Products';
 function App() {
 
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [users, setUsers] = useState([]);
 
   const fetchProducts = () => {
@@ -17,6 +18,15 @@ function App() {
           })
           
   }
+
+  const fetchCategories = () => {
+    fetch('/api/categories')
+        .then(response => response.json())
+        .then(datos=> {
+            setCategories(datos.data);
+        })
+        
+}
 
   
   const fetchUsers = () => {
@@ -33,15 +43,17 @@ function App() {
   },[])
 
   useEffect(()=> {
+    fetchCategories()
+},[])
+
+  useEffect(()=> {
     fetchUsers()
 },[])
 
-console.log(products)
-console.log(users)
-
  const props = {
     products: products,
-    users: users
+    users: users,
+    categories: categories
  }
 
   return (

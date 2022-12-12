@@ -22,7 +22,6 @@ import React, {useState, useEffect} from "react";
                     <p class="card-text"> <strong>Stock: </strong> {product.productSize.length}</p>
                     <p class="card-text"> <strong>Images: </strong> {product.image.length}</p>
                     <p class="card-text"> <strong>Discount: </strong> {product.discount}%</p> 
-                    <a href={"Products/" + product.id} class="btn btn-primary">Detalles de producto</a>
                   </div>
                 </div> 
               </>
