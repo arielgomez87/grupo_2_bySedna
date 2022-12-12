@@ -43,54 +43,53 @@
         </div>
 
       </section>
-      <section class="oferta">
-        <% products.forEach(product=> { %>
+      <section class="oferta my-2">
+        <h2>En Oferta</h2>
+        <div class="d-flex">
+          <% products.forEach(product=> { %>
             <% if(product.categoryId == 1) {%>
-              <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <div class=" col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <a href="/products/detail/<%= product.id %> ">
                   <div class="product-img">
                     <% console.log()%>
-                    <img class="img-fluid" src="/images/products/<%= product.image[0].dataValues.name %>" alt="Bikini Gris" class="img-product">
+                    <img class="img-fluid shadow home-product" src="/images/products/<%= product.image[0].dataValues.name %>" alt="Bikini Gris" class="img-product">
                   </div>
                   <div class="product-description">
                     <div class="product-title">
-                      <%= product.name %>
+                      
                     </div>
                     <div class="product-price">
-                      <p>$ <%= product.price %>
-                      </p>
                     </div>
                   </div>
                 </a>
               </div>
           <% }}) %>
+          <div>
     </div>
     </section>
-    </div>
-    <div>
-      <section class="temporada">
+    <section class="temporada my-2">
+      <h2>Verano</h2>
+      <div class="d-flex flex-wrap mx-auto">
         <% products.forEach(product=> { %>
           <% if(product.categoryId == 2) {%>
-            <div class=" product-oferta col-lg-4 col-md-6 col-sm-6 col-xs-12">
+            <div class=" col-lg-3 col-md-6 col-sm-6 col-xs-12 mx-auto">
               <a href="/products/detail/<%= product.id %> ">
                 <div class="product-img">
                   <% console.log()%>
-                  <img class="img-fluid" src="/images/products/<%= product.image[0].dataValues.name %>" alt="Bikini Gris" class="img-product">
+                  <img class="img-fluid shadow home-product" src="/images/products/<%= product.image[0].dataValues.name %>" alt="Bikini Gris" class="img-product">
                 </div>
                 <div class="product-description">
                   <div class="product-title">
-                    <%= product.name %>
+                    
                   </div>
                   <div class="product-price">
-                    <p>$ <%= product.price %>
-                    </p>
                   </div>
                 </div>
               </a>
             </div>
         <% }}) %>
-    </div>
-    </section>
+        </div>
+  </section>
     </div>
   </main>
 
