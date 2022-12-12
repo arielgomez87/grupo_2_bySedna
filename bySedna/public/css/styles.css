@@ -158,6 +158,15 @@
     margin: auto;
     width: 96%;
     background-color: thistle;
+    padding-top: 80px;
+}
+.ofertaIndex{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 96%;
+    background-color: thistle;
     padding-top: 20px;
 }
 .temporada{    
