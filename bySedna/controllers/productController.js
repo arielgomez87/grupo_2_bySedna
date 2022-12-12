@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const db = require("../database/models");
 const Product = require("../database/models/Product");
+const { validationResult } = require("express-validator");
 
 
 const productController = {
@@ -15,15 +16,31 @@ const productController = {
 	},
 
 	store: async function (req, res) {
+		let errors = validationResult(req)
+		if (!errors.isEmpty()) {
+		  const sizes = await db.Size.findAll()
+		  
+		  return res.render("productCreate", {
+			errors: errors.mapped(), /**.mapped convierte el array en un objeto literal **/
+			oldData: req.body,
+			sizes
+		  })
+		};
+
+		//si el Formulario no tiene nada en imagen se guarda una generica de default
+	const imgProduct = req.file
+      ? req.file.filename
+      : "MZA07660.jpg";
+    
 		const newProduct = await db.Product.create({
 			name: req.body.name,		//todo esto se podria abreviar con un "...req.body"//
 			price: req.body.price,
 			discount: req.body.discount,
         	description: req.body.description,
 		});
-
+		
 		await db.Image.create({
-		name: req.file.filename,
+		name: imgProduct,
 		productId: newProduct.id
 		});
 		
@@ -34,14 +51,9 @@ const productController = {
 			})
 		});
 		
-
-		
-		// newProduct.product-image
-		// 		image: req.file? req.file.filename : "MZA07660.jpg"
-		
-
 		res.redirect('/products');
 	},
+
 	products: function(req, res) {
 		db.Product.findAll({
 			include: [{association: 'image'},{association: 'productSize'}]

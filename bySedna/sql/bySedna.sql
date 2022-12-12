@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-12-2022 a las 16:03:21
+-- Tiempo de generación: 11-12-2022 a las 22:17:07
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -59,7 +59,6 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`id`, `name`, `productId`) VALUES
-(34, 'img-1670676354726.JPG', 78),
 (40, 'MZA07580.jpg', 67),
 (41, 'MZA07588-600X900.jpg', 67),
 (42, 'MZA07602.jpg', 67),
@@ -127,8 +126,7 @@ INSERT INTO `product` (`id`, `name`, `price`, `discount`, `description`, `catego
 (73, 'Esmeralda', 4600, 7, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
 (74, 'Gelene Avellana', 5000, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 2),
 (75, 'Obsidiana', 4500, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', 1),
-(76, 'Pandora', 4500, 10, 'donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci  ', 2),
-(78, 'Para eliminar 1', 1564, 10, '  donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci', NULL);
+(76, 'Pandora', 4500, 10, 'donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci  ', 2);
 
 -- --------------------------------------------------------
 
@@ -147,17 +145,44 @@ CREATE TABLE `product_size` (
 --
 
 INSERT INTO `product_size` (`id`, `sizeId`, `productId`) VALUES
-(10, 3, 67),
-(11, 2, 68),
-(12, 3, 69),
-(13, 2, 70),
-(14, 3, 71),
-(15, 2, 72),
-(16, 3, 73),
-(17, 3, 74),
-(18, 4, 75),
-(19, 2, 76),
-(21, 3, 78);
+(38, 1, 67),
+(39, 2, 67),
+(40, 3, 67),
+(41, 5, 67),
+(42, 2, 68),
+(43, 3, 68),
+(44, 4, 68),
+(45, 3, 69),
+(46, 4, 69),
+(47, 5, 69),
+(48, 1, 70),
+(49, 2, 70),
+(50, 3, 70),
+(51, 4, 70),
+(52, 2, 71),
+(53, 3, 71),
+(54, 4, 71),
+(55, 1, 72),
+(56, 2, 72),
+(57, 3, 72),
+(58, 4, 72),
+(59, 2, 73),
+(60, 3, 73),
+(61, 4, 73),
+(62, 5, 73),
+(63, 2, 74),
+(64, 3, 74),
+(65, 4, 74),
+(66, 5, 74),
+(67, 1, 75),
+(68, 2, 75),
+(69, 3, 75),
+(70, 4, 75),
+(71, 5, 75),
+(72, 2, 76),
+(73, 3, 76),
+(74, 4, 76),
+(75, 5, 76);
 
 -- --------------------------------------------------------
 
@@ -344,19 +369,19 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `image`
 --
 ALTER TABLE `image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=111;
 
 --
 -- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT de la tabla `product_size`
 --
 ALTER TABLE `product_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
