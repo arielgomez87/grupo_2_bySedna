@@ -77,6 +77,11 @@
     color: white;
 }
 /*Cierre Header*/
+
+.home-product:hover{
+    opacity: 0.5;
+}
+
 .main-banner{
     margin: auto;
     text-align: center;
@@ -151,9 +156,18 @@
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
-    width: 95%;
+    width: 96%;
     background-color: thistle;
-    padding-top: 80px;
+    padding-top: 20px;
+}
+.temporada{    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 96%;
+    background-color: #d6f4e7;
+    padding-top: 20px;
 }
 .oferta a, .temporada a{
     color: #4b4b4b;
