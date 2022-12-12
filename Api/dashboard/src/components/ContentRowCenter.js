@@ -1,11 +1,11 @@
 import React from 'react';
-import CategoriesInDb from './CategoriesInDb';
+import Categories from './Categories';
 
-function ContentRowCenter(){
+function ContentRowCenter({props}){
     return (
         <div className="row">
             {/*<!-- Categories in DB -->*/}
-            <CategoriesInDb />
+            <Categories props= {props}/>
 
         </div>
     )

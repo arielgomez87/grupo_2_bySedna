@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import SideBar from './SideBar';
-import Login from './Login';
 import "../assets/css/login.css";
-import Products from './Products';
 
 function App() {
 
@@ -55,15 +53,13 @@ function App() {
     users: users,
     categories: categories
  }
-
-  return (
-    <React.Fragment>  
-      	<div id="wrapper">
-          <SideBar props={props}/>
-        </div>
-        
-    </React.Fragment>
-  );
+return (
+  <React.Fragment>
+    <div id="wrapper">
+      <SideBar props = {props}/>
+    </div>
+  </React.Fragment>
+);
 }
 
 export default App;

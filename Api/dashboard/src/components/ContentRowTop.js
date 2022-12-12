@@ -14,7 +14,7 @@ function ContentRowTop({props}){
 				
 				
 					<ContentRowData props={props}/>
-					<ContentRowCenter />
+					<ContentRowCenter props={props}/>
 	
 				</div>
 		

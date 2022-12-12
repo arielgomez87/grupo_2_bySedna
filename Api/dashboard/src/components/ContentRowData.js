@@ -19,6 +19,13 @@ function ContentRowData({props}){
         quantity: props.users.length,
         icon:'far fa-users'
     }
+
+    let categoriesTotal = {
+        title:' Product Categories in DataBase', 
+        color:'success', 
+        quantity: props.categories.length,
+        icon:'far fa-users'
+    }
     
     
     let cartProps = [productsTotal, usersTotal];

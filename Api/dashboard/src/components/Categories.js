@@ -1,6 +1,6 @@
 import React from "react";
 
-function CategoriesInDb({props}) {
+function Categories({props}) {
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
@@ -11,7 +11,6 @@ function CategoriesInDb({props}) {
         </div>
         <div className="card-body">
           <div className="row">
-          {/*un for que recorra */}
           {
             props.categories.length > 0 && 
             props.categories.map(category => 
@@ -24,7 +23,6 @@ function CategoriesInDb({props}) {
             </div>
           ))}
 
-          {/*un for que recorra */}
           </div>
         </div>
       </div>
@@ -32,4 +30,4 @@ function CategoriesInDb({props}) {
   );
 }
 
-export default CategoriesInDb;
+export default Categories;

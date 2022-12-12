@@ -1,11 +1,10 @@
 import React from 'react';
 import imgLogo from '../assets/images/BySedna.png';
 import ContentWrapper from './ContentWrapper';
-import CategoriesInDb from './CategoriesInDb';
-
 import ContentRowData from './ContentRowData';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom';
+import Categories from './Categories';
 import Products from './Products';
 import Users from './Users';
 
@@ -41,7 +40,7 @@ function SideBar({props}){
 
              
                 <li className="nav-item">
-                <Link className="nav-link" to="/CategoriesInDb">
+                <Link className="nav-link" to="/Categories">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Categories</span>
                     </Link>
@@ -65,7 +64,7 @@ function SideBar({props}){
                 <Route exact path="/" element={<ContentWrapper  props={props}/>}/>
                 <Route path="/Products" element={<Products props={props}/>}/>
                 <Route path="/Users" element={<Users props={props}/>}/>
-                <Route path="/CategoriesInDb" element={<CategoriesInDb  props={props}/>}/>
+                <Route path="/Categories" element={<Categories  props={props}/>}/>
                 <Route path="/ContentRowData" element={<ContentRowData props={props}/>}/>
 
                 <Route element={NotFound} />
