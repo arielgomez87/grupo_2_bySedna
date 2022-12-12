@@ -20,28 +20,22 @@ function ContentRowData({props}){
         icon:'far fa-users'
     }
     
-
-    let actorsQuantity = {
-        title:'Actors quantity' ,
-        color:'warning',
-        quantity:'49',
-        icon:'fa-user-check'
-    }
     
-    let cartProps = [productsTotal, usersTotal, actorsQuantity];
+    let cartProps = [productsTotal, usersTotal];
 
 
     return (
     
-        <div className="row">
+        <div className="row mb-3">
             
             {cartProps.map( (data, i) => {
 
                 return <SmallCard {...data} key={i} props={props}/>
+                
             
             })}
-
         </div>
+        
     )
 }
 
