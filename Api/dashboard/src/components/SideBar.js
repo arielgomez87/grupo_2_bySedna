@@ -1,15 +1,16 @@
 import React from 'react';
 import imgLogo from '../assets/images/BySedna.png';
 import ContentWrapper from './ContentWrapper';
-import GenresInDb from './GenresInDb';
+import CategoriesInDb from './CategoriesInDb';
 import LastMovieInDb from './LastMovieInDb';
 import ContentRowData from './ContentRowData';
 import SearchMovies from './SearchMovies';
 import NotFound from './NotFound';
 import {Link, Route, Routes} from 'react-router-dom';
+import Products from './Products';
 
 function SideBar({props}){
-    
+
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
@@ -40,7 +41,7 @@ function SideBar({props}){
 
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                <Link className="nav-link" to="/GenresInDb">
+                <Link className="nav-link" to="/CategoriesInDb">
                         <i className="fas fa-fw fa-folder"></i>
                         <span>Pages</span>
                     </Link>
@@ -63,7 +64,8 @@ function SideBar({props}){
             </ul>
             <Routes>
                 <Route exact path="/" element={<ContentWrapper  props={props}/>}/>
-                <Route path="/GenresInDb" element={<GenresInDb  />}/>
+                <Route path="/Products" element={<Products props={props}/>}/>
+                <Route path="/CategoriesInDb" element={<CategoriesInDb  />}/>
                 <Route path="/LastMovieInDb" element={<LastMovieInDb />}/>
                 <Route path="/ContentRowData" element={<ContentRowData props={props}/>}/>
                 <Route path="/SearchMovies" element={<SearchMovies />}/>
