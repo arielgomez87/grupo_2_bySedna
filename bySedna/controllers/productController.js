@@ -63,6 +63,7 @@ const productController = {
 				res.render('products', {products: product})
 				//res.json(Product) API
 			})
+			
 	},
  	detail: function(req, res){
 		
